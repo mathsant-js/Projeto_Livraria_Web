@@ -1,14 +1,17 @@
 {
-  "dependencies": {
-    "bootstrap": "^5.3.3"
-  },
-  "name": "bootstrapnpm",
+  "name": "projeto_livraria_web",
   "version": "1.0.0",
-  "description": "Test project with Bootstrap via NPM",
+  "description": "Projeto para Feira Tecnológica 2024",
   "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Matheus Santana",
-  "license": "ISC"
+  "author": "Matheus Santana & Lucas Tino",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.3.3"
+  }
 }
