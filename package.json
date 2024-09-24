@@ -1,0 +1,14 @@
+{
+  "dependencies": {
+    "bootstrap": "^5.3.3"
+  },
+  "name": "bootstrapnpm",
+  "version": "1.0.0",
+  "description": "Test project with Bootstrap via NPM",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Matheus Santana",
+  "license": "ISC"
+}
