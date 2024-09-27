@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Open Book</title>
     <link rel="stylesheet" href="../assets/scss/main.css">
-    <script src="../../src/js/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="../js/bootstrap/bootstrap.bundle.min.js"></script>
 </head>
 <body>
 </body>
