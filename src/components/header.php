@@ -72,9 +72,14 @@
           </li>
         </ul>
         <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Pesquise Aqui" aria-label="Search">
-          <button class="btn btn-outline-warning" type="submit">Pesquisar</button>
+          <input class="form-control background-dark-light text-warning border-dark me-2" type="search" placeholder="Pesquisar" aria-label="Search">
         </form>
+        <a href="#">
+          <img class="ms-lg-5" src="../assets/icons/cartBuy.svg" alt="Ícone de carrinho de compras" width="45" height="45">
+        </a>
+        <a href="#">
+          <img class="ms-lg-5" src="../assets/icons/personCircle.svg" alt="Ícone de usuário" width="45" height="45">
+        </a>
       </div>
     </div>
   </div>

@@ -7,6 +7,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
 
 $font-family-base: 'Lexend', sans-serif;
+$warning: #FF6600;
+$dark: #262626;
 
 // Boostrap import
 @import "../../../node_modules/bootstrap/scss/bootstrap";
@@ -55,4 +57,37 @@ $font-family-base: 'Lexend', sans-serif;
     font-optical-sizing: auto;
     font-weight: 700;
     font-style: normal;
+}
+
+// Cores de fundo
+
+.background-dark-light {
+    background-color: #575757;
+}
+
+// Cor de fundo para os inputs
+
+.form-control:focus {
+    background-color: #575757; /* Cor de fundo quando em foco */
+    border-color: #ff6600;     /* Cor da borda quando em foco */
+    box-shadow: 0 0 5px rgba(255, 102, 0, 0.75); /* Sombra com cor #ff6600 */
+}
+
+// Cor para os placeholders
+
+/* Estilo do placeholder */
+::-webkit-input-placeholder { /* Para navegadores WebKit (Chrome, Safari, Opera) */
+    color: #ff6600;
+}
+
+:-ms-input-placeholder { /* Para Internet Explorer 10-11 */
+    color: #ff6600;
+}
+
+::-ms-input-placeholder { /* Para Microsoft Edge */
+    color: #ff6600;
+}
+
+::placeholder { /* Padrão para navegadores modernos */
+    color: #ff6600;
 }
