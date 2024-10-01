@@ -51,4 +51,5 @@
     </div>
 </body>
 <?php require_once '../components/footer.php'; ?>
+
 </html>
