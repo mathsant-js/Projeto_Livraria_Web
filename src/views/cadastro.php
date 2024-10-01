@@ -10,12 +10,12 @@
     <script src="../js/bootstrap/bootstrap.bundle.min.js"></script>
 </head>
 
-<body style="background-image: url('../assets/imgs/static/loginbackground.png'); background-repeat: no-repeat; background-size: cover;" class="align-items-center">
-    <div class="row text-center">
+<body class="align-items-center object-fit-contain background-image-signup">
+    <div class="row text-center w-100 row-cols-auto">
         <div class="col my-5 text-center order-2 order-lg-1">
-            <img src="../assets/icons/logo.svg" width="600" height="600">
+            <img src="../assets/icons/logo.svg">
         </div>
-        <div class="col border-warning bg-dark text-white my-3 me-5 p-4 rounded-4 order-1 order-lg-2">
+        <div class="col border-warning bg-dark text-white my-3 mx-auto me-5 p-4 rounded-4 order-1 order-lg-2">
             <form class="text-start">
                 <h2 class="text-warning text-center">Seja bem-vindo à Open Book!</h2>
                 <p class="text-white text-center">Preencha os dados solicitados para criar sua conta.</p>

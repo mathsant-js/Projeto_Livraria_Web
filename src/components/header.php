@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg border-bottom border-warning border-4 navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg border-bottom border-warning border-4 navbar-dark bg-dark w-100">
   <div class="container-fluid mx-5">
     <!-- Logo -->
     <a class="navbar-brand fs-4 text-warning" href="#">

@@ -182,6 +182,13 @@
   --bs-form-invalid-border-color: #ea868f;
 }
 
+.background-image-signup {
+  background-image: url('../imgs/static/loginbackground.png');
+  background-repeat: no-repeat; 
+  background-size: cover;
+}
+
+
 *,
 *::before,
 *::after {
