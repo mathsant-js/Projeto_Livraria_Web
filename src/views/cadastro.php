@@ -46,7 +46,7 @@
                     <label for="text">Endereço</label>
                 </div>
                 <div class="form-floating mb-3">
-                    <input type="password" class="form-control text-warning background-dark-light border-bottom border-top-0 border-start-0 border-end-0 border-3 rounded-bottom-0 border-warning me-2" id="nome" name="nome" placeholder="Senha">
+                    <input type="password" class="form-control text-warning background-dark-light border-bottom border-top-0 border-start-0 border-end-0 border-3 rounded-bottom-0 border-warning me-2" id="senha" name="senha" placeholder="Senha">
                     <label for="senha">Senha</label>
                 </div>
                 <div class="form-floating mb-3">
