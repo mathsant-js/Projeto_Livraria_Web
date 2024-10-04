@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg border-bottom border-warning border-4 navbar-dark bg-dark w-100">
   <div class="container-fluid mx-5">
     <!-- Logo -->
-    <a class="navbar-brand fs-4 text-warning" href="#">
+    <a class="navbar-brand fs-4 text-warning" href="../views/index.php">
       <img src="../assets/icons/logo.svg" alt="Logo" width="50" height="40" class="d-inline-block align-text-top">
       Open Book
     </a>
@@ -13,7 +13,7 @@
     <div class="offcanvas offcanvas-start navbar-dark bg-dark" tabindex="-1" id="offcanvasWithBothOptions" data-bs-scroll="true" aria-labelledby="offcanvasWithBothOptionsLabel">
       <div class="offcanvas-header">
         <!-- Logo -->
-        <a class="navbar-brand fs-4 text-warning" href="#">
+        <a class="navbar-brand fs-4 text-warning" href="../views/index.php">
           <img src="../assets/icons/logo.svg" alt="Logo" width="50" height="40" class="d-inline-block align-text-top">
           Open Book
         </a>
@@ -22,22 +22,22 @@
       <div class="offcanvas-body my-2">
         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 me-5">
           <li class="nav-item mx-2">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <a class="nav-link" aria-current="page" href="../views/index.php">Home</a>
           </li>
           <li class="nav-item mx-2">
             <a class="nav-link" href="#">Livros</a>
           </li>
           <li class="nav-item mx-2">
-            <a class="nav-link" href="#">Autores</a>
+            <a class="nav-link" href="../views/autorpag.php">Autores</a>
           </li>
         </ul>
         <form class="d-flex" role="search">
           <input class="form-control background-dark-light text-warning border-dark me-2" type="search" placeholder="Pesquisar" aria-label="Search">
         </form>
-        <a href="#">
+        <a href="../views/carrinhoCompras.php">
           <img class="ms-lg-5" src="../assets/icons/cartBuy.svg" alt="Ícone de carrinho de compras" width="45" height="45">
         </a>
-        <a href="#">
+        <a href="../views/configuracoes.php">
           <img class="ms-lg-5" src="../assets/icons/personCircle.svg" alt="Ícone de usuário" width="45" height="45">
         </a>
       </div>

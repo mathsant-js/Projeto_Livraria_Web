@@ -4,7 +4,7 @@
             <div class="col align-self-center">
                 <div class="row align-items-center">
                     <div class="col-2">
-                        <a class="navbar-brand fs-4 text-warning" href="#">
+                        <a class="navbar-brand fs-4 text-warning" href="../views/index.php">
                             <img src="../assets/icons/logo.svg" alt="Logo" height="80" class="d-inline-block align-text-top">
                             Open Book
                         </a>
@@ -17,7 +17,7 @@
                         <p class="lexend-title-semibold">Configurações</p>
                     </li>
                     <li class="">
-                        <a class="nav-link active" href="#">Preferências</a>
+                        <a class="nav-link active" href="../views/configuracoes.php">Preferências</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Pagamentos</a>
