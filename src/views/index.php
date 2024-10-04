@@ -1,4 +1,3 @@
-<?php require_once '../components/header.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,6 +10,7 @@
 </head>
 
 <body class="background-dark-light">
+    <?php require_once '../components/header.php'; ?>
     <div id="carouselExampleCaptions" class="carousel slide container mt-5">
         <div class="carousel-indicators">
             <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -49,7 +49,8 @@
             <span class="visually-hidden">Next</span>
         </button>
     </div>
+    <?php require_once '../components/footer.php'; ?>
 </body>
-<?php require_once '../components/footer.php'; ?>
+
 
 </html>

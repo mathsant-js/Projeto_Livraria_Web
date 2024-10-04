@@ -1,4 +1,3 @@
-<?php require_once '../components/header.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,6 +10,7 @@
 </head>
 
 <body class="align-items-center object-fit-contain background-image-signup">
+    <?php require_once '../components/header.php'; ?>
     <div class="row text-center w-100 row-cols-auto">
         <div class="col my-5 text-center order-2 order-lg-1">
             <img src="../assets/icons/logo.svg">
@@ -60,8 +60,6 @@
         </div>
     </div>
 
-
+    <?php require_once '../components/footer.php'; ?>
 </body>
-<?php require_once '../components/footer.php'; ?>
-
 </html>
