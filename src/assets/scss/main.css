@@ -182,80 +182,6 @@
   --bs-form-invalid-border-color: #ea868f;
 }
 
-.background-image-signup {
-  background-image: url('../imgs/static/loginbackground.png');
-  background-repeat: no-repeat; 
-  background-size: cover;
-}
-
-.background-image-author {
-  background-image: url('../imgs/static/imgCarousel1.svg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  z-index: -1;
-  width: 100%;
-  height: 40vh;
-}
-
-.author-div {
-  background-color: #262626;
-  width: 90vw;
-  font-size: smaller;
-  border-radius: 20px;
-  margin-top: -15vh;
-}
-
-@media (min-width: 1440px) {
-  .author-div {
-    width: 80vw;
-    font-size: inherit;
-  }
-}
-
-.author-image {
-  background-color: white;
-  border-radius: 25px;
-  height: 25vh;
-  width: 30vh;
-  margin-top: -15vh;
-}
-
-.book-carousel{
-  width: 90vw;
-}
-
-@media (min-width: 1440px) {
-  .book-carousel {
-    width: 80vw;
-  }
-}
-
-.book-card {
-  width: 50vw;
-}
-
-@media (min-width: 700px) {
-  .book-card {
-    width: 15vw;
-  }
-}
-
-.book-card-title {
-  height: 2em;
-}
-
-.book-card-image {
-  height: 18vh;
-  width: auto;
-}
-
-@media (min-width: 700px) {
-  .book-card-image {
-    height: 25vh;
-    width: auto;
-  }
-}
-
 *,
 *::before,
 *::after {
@@ -12083,6 +12009,15 @@ textarea.form-control-lg {
   background-color: #575757; /* Cor de fundo quando em foco */
   border-color: #ff6600; /* Cor da borda quando em foco */
   box-shadow: 0 0 5px rgba(255, 102, 0, 0.75); /* Sombra com cor #ff6600 */
+}
+
+.carousel-indicators .active {
+  background-color: #FF6600;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(100%);
 }
 
 /* Estilo do placeholder */

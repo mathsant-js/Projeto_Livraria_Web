@@ -73,6 +73,18 @@ $font-family-base: 'Lexend', sans-serif;
     box-shadow: 0 0 5px rgba(255, 102, 0, 0.75); /* Sombra com cor #ff6600 */
 }
 
+// Cor para os botões inferiores do carousel
+
+.carousel-indicators .active {
+    background-color: #FF6600;
+}
+
+// Alterar a cor das setas do carousel para uma cor escura
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(100%);
+}
+
 // Cor para os placeholders
 
 /* Estilo do placeholder */
