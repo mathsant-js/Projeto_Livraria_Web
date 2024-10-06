@@ -31,7 +31,7 @@
                 </div>
                 <div class="form-floating mb-3">
                     <input type="date" class="form-control text-warning background-dark-light border-bottom border-top-0 border-start-0 border-end-0 border-3 rounded-bottom-0 border-warning me-2" id="datanasc" name="datanasc" placeholder="Data de Nascimento">
-                    <label for="datenasc">Data de Nascimento</label>
+                    <label for="datanasc">Data de Nascimento</label>
                 </div>
                 <div class="form-floating mb-3">
                     <input type="email" class="form-control text-warning background-dark-light border-bottom border-top-0 border-start-0 border-end-0 border-3 rounded-bottom-0 border-warning me-2" id="email" name="email" placeholder="Email">
