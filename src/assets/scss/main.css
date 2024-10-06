@@ -187,6 +187,16 @@
   background-repeat: no-repeat; 
   background-size: cover;
 }
+.signup-logo {
+  height: 150px;
+  width: auto;
+}
+@media (min-width: 1440px) {
+  .signup-logo {
+    height: 300px;
+    width: auto;
+  }
+}
 .background-image-author {
   background-image: url('../imgs/static/imgCarousel1.svg');
   background-repeat: no-repeat;

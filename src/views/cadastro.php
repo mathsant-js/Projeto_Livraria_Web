@@ -11,11 +11,11 @@
 
 <body class="align-items-center object-fit-contain background-image-signup">
     <?php require_once '../components/header.php'; ?>
-    <div class="row text-center w-100 row-cols-auto">
-        <div class="col my-5 text-center order-2 order-lg-1">
-            <img src="../assets/icons/logo.svg">
+    <div class="row text-center w-100 row-cols-auto mx-auto">
+        <div class="col mx-auto my-auto text-center order-2 order-lg-1">
+            <img src="../assets/icons/logo.svg" class="signup-logo">
         </div>
-        <div class="col border-warning bg-dark text-white my-3 mx-auto me-5 p-4 rounded-4 order-1 order-lg-2">
+        <div class="col border-warning bg-dark text-white my-3 mx-auto p-4 rounded-4 order-1 order-lg-2">
             <form class="text-start">
                 <h2 class="text-warning text-center">Seja bem-vindo à Open Book!</h2>
                 <p class="text-white text-center">Preencha os dados solicitados para criar sua conta.</p>
@@ -54,7 +54,7 @@
                     <label for="confsenha">Confirmar Senha</label>
                 </div>
                 <div class="w-100 text-center">
-                    <button type="submit" class="btn btn-warning btn-lg text-white text-center m-3">Cadastrar</button>
+                    <button type="submit" class="btn btn-warning btn-lg text-white text-center m-3 px-5">Cadastrar</button>
                 </div>
             </form>
         </div>
