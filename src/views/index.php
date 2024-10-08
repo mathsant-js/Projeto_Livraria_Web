@@ -9,7 +9,7 @@
     <script src="../js/bootstrap/bootstrap.bundle.min.js"></script>
 </head>
 
-<body class="background-dark-light">
+<body class="background-dark-light overflow-x-hidden">
     <?php require_once '../components/header.php'; ?>
     <div class="container">
         <div id="carouselExampleCaptions" class="carousel slide container mt-5">
