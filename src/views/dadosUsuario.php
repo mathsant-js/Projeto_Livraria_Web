@@ -1,4 +1,3 @@
-<?php require_once '../components/header.php' ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,6 +10,7 @@
 </head>
 
 <body class="background-dark-light">
+<?php require_once '../components/header.php' ?>
     <div class="container text-light">
         <div class="row mt-sm-4 justify-content-between">
             <div class="col my-3 text-center">
