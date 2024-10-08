@@ -19,7 +19,7 @@
                     <img src="../assets/imgs/static/autorplaceholder.png" class="rounded-start bg-white mx-auto" alt="editora" height="200vh" width="200vh">
                 </div>
                 <div class="col-md-9">
-                    <div class="card-body py-4 ps-md-5 text-center text-md-start">
+                    <div class="card-body py-4 ps-md-5 ms-md-4 text-center text-md-start">
                         <h2 class="card-title text-warning">Card title</h2>
                         <h5 class="card-text text-warning">Rua Endereço, 10 - São Paulo - SP - Brasil </h5>
                         <h5 class="card-text text-warning">🕿 11 12345-6789</h5>

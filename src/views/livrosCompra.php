@@ -36,8 +36,8 @@
                             <div class="card book-card bg-dark rounded-5 overflow-hidden">
                                 <div class="row border-bottom border-3 border-warning bg-white">
                                     <img src="../assets/imgs/static/livroplaceholder.png" alt="book image" class="mx-auto book-card-image">
-                                    <p class="mb-0">
-                                        <a href="cock" class="link-warning ps-3">Editora</a>
+                                    <p class="mb-0 text-start">
+                                        <a href="editorapag.php" class="link-warning ps-3">Editora</a>
                                     </p>
                                 </div>
                                 <div class="row mx-1">
@@ -73,8 +73,8 @@
                             <div class="card book-card bg-dark rounded-5 overflow-hidden">
                                 <div class="row border-bottom border-3 border-warning bg-white">
                                     <img src="../assets/imgs/static/livroplaceholder.png" alt="book image" class="mx-auto book-card-image">
-                                    <p class="mb-0">
-                                        <a href="cock" class="link-warning ps-3">Editora</a>
+                                    <p class="mb-0 text-start">
+                                        <a href="editorapag.php" class="link-warning ps-3">Editora</a>
                                     </p>
                                 </div>
                                 <div class="row mx-1">
@@ -110,8 +110,8 @@
                             <div class="card book-card bg-dark rounded-5 overflow-hidden">
                                 <div class="row border-bottom border-3 border-warning bg-white">
                                     <img src="../assets/imgs/static/livroplaceholder.png" alt="book image" class="mx-auto book-card-image">
-                                    <p class="mb-0">
-                                        <a href="cock" class="link-warning ps-3">Editora</a>
+                                    <p class="mb-0 text-start">
+                                        <a href="editorapag.php" class="link-warning ps-3">Editora</a>
                                     </p>
                                 </div>
                                 <div class="row mx-1">
@@ -147,8 +147,8 @@
                             <div class="card book-card bg-dark rounded-5 overflow-hidden">
                                 <div class="row border-bottom border-3 border-warning bg-white">
                                     <img src="../assets/imgs/static/livroplaceholder.png" alt="book image" class="mx-auto book-card-image">
-                                    <p class="mb-0">
-                                        <a href="cock" class="link-warning ps-3">Editora</a>
+                                    <p class="mb-0 text-start">
+                                        <a href="editorapag.php" class="link-warning ps-3">Editora</a>
                                     </p>
                                 </div>
                                 <div class="row mx-1">
@@ -185,8 +185,8 @@
                                 <div class="card book-card bg-dark rounded-5 overflow-hidden">
                                     <div class="row border-bottom border-3 border-warning bg-white">
                                         <img src="../assets/imgs/static/livroplaceholder.png" alt="book image" class="mx-auto book-card-image">
-                                        <p class="mb-0">
-                                            <a href="cock" class="link-warning ps-3">Editora</a>
+                                        <p class="mb-0 text-start">
+                                            <a href="editorapag.php" class="link-warning ps-3">Editora</a>
                                         </p>
                                     </div>
                                     <div class="row mx-1">
@@ -222,8 +222,8 @@
                                 <div class="card book-card bg-dark rounded-5 overflow-hidden">
                                     <div class="row border-bottom border-3 border-warning bg-white">
                                         <img src="../assets/imgs/static/livroplaceholder.png" alt="book image" class="mx-auto book-card-image">
-                                        <p class="mb-0">
-                                            <a href="cock" class="link-warning ps-3">Editora</a>
+                                        <p class="mb-0 text-start">
+                                            <a href="editorapag.php" class="link-warning ps-3">Editora</a>
                                         </p>
                                     </div>
                                     <div class="row mx-1">
@@ -259,8 +259,8 @@
                                 <div class="card book-card bg-dark rounded-5 overflow-hidden">
                                     <div class="row border-bottom border-3 border-warning bg-white">
                                         <img src="../assets/imgs/static/livroplaceholder.png" alt="book image" class="mx-auto book-card-image">
-                                        <p class="mb-0">
-                                            <a href="cock" class="link-warning ps-3">Editora</a>
+                                        <p class="mb-0 text-start">
+                                            <a href="editorapag.php" class="link-warning ps-3">Editora</a>
                                         </p>
                                     </div>
                                     <div class="row mx-1">
@@ -296,8 +296,8 @@
                                 <div class="card book-card bg-dark rounded-5 overflow-hidden">
                                     <div class="row border-bottom border-3 border-warning bg-white">
                                         <img src="../assets/imgs/static/livroplaceholder.png" alt="book image" class="mx-auto book-card-image">
-                                        <p class="mb-0">
-                                            <a href="cock" class="link-warning ps-3">Editora</a>
+                                        <p class="mb-0 text-start">
+                                            <a href="editorapag.php" class="link-warning ps-3">Editora</a>
                                         </p>
                                     </div>
                                     <div class="row mx-1">
@@ -334,8 +334,8 @@
                                     <div class="card book-card bg-dark rounded-5 overflow-hidden">
                                         <div class="row border-bottom border-3 border-warning bg-white">
                                             <img src="../assets/imgs/static/livroplaceholder.png" alt="book image" class="mx-auto book-card-image">
-                                            <p class="mb-0">
-                                                <a href="cock" class="link-warning ps-3">Editora</a>
+                                            <p class="mb-0 text-start">
+                                                <a href="editorapag.php" class="link-warning ps-3">Editora</a>
                                             </p>
                                         </div>
                                         <div class="row mx-1">
@@ -371,8 +371,8 @@
                                     <div class="card book-card bg-dark rounded-5 overflow-hidden">
                                         <div class="row border-bottom border-3 border-warning bg-white">
                                             <img src="../assets/imgs/static/livroplaceholder.png" alt="book image" class="mx-auto book-card-image">
-                                            <p class="mb-0">
-                                                <a href="cock" class="link-warning ps-3">Editora</a>
+                                            <p class="mb-0 text-start">
+                                                <a href="editorapag.php" class="link-warning ps-3">Editora</a>
                                             </p>
                                         </div>
                                         <div class="row mx-1">
@@ -408,8 +408,8 @@
                                     <div class="card book-card bg-dark rounded-5 overflow-hidden">
                                         <div class="row border-bottom border-3 border-warning bg-white">
                                             <img src="../assets/imgs/static/livroplaceholder.png" alt="book image" class="mx-auto book-card-image">
-                                            <p class="mb-0">
-                                                <a href="cock" class="link-warning ps-3">Editora</a>
+                                            <p class="mb-0 text-start">
+                                                <a href="editorapag.php" class="link-warning ps-3">Editora</a>
                                             </p>
                                         </div>
                                         <div class="row mx-1">
@@ -445,8 +445,8 @@
                                     <div class="card book-card bg-dark rounded-5 overflow-hidden">
                                         <div class="row border-bottom border-3 border-warning bg-white">
                                             <img src="../assets/imgs/static/livroplaceholder.png" alt="book image" class="mx-auto book-card-image">
-                                            <p class="mb-0">
-                                                <a href="cock" class="link-warning ps-3">Editora</a>
+                                            <p class="mb-0 text-start">
+                                                <a href="editorapag.php" class="link-warning ps-3">Editora</a>
                                             </p>
                                         </div>
                                         <div class="row mx-1">
