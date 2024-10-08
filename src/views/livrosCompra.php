@@ -10,7 +10,7 @@
     <script src="../js/bootstrap/bootstrap.bundle.min.js"></script>
 </head>
 
-<body class="background-dark-light">
+<body class="background-dark-light overflow-x-hidden">
     <div class="container mt-sm-5 text-light">
         <div class="row">
             <div class="col text-start">
