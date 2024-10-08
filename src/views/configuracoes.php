@@ -1,4 +1,3 @@
-<?php require_once '../components/header.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,6 +10,7 @@
 </head>
 
 <body class="background-dark-light">
+<?php require_once '../components/header.php'; ?>
     <div class="container text-center my-auto">
         <div class="row">
             <div class="col mt-sm-5">
@@ -26,7 +26,7 @@
                     <p class="mt-sm-4 ms-sm-2">Suas informações, como nome, email e entre outros.</p>
                 </div>
                 <div class="col-sm-4 align-self-center text-end d-grid gap-2 ms-sm-5">
-                    <a href="#" class="btn btn-warning text-light">Visualizar Dados</a>
+                    <a href="../views/dadosUsuario.php" class="btn btn-warning text-light">Visualizar Dados</a>
                 </div>
             </div>
         </div>
