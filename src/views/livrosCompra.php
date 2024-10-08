@@ -44,7 +44,7 @@
                                     <div class="card-body text-white text-center">
                                         <h5 class="card-title book-card-title mt-2 text-warning">Título do livro</h5>
                                         <p class="small">
-                                            <a href="" class="link-warning">Nome do autor</a>
+                                            <a href="autorpag.php" class="link-warning">Nome do autor</a>
                                         </p>
                                         <h5 class="card-text">R$ XX,XX</h5>
                                         <div class="row mt-3">
@@ -81,7 +81,7 @@
                                     <div class="card-body text-white text-center">
                                         <h5 class="card-title book-card-title mt-2 text-warning">Título do livro</h5>
                                         <p class="small">
-                                            <a href="" class="link-warning">Nome do autor</a>
+                                            <a href="autorpag.php" class="link-warning">Nome do autor</a>
                                         </p>
                                         <h5 class="card-text">R$ XX,XX</h5>
                                         <div class="row mt-3">
@@ -118,7 +118,7 @@
                                     <div class="card-body text-white text-center">
                                         <h5 class="card-title book-card-title mt-2 text-warning">Título do livro</h5>
                                         <p class="small">
-                                            <a href="" class="link-warning">Nome do autor</a>
+                                            <a href="autorpag.php" class="link-warning">Nome do autor</a>
                                         </p>
                                         <h5 class="card-text">R$ XX,XX</h5>
                                         <div class="row mt-3">
@@ -155,7 +155,7 @@
                                     <div class="card-body text-white text-center">
                                         <h5 class="card-title book-card-title mt-2 text-warning">Título do livro</h5>
                                         <p class="small">
-                                            <a href="" class="link-warning">Nome do autor</a>
+                                            <a href="autorpag.php" class="link-warning">Nome do autor</a>
                                         </p>
                                         <h5 class="card-text">R$ XX,XX</h5>
                                         <div class="row mt-3">
@@ -193,7 +193,7 @@
                                         <div class="card-body text-white text-center">
                                             <h5 class="card-title book-card-title mt-2 text-warning">Título do livro</h5>
                                             <p class="small">
-                                                <a href="" class="link-warning">Nome do autor</a>
+                                                <a href="autorpag.php" class="link-warning">Nome do autor</a>
                                             </p>
                                             <h5 class="card-text">R$ XX,XX</h5>
                                             <div class="row mt-3">
@@ -230,7 +230,7 @@
                                         <div class="card-body text-white text-center">
                                             <h5 class="card-title book-card-title mt-2 text-warning">Título do livro</h5>
                                             <p class="small">
-                                                <a href="" class="link-warning">Nome do autor</a>
+                                                <a href="autorpag.php" class="link-warning">Nome do autor</a>
                                             </p>
                                             <h5 class="card-text">R$ XX,XX</h5>
                                             <div class="row mt-3">
@@ -267,7 +267,7 @@
                                         <div class="card-body text-white text-center">
                                             <h5 class="card-title book-card-title mt-2 text-warning">Título do livro</h5>
                                             <p class="small">
-                                                <a href="" class="link-warning">Nome do autor</a>
+                                                <a href="autorpag.php" class="link-warning">Nome do autor</a>
                                             </p>
                                             <h5 class="card-text">R$ XX,XX</h5>
                                             <div class="row mt-3">
@@ -304,7 +304,7 @@
                                         <div class="card-body text-white text-center">
                                             <h5 class="card-title book-card-title mt-2 text-warning">Título do livro</h5>
                                             <p class="small">
-                                                <a href="" class="link-warning">Nome do autor</a>
+                                                <a href="autorpag.php" class="link-warning">Nome do autor</a>
                                             </p>
                                             <h5 class="card-text">R$ XX,XX</h5>
                                             <div class="row mt-3">
@@ -342,7 +342,7 @@
                                             <div class="card-body text-white text-center">
                                                 <h5 class="card-title book-card-title mt-2 text-warning">Título do livro</h5>
                                                 <p class="small">
-                                                    <a href="" class="link-warning">Nome do autor</a>
+                                                    <a href="autorpag.php" class="link-warning">Nome do autor</a>
                                                 </p>
                                                 <h5 class="card-text">R$ XX,XX</h5>
                                                 <div class="row mt-3">
@@ -379,7 +379,7 @@
                                             <div class="card-body text-white text-center">
                                                 <h5 class="card-title book-card-title mt-2 text-warning">Título do livro</h5>
                                                 <p class="small">
-                                                    <a href="" class="link-warning">Nome do autor</a>
+                                                    <a href="autorpag.php" class="link-warning">Nome do autor</a>
                                                 </p>
                                                 <h5 class="card-text">R$ XX,XX</h5>
                                                 <div class="row mt-3">
@@ -416,7 +416,7 @@
                                             <div class="card-body text-white text-center">
                                                 <h5 class="card-title book-card-title mt-2 text-warning">Título do livro</h5>
                                                 <p class="small">
-                                                    <a href="" class="link-warning">Nome do autor</a>
+                                                    <a href="autorpag.php" class="link-warning">Nome do autor</a>
                                                 </p>
                                                 <h5 class="card-text">R$ XX,XX</h5>
                                                 <div class="row mt-3">
@@ -453,7 +453,7 @@
                                             <div class="card-body text-white text-center">
                                                 <h5 class="card-title book-card-title mt-2 text-warning">Título do livro</h5>
                                                 <p class="small">
-                                                    <a href="" class="link-warning">Nome do autor</a>
+                                                    <a href="autorpag.php" class="link-warning">Nome do autor</a>
                                                 </p>
                                                 <h5 class="card-text">R$ XX,XX</h5>
                                                 <div class="row mt-3">

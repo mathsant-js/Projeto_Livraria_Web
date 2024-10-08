@@ -53,14 +53,14 @@
                     <div class="row border-bottom border-3 border-warning bg-white">
                         <img src="../assets/imgs/static/livroplaceholder.png" alt="book image" class="mx-auto book-card-image">
                         <p class="mb-0">
-                            <a href="cock" class="link-warning ps-3">Editora</a>
+                            <a href="editorapag.php" class="link-warning ps-3">Editora</a>
                         </p>
                     </div>
                     <div class="row mx-1">
                         <div class="card-body text-white text-center">
                             <h5 class="card-title book-card-title mt-2 text-warning">Título do livro</h5>
                             <p class="small">
-                                <a href="" class="link-warning">Nome do autor</a>
+                                <a href="autorpag.php" class="link-warning">Nome do autor</a>
                             </p>
                             <h5 class="card-text">R$ XX,XX</h5>
                             <div class="row mt-3">
