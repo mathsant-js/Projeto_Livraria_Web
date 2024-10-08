@@ -20,21 +20,21 @@
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="../assets/imgs/static/imgCarousel1.svg" class="d-block w-100" alt="...">
+                    <img src="../assets/imgs/static/imgCarouselWithFade.svg" class="d-block w-100" alt="...">
                     <div class="carousel-caption d-none d-md-block">
                         <h5 class="text-warning fs-4">Livros com ótimos preços, sem sair de casa!</h5>
                         <p>Na livraria, você compra seus livros favoritos por preços baixos e justos, e pede para entrega no conforto de sua casa!</p>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="../assets/imgs/static/imgCarousel1.svg" class="d-block w-100" alt="...">
+                    <img src="../assets/imgs/static/imgCarouselWithFade.svg" class="d-block w-100" alt="...">
                     <div class="carousel-caption d-none d-md-block">
                         <h5 class="text-warning">Second slide label</h5>
                         <p>Some representative placeholder content for the second slide.</p>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="../assets/imgs/static/imgCarousel1.svg" class="d-block w-100" alt="...">
+                    <img src="../assets/imgs/static/imgCarouselWithFade.svg" class="d-block w-100" alt="...">
                     <div class="carousel-caption d-none d-md-block">
                         <h5 class="text-warning">Third slide label</h5>
                         <p>Some representative placeholder content for the third slide.</p>
@@ -50,313 +50,50 @@
                 <span class="visually-hidden">Next</span>
             </button>
         </div>
-        <div class="container">
-            <div class="row align-items-end justify-content-between text-light mt-sm-5">
-                <div class="col-3">
-                    <h4 class="mb-5">Lançamentos</h4>
-                    <!-- Começo do card -->
-                    <div class="row book-carousel mx-auto mt-3 column-gap-0">
-                        <div class="col">
-                            <a href="#">
-                                <div class="card book-card bg-dark rounded-3 overflow-hidden">
-                                    <div class="row border-bottom border-3 border-warning bg-white">
-                                        <img src="../assets/imgs/static/livroplaceholder.png" alt="book image" class="mx-auto book-card-image">
-                                        <p class="mb-0">
-                                            <a href="cock" class="link-warning ps-3">Editora</a>
-                                        </p>
-                                    </div>
-                                    <div class="row mx-1">
-                                        <div class="card-body text-white text-center">
-                                            <h5 class="card-title book-card-title mt-2 text-warning">Título do livro</h5>
-                                            <p class="small">
-                                                <a href="" class="link-warning">Nome do autor</a>
-                                            </p>
-                                            <h5 class="card-text">R$ XX,XX</h5>
-                                            <div class="row mt-3">
-                                                <div class="col">
-                                                    <a href="#" class="btn btn-warning rounded-3 text-white mb-3 w-100">Comprar</a>
-                                                </div>
-                                                <div class="col col-auto">
-                                                    <a href="">
-                                                        <img src="../assets/icons/cartAdd.svg" alt="add to cart" height="40px" width="40px">
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <!-- Fim do Card -->
-                </div>
-                <div class="col-3">
-                    <!-- Começo do card -->
-                    <div class="row book-carousel mx-auto mt-3 column-gap-0">
-                        <div class="col">
-                            <a href="#">
-                                <div class="card book-card bg-dark rounded-3 overflow-hidden">
-                                    <div class="row border-bottom border-3 border-warning bg-white">
-                                        <img src="../assets/imgs/static/livroplaceholder.png" alt="book image" class="mx-auto book-card-image">
-                                        <p class="mb-0">
-                                            <a href="cock" class="link-warning ps-3">Editora</a>
-                                        </p>
-                                    </div>
-                                    <div class="row mx-1">
-                                        <div class="card-body text-white text-center">
-                                            <h5 class="card-title book-card-title mt-2 text-warning">Título do livro</h5>
-                                            <p class="small">
-                                                <a href="" class="link-warning">Nome do autor</a>
-                                            </p>
-                                            <h5 class="card-text">R$ XX,XX</h5>
-                                            <div class="row mt-3">
-                                                <div class="col">
-                                                    <a href="#" class="btn btn-warning rounded-3 text-white mb-3 w-100">Comprar</a>
-                                                </div>
-                                                <div class="col col-auto">
-                                                    <a href="">
-                                                        <img src="../assets/icons/cartAdd.svg" alt="add to cart" height="40px" width="40px">
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <!-- Fim do Card -->
-                </div>
-                <div class="col-3">
-                    <!-- Começo do card -->
-                    <div class="row book-carousel mx-auto mt-3 column-gap-0">
-                        <div class="col">
-                            <a href="#">
-                                <div class="card book-card bg-dark rounded-3 overflow-hidden">
-                                    <div class="row border-bottom border-3 border-warning bg-white">
-                                        <img src="../assets/imgs/static/livroplaceholder.png" alt="book image" class="mx-auto book-card-image">
-                                        <p class="mb-0">
-                                            <a href="cock" class="link-warning ps-3">Editora</a>
-                                        </p>
-                                    </div>
-                                    <div class="row mx-1">
-                                        <div class="card-body text-white text-center">
-                                            <h5 class="card-title book-card-title mt-2 text-warning">Título do livro</h5>
-                                            <p class="small">
-                                                <a href="" class="link-warning">Nome do autor</a>
-                                            </p>
-                                            <h5 class="card-text">R$ XX,XX</h5>
-                                            <div class="row mt-3">
-                                                <div class="col">
-                                                    <a href="#" class="btn btn-warning rounded-3 text-white mb-3 w-100">Comprar</a>
-                                                </div>
-                                                <div class="col col-auto">
-                                                    <a href="">
-                                                        <img src="../assets/icons/cartAdd.svg" alt="add to cart" height="40px" width="40px">
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <!-- Fim do Card -->
-                </div>
-                <div class="col-3">
-                    <h4 class="text-warning text-end mb-5">Ver Todos</h4>
-                    <!-- Começo do card -->
-                    <div class="row book-carousel mx-auto mt-3 column-gap-0">
-                        <div class="col">
-                            <a href="#">
-                                <div class="card book-card bg-dark rounded-3 overflow-hidden">
-                                    <div class="row border-bottom border-3 border-warning bg-white">
-                                        <img src="../assets/imgs/static/livroplaceholder.png" alt="book image" class="mx-auto book-card-image">
-                                        <p class="mb-0">
-                                            <a href="cock" class="link-warning ps-3">Editora</a>
-                                        </p>
-                                    </div>
-                                    <div class="row mx-1">
-                                        <div class="card-body text-white text-center">
-                                            <h5 class="card-title book-card-title mt-2 text-warning">Título do livro</h5>
-                                            <p class="small">
-                                                <a href="" class="link-warning">Nome do autor</a>
-                                            </p>
-                                            <h5 class="card-text">R$ XX,XX</h5>
-                                            <div class="row mt-3">
-                                                <div class="col">
-                                                    <a href="#" class="btn btn-warning rounded-3 text-white mb-3 w-100">Comprar</a>
-                                                </div>
-                                                <div class="col col-auto">
-                                                    <a href="">
-                                                        <img src="../assets/icons/cartAdd.svg" alt="add to cart" height="40px" width="40px">
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <!-- Fim do Card -->
-                </div>
+        <div class="row justify-content-between text-light mt-sm-5">
+            <div class="col-sm-4">
+                <h4 class="lexend-title-semibold ms-sm-2">Lançamentos</h4>
+            </div>
+            <div class="col-sm-4">
+                <h4 class="lexend-title-regular text-warning text-end me-sm-2">Ver Todos</h4>
             </div>
         </div>
-        <div class="row align-items-end justify-content-between text-light mt-sm-5">
-            <div class="col-3">
-                <h4 class="mb-5">Mais Vendidos</h4>
-                <!-- Começo do card -->
-                <div class="row book-carousel mx-auto mt-3 column-gap-0">
-                    <div class="col">
-                        <a href="#">
-                            <div class="card book-card bg-dark rounded-3 overflow-hidden">
-                                <div class="row border-bottom border-3 border-warning bg-white">
-                                    <img src="../assets/imgs/static/livroplaceholder.png" alt="book image" class="mx-auto book-card-image">
-                                    <p class="mb-0">
-                                        <a href="cock" class="link-warning ps-3">Editora</a>
-                                    </p>
-                                </div>
-                                <div class="row mx-1">
-                                    <div class="card-body text-white text-center">
-                                        <h5 class="card-title book-card-title mt-2 text-warning">Título do livro</h5>
-                                        <p class="small">
-                                            <a href="" class="link-warning">Nome do autor</a>
-                                        </p>
-                                        <h5 class="card-text">R$ XX,XX</h5>
-                                        <div class="row mt-3">
-                                            <div class="col">
-                                                <a href="#" class="btn btn-warning rounded-3 text-white mb-3 w-100">Comprar</a>
-                                            </div>
-                                            <div class="col col-auto">
-                                                <a href="">
-                                                    <img src="../assets/icons/cartAdd.svg" alt="add to cart" height="40px" width="40px">
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <!-- Fim do Card -->
+        <div class="row justify-content-center text-center text-light mt-sm-5">
+            <div class="col-sm-3">
+                Column
             </div>
-            <div class="col-3">
-                <!-- Começo do card -->
-                <div class="row book-carousel mx-auto mt-3 column-gap-0">
-                    <div class="col">
-                        <a href="#">
-                            <div class="card book-card bg-dark rounded-3 overflow-hidden">
-                                <div class="row border-bottom border-3 border-warning bg-white">
-                                    <img src="../assets/imgs/static/livroplaceholder.png" alt="book image" class="mx-auto book-card-image">
-                                    <p class="mb-0">
-                                        <a href="cock" class="link-warning ps-3">Editora</a>
-                                    </p>
-                                </div>
-                                <div class="row mx-1">
-                                    <div class="card-body text-white text-center">
-                                        <h5 class="card-title book-card-title mt-2 text-warning">Título do livro</h5>
-                                        <p class="small">
-                                            <a href="" class="link-warning">Nome do autor</a>
-                                        </p>
-                                        <h5 class="card-text">R$ XX,XX</h5>
-                                        <div class="row mt-3">
-                                            <div class="col">
-                                                <a href="#" class="btn btn-warning rounded-3 text-white mb-3 w-100">Comprar</a>
-                                            </div>
-                                            <div class="col col-auto">
-                                                <a href="">
-                                                    <img src="../assets/icons/cartAdd.svg" alt="add to cart" height="40px" width="40px">
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <!-- Fim do Card -->
+            <div class="col-sm-3">
+                Column
             </div>
-            <div class="col-3">
-                <!-- Começo do card -->
-                <div class="row book-carousel mx-auto mt-3 column-gap-0">
-                    <div class="col">
-                        <a href="#">
-                            <div class="card book-card bg-dark rounded-3 overflow-hidden">
-                                <div class="row border-bottom border-3 border-warning bg-white">
-                                    <img src="../assets/imgs/static/livroplaceholder.png" alt="book image" class="mx-auto book-card-image">
-                                    <p class="mb-0">
-                                        <a href="cock" class="link-warning ps-3">Editora</a>
-                                    </p>
-                                </div>
-                                <div class="row mx-1">
-                                    <div class="card-body text-white text-center">
-                                        <h5 class="card-title book-card-title mt-2 text-warning">Título do livro</h5>
-                                        <p class="small">
-                                            <a href="" class="link-warning">Nome do autor</a>
-                                        </p>
-                                        <h5 class="card-text">R$ XX,XX</h5>
-                                        <div class="row mt-3">
-                                            <div class="col">
-                                                <a href="#" class="btn btn-warning rounded-3 text-white mb-3 w-100">Comprar</a>
-                                            </div>
-                                            <div class="col col-auto">
-                                                <a href="">
-                                                    <img src="../assets/icons/cartAdd.svg" alt="add to cart" height="40px" width="40px">
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <!-- Fim do Card -->
+            <div class="col-sm-3">
+                Column
             </div>
-            <div class="col-3">
-                <h4 class="text-warning text-end mb-5">Ver Todos</h4>
-                <!-- Começo do card -->
-                <div class="row book-carousel mx-auto mt-3 column-gap-0">
-                    <div class="col">
-                        <a href="#">
-                            <div class="card book-card bg-dark rounded-3 overflow-hidden">
-                                <div class="row border-bottom border-3 border-warning bg-white">
-                                    <img src="../assets/imgs/static/livroplaceholder.png" alt="book image" class="mx-auto book-card-image">
-                                    <p class="mb-0">
-                                        <a href="cock" class="link-warning ps-3">Editora</a>
-                                    </p>
-                                </div>
-                                <div class="row mx-1">
-                                    <div class="card-body text-white text-center">
-                                        <h5 class="card-title book-card-title mt-2 text-warning">Título do livro</h5>
-                                        <p class="small">
-                                            <a href="" class="link-warning">Nome do autor</a>
-                                        </p>
-                                        <h5 class="card-text">R$ XX,XX</h5>
-                                        <div class="row mt-3">
-                                            <div class="col">
-                                                <a href="#" class="btn btn-warning rounded-3 text-white mb-3 w-100">Comprar</a>
-                                            </div>
-                                            <div class="col col-auto">
-                                                <a href="">
-                                                    <img src="../assets/icons/cartAdd.svg" alt="add to cart" height="40px" width="40px">
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <!-- Fim do Card -->
+            <div class="col-sm-3">
+                Column
             </div>
         </div>
-    </div>
+        <div class="row justify-content-between text-light mt-sm-5">
+            <div class="col-sm-4">
+                <h4 class="lexend-title-semibold ms-sm-2">Mais Vendidos</h4>
+            </div>
+            <div class="col-sm-4">
+                <h4 class="lexend-title-regular text-warning text-end me-sm-2">Ver Todos</h4>
+            </div>
+        </div>
+        <div class="row justify-content-center text-center text-light mt-sm-5">
+            <div class="col-sm-3">
+                Column
+            </div>
+            <div class="col-sm-3">
+                Column
+            </div>
+            <div class="col-sm-3">
+                Column
+            </div>
+            <div class="col-sm-3">
+                Column
+            </div>
+        </div>
     </div>
 </body>
 <?php require_once '../components/footer.php'; ?>
