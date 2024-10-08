@@ -1,4 +1,3 @@
-<?php require_once '../components/header.php' ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,6 +10,7 @@
 </head>
 
 <body class="background-dark-light">
+<?php require_once '../components/header.php' ?>
   <div class="container text-start text-light mt-5">
     <h2 class="lexend-title-semibold text-warning">Carrinho de Compras</h2>
     <div class="row shadow p-3 my-5 my-sm-4 bg-dark rounded">
