@@ -9,6 +9,7 @@ class Cliente {
     private $cpfCliente;
     private $datanascCliente;
     private $senhaCliente;
+    private $conexao;
 
     // gets e sets
     public function getCodCliente() {
@@ -73,10 +74,10 @@ class Cliente {
         $clientes = [];
 
         while ($cliente = $result->fetch_assoc()) {
-            $pessoas[] = $pessoa;
+            $clientes[] = $cliente;
         }
 
-        return $pessoas;
+        return $clientes;
     }
 
     // buscar por id
