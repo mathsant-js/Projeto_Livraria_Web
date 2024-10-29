@@ -1,5 +1,7 @@
 <?php 
 
+require_once $_SERVER['DOCUMENT_ROOT'] . '/Projeto_Livraria_Web/src/connection/conexao.php';
+
 class Livro {
     private $codLivro;
     private $nomeLivro;
