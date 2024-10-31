@@ -1,3 +1,8 @@
+<?php
+    require_once $_SERVER['DOCUMENT_ROOT'] . '/Projeto_Livraria_Web/src/controllers/editoraController.php';
+    require_once $_SERVER['DOCUMENT_ROOT'] . '/Projeto_Livraria_Web/src/controllers/telefoneeditoraController.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,6 +16,13 @@
 
 <body class="background-dark-light">
     <?php require_once '../components/header.php'; ?>
+    <?php 
+        $editoraController = new EditoraController();
+        $editora = $editoraController->buscarPorId($_GET['codEditora']);
+
+        $telefoneeditoraController = new TelefoneEditoraController();
+        $telefoneeditora = $telefoneeditoraController->buscarPorId($_GET['codEditora']);
+    ?>
     <div class="background-image-author border-bottom border-5 border-warning"></div>
     <div class="mx-auto author-div overflow-hidden">
         <div class="card bg-transparent border-0">
@@ -20,9 +32,9 @@
                 </div>
                 <div class="col-md-9">
                     <div class="card-body py-4 ps-md-5 ms-md-4 text-center text-md-start">
-                        <h2 class="card-title text-warning">Card title</h2>
-                        <h5 class="card-text text-warning">Rua Endereço, 10 - São Paulo - SP - Brasil </h5>
-                        <h5 class="card-text text-warning">🕿 11 12345-6789</h5>
+                        <h2 class="card-title text-warning"><?php echo $editora['nome_editora'];?></h2>
+                        <h5 class="card-text text-warning"><?php echo $editora['endereco_editora'];?></h5>
+                        <h5 class="card-text text-warning">🕿 <?php echo $telefoneeditora['telefone_editora'];?></h5>
                     </div>
                 </div>
             </div>

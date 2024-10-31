@@ -12,10 +12,10 @@ class TelefoneEditoraController {
             $this->inserir();
             header('Location: ../src/views/index.php?acao=semacao');
         } else if($_GET['acao'] == 'atualizar') {
-            $this->atualizar($_GET['id']);
+            $this->atualizar($_POST['codigo']);
             header('Location: ../src/views/index.php?acao=semacao');
         } else if($_GET['acao'] == 'excluir') {
-            $this->excluir($_GET['id']);
+            $this->excluir($_POST['codigo']);
             header('Location: ../src/views/index.php?acao=semacao');
         }
     }

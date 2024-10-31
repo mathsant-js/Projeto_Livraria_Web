@@ -11,13 +11,13 @@ class EditoraController {
         
         if($_GET['acao'] == 'inserir') {
             $this->inserir();
-            header('Location: ../src/views/index.php?acao=semacao');
+            header('Location: ../views/index.php?acao=semacao');
         } else if($_GET['acao'] == 'atualizar') {
             $this->atualizar($_GET['id']);
-            header('Location: ../src/views/index.php?acao=semacao');
+            header('Location: ../views/index.php?acao=semacao');
         } else if($_GET['acao'] == 'excluir') {
             $this->excluir($_GET['id']);
-            header('Location: ../src/views/index.php?acao=semacao');
+            header('Location: ../views/index.php?acao=semacao');
         }
     }
 
@@ -26,6 +26,9 @@ class EditoraController {
         $this->editora->setEnderecoEditora($_POST['endereco']);
 
         $this->editora->inserir();
+
+        $telefoneeditoracontroller = new TelefoneEditoraController();
+        $telefoneeditoracontroller->inserir();
     }
 
     public function listar(){
@@ -37,6 +40,9 @@ class EditoraController {
     }
 
     public function atualizar($codEditora){
+        $telefoneeditoracontroller = new TelefoneEditoraController();
+        $telefoneeditoracontroller->atualizar($codEditora);
+
         $this->editora->setCodEditora($codEditora);
         $this->editora->setNomeEditora($_POST['nome']);
         $this->editora->setEnderecoEditora($_POST['endereco']);
@@ -45,6 +51,9 @@ class EditoraController {
     }
 
     public function excluir($codEditora) {
+        $telefoneeditoracontroller = new TelefoneEditoraController();
+        $telefoneeditoracontroller->excluir($codEditora);
+
         $this->editora->excluir($codEditora);
     }
 }
