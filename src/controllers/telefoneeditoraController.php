@@ -7,21 +7,10 @@ class TelefoneEditoraController {
 
     public function __construct() {
         $this->telefoneeditora = new TelefoneEditora();
-        
-        if($_GET['acao'] == 'inserir') {
-            $this->inserir();
-            header('Location: ../views/index.php?acao=semacao');
-        } else if($_GET['acao'] == 'atualizar') {
-            $this->atualizar($_POST['codigo']);
-            header('Location: ../views/index.php?acao=semacao');
-        } else if($_GET['acao'] == 'excluir') {
-            $this->excluir($_POST['codigo']);
-            header('Location: ../views/index.php?acao=semacao');
-        }
     }
 
-    public function inserir() {
-        $this->telefoneeditora->setCodEditora($_POST['codigo']);
+    public function inserir($codEditora) {
+        $this->telefoneeditora->setCodEditora($codEditora);
         $this->telefoneeditora->setTelefoneEditora($_POST['telefone']);
 
         $this->telefoneeditora->inserir();

@@ -23,20 +23,20 @@
                 <h2 class="text-warning ms-md-3 mb-4 w-100">Dados da Editora</h2>
                 
                 <div class="col-md-2 form-floating col mb-3">
-                    <input type="number" class="form-control text-warning background-dark-light border-bottom border-top-0 border-start-0 border-end-0 border-3 rounded-bottom-0 border-warning me-2" id="codigo" name="codigo" placeholder="Código" readonly>
-                    <label for="codigo" class="ms-3">Código</label>
+                    <input type="number" class="form-control text-white background-dark-light border-bottom border-top-0 border-start-0 border-end-0 border-3 rounded-bottom-0 border-warning me-2" id="codigo" name="codigo" placeholder="Código" readonly>
+                    <label for="codigo" class="text-warning ms-3">Código</label>
                 </div>
                 <div class="col-md-10 form-floating col mb-3">
-                    <input type="text" class="form-control text-warning background-dark-light border-bottom border-top-0 border-start-0 border-end-0 border-3 rounded-bottom-0 border-warning me-2" id="nome" name="nome" placeholder="Nome" required>
-                    <label for="nome" class="ms-3">Nome</label>
+                    <input type="text" class="form-control text-white background-dark-light border-bottom border-top-0 border-start-0 border-end-0 border-3 rounded-bottom-0 border-warning me-2" id="nome" name="nome" placeholder="Nome" required>
+                    <label for="nome" class="text-warning ms-3">Nome</label>
                 </div>
                 <div class="form-floating col mb-4">
-                    <input type="text" class="form-control text-warning background-dark-light border-bottom border-top-0 border-start-0 border-end-0 border-3 rounded-bottom-0 border-warning me-2" id="endereco" name="endereco" placeholder="Endereço" required>
-                    <label for="endereco" class="ms-3">Endereço</label>
+                    <input type="text" class="form-control text-white background-dark-light border-bottom border-top-0 border-start-0 border-end-0 border-3 rounded-bottom-0 border-warning me-2" id="endereco" name="endereco" placeholder="Endereço" required>
+                    <label for="endereco" class="text-warning ms-3">Endereço</label>
                 </div>
                 <div class="form-floating col mb-4">
-                    <input type="text" class="form-control text-warning background-dark-light border-bottom border-top-0 border-start-0 border-end-0 border-3 rounded-bottom-0 border-warning me-2" id="telefone" name="telefone" placeholder="Telefone" required>
-                    <label for="telefone" class="ms-3">Telefone</label>
+                    <input type="text" class="form-control text-white background-dark-light border-bottom border-top-0 border-start-0 border-end-0 border-3 rounded-bottom-0 border-warning me-2" id="telefone" name="telefone" placeholder="Telefone" required>
+                    <label for="telefone" class="text-warning ms-3">Telefone</label>
                 </div>
                 <div class="w-100 text-center text-md-start">
                     <button type="submit" class="btn btn-warning btn-lg text-white text-center px-5">Cadastrar</button>

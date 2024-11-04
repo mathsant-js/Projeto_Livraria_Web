@@ -44,7 +44,8 @@ class Editora {
         $sql = "INSERT INTO editora (`nome_editora`, `endereco_editora`) VALUES (?,?);";
         $stmt = $this->conexao->getConexao()->prepare($sql);
         $stmt->bind_param('ss', $this->nomeEditora, $this->enderecoEditora);
-        return $stmt->execute();
+        $stmt->execute();
+        return $stmt->insert_id;
     }
 
     // listar

@@ -25,10 +25,10 @@ class EditoraController {
         $this->editora->setNomeEditora($_POST['nome']);
         $this->editora->setEnderecoEditora($_POST['endereco']);
 
-        $this->editora->inserir();
+        $codEditora = $this->editora->inserir();
 
         $telefoneeditoracontroller = new TelefoneEditoraController();
-        $telefoneeditoracontroller->inserir();
+        $telefoneeditoracontroller->inserir($codEditora);
     }
 
     public function listar(){
