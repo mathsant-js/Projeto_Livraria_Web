@@ -18,20 +18,20 @@
                 <h2 class="text-warning ms-md-3 mb-4 w-100">Dados da compra</h2>
                 
                 <div class="col-md-2 form-floating col mb-3">
-                    <input type="number" class="form-control text-warning background-dark-light border-bottom border-top-0 border-start-0 border-end-0 border-3 rounded-bottom-0 border-warning me-2" id="codigo" name="codigo" placeholder="Código" required>
-                    <label for="codigo" class="ms-3">Código do cliente</label>
+                    <input type="number" class="form-control text-white background-dark-light border-bottom border-top-0 border-start-0 border-end-0 border-3 rounded-bottom-0 border-warning me-2" id="codigo" name="codigo" placeholder="Código" required>
+                    <label for="codigo" class="text-warning ms-3">Código do cliente</label>
                 </div>
                 <div class="col-md-10 form-floating col mb-3">
-                    <input type="text" class="form-control text-warning background-dark-light border-bottom border-top-0 border-start-0 border-end-0 border-3 rounded-bottom-0 border-warning me-2" id="nomecliente" name="nomecliente" placeholder="Nome do cliente" required>
-                    <label for="nomecliente" class="ms-3">Nome do cliente</label>
+                    <input type="text" class="form-control text-white background-dark-light border-bottom border-top-0 border-start-0 border-end-0 border-3 rounded-bottom-0 border-warning me-2" id="nomecliente" name="nomecliente" placeholder="Nome do cliente" required>
+                    <label for="nomecliente" class="text-warning ms-3">Nome do cliente</label>
                 </div>
                 <div class="form-floating col mb-3">
-                    <input type="text" class="form-control text-warning background-dark-light border-bottom border-top-0 border-start-0 border-end-0 border-3 rounded-bottom-0 border-warning me-2" id="metodopag" name="metodopag" placeholder="Método de Pagamento" required>
-                    <label for="metodopag" class="ms-3">Método de Pagamento</label>
+                    <input type="text" class="form-control text-white background-dark-light border-bottom border-top-0 border-start-0 border-end-0 border-3 rounded-bottom-0 border-warning me-2" id="metodopag" name="metodopag" placeholder="Método de Pagamento" required>
+                    <label for="metodopag" class="text-warning ms-3">Método de Pagamento</label>
                 </div>
                 <div class="form-floating col mb-4">
-                    <input type="date" class="form-control text-warning background-dark-light border-bottom border-top-0 border-start-0 border-end-0 border-3 rounded-bottom-0 border-warning me-2" id="prazo" name="prazo" placeholder="Prazo de Entrega" required>
-                    <label for="prazo" class="ms-3">Prazo de Entrega</label>
+                    <input type="date" class="form-control text-white background-dark-light border-bottom border-top-0 border-start-0 border-end-0 border-3 rounded-bottom-0 border-warning me-2" id="prazo" name="prazo" placeholder="Prazo de Entrega" required>
+                    <label for="prazo" class="text-warning ms-3">Prazo de Entrega</label>
                 </div>
                 <div class="col-md-12 mb-3">
                     <table class="table table-bordered text-break table-sm">

@@ -22,36 +22,36 @@
                 <p class="text-white text-center mt-2">Já possui uma conta? <a href="" class="link-warning">Entre agora.</a></p>
 
                 <div class="form-floating mb-3">
-                    <input type="text" class="form-control text-warning background-dark-light border-bottom border-top-0 border-start-0 border-end-0 border-3 rounded-bottom-0 border-warning me-2" id="nome" name="nome" placeholder="Nome">
-                    <label for="nome">Nome</label>
+                    <input type="text" class="form-control text-white background-dark-light border-bottom border-top-0 border-start-0 border-end-0 border-3 rounded-bottom-0 border-warning me-2" id="nome" name="nome" placeholder="Nome">
+                    <label for="nome" class="text-warning">Nome</label>
                 </div>
                 <div class="form-floating mb-3">
-                    <input type="text" class="form-control text-warning background-dark-light border-bottom border-top-0 border-start-0 border-end-0 border-3 rounded-bottom-0 border-warning me-2" id="cpf" name="cpf" placeholder="CPF">
-                    <label for="cpf">CPF</label>
+                    <input type="text" class="form-control text-white background-dark-light border-bottom border-top-0 border-start-0 border-end-0 border-3 rounded-bottom-0 border-warning me-2" id="cpf" name="cpf" placeholder="CPF">
+                    <label for="cpf" class="text-warning">CPF</label>
                 </div>
                 <div class="form-floating mb-3">
-                    <input type="date" class="form-control text-warning background-dark-light border-bottom border-top-0 border-start-0 border-end-0 border-3 rounded-bottom-0 border-warning me-2" id="datanasc" name="datanasc" placeholder="Data de Nascimento">
-                    <label for="datanasc">Data de Nascimento</label>
+                    <input type="date" class="form-control text-white background-dark-light border-bottom border-top-0 border-start-0 border-end-0 border-3 rounded-bottom-0 border-warning me-2" id="datanasc" name="datanasc" placeholder="Data de Nascimento">
+                    <label for="datanasc" class="text-warning">Data de Nascimento</label>
                 </div>
                 <div class="form-floating mb-3">
-                    <input type="email" class="form-control text-warning background-dark-light border-bottom border-top-0 border-start-0 border-end-0 border-3 rounded-bottom-0 border-warning me-2" id="email" name="email" placeholder="Email">
-                    <label for="email">Email</label>
+                    <input type="email" class="form-control text-white background-dark-light border-bottom border-top-0 border-start-0 border-end-0 border-3 rounded-bottom-0 border-warning me-2" id="email" name="email" placeholder="Email">
+                    <label for="email" class="text-warning">Email</label>
                 </div>
                 <div class="form-floating mb-3">
-                    <input type="text" class="form-control text-warning background-dark-light border-bottom border-top-0 border-start-0 border-end-0 border-3 rounded-bottom-0 border-warning me-2" id="telefone" name="telefone" placeholder="Telefone">
-                    <label for="text">Telefone</label>
+                    <input type="text" class="form-control text-white background-dark-light border-bottom border-top-0 border-start-0 border-end-0 border-3 rounded-bottom-0 border-warning me-2" id="telefone" name="telefone" placeholder="Telefone">
+                    <label for="text" class="text-warning">Telefone</label>
                 </div>
                 <div class="form-floating mb-3">
-                    <input type="text" class="form-control text-warning background-dark-light border-bottom border-top-0 border-start-0 border-end-0 border-3 rounded-bottom-0 border-warning me-2" id="endereco" name="endereco" placeholder="Endereço">
-                    <label for="text">Endereço</label>
+                    <input type="text" class="form-control text-white background-dark-light border-bottom border-top-0 border-start-0 border-end-0 border-3 rounded-bottom-0 border-warning me-2" id="endereco" name="endereco" placeholder="Endereço">
+                    <label for="text" class="text-warning">Endereço</label>
                 </div>
                 <div class="form-floating mb-3">
-                    <input type="password" class="form-control text-warning background-dark-light border-bottom border-top-0 border-start-0 border-end-0 border-3 rounded-bottom-0 border-warning me-2" id="senha" name="senha" placeholder="Senha">
-                    <label for="senha">Senha</label>
+                    <input type="password" class="form-control text-white background-dark-light border-bottom border-top-0 border-start-0 border-end-0 border-3 rounded-bottom-0 border-warning me-2" id="senha" name="senha" placeholder="Senha">
+                    <label for="senha" class="text-warning">Senha</label>
                 </div>
                 <div class="form-floating mb-3">
-                    <input type="password" class="form-control text-warning background-dark-light border-bottom border-top-0 border-start-0 border-end-0 border-3 rounded-bottom-0 border-warning me-2" id="confsenha" name="confsenha" placeholder="Confirmar Senha">
-                    <label for="confsenha">Confirmar Senha</label>
+                    <input type="password" class="form-control text-white background-dark-light border-bottom border-top-0 border-start-0 border-end-0 border-3 rounded-bottom-0 border-warning me-2" id="confsenha" name="confsenha" placeholder="Confirmar Senha">
+                    <label for="confsenha" class="text-warning">Confirmar Senha</label>
                 </div>
                 <div class="w-100 text-center">
                     <button type="submit" class="btn btn-warning btn-lg text-white text-center m-3 px-5">Cadastrar</button>

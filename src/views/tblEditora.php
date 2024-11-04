@@ -18,15 +18,9 @@
     <?php require_once '../components/header.php'; ?>
     <div class="container w-100 mx-auto mt-4">
         <h5><a href="javascript:history.back()" class="link-warning">< Voltar</a></h5>
-        <div class="border-warning bg-dark text-white mx-auto p-4 rounded-4 order-1 order-lg-2 mt-4">
-            <?php 
-                $editoraController = new EditoraController();
-                $editora = $editoraController->buscarPorId($_GET['codEditora']);
+        <div class="border-warning bg-dark text-white p-4 mx-auto rounded-4 order-1 order-lg-2 mt-4 overflow-x-scroll">
+            <h2 class="text-warning ms-md-3 mb-4">Lista de Editoras</h2>
 
-                $telefoneeditoraController = new TelefoneEditoraController();
-                $telefoneeditora = $telefoneeditoraController->buscarPorId($_GET['codEditora']);
-            ?>
-            
             <table class="table">
                 <thead>
                     <tr>

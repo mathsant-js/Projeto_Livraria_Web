@@ -10,13 +10,13 @@ class TelefoneClienteController {
         
         if($_GET['acao'] == 'inserir') {
             $this->inserir();
-            header('Location: ../src/views/index.php?acao=semacao');
+            header('Location: ../views/index.php?acao=semacao');
         } else if($_GET['acao'] == 'atualizar') {
-            $this->atualizar($_GET['id']);
-            header('Location: ../src/views/index.php?acao=semacao');
+            $this->atualizar($_POST['codigo']);
+            header('Location: ../views/index.php?acao=semacao');
         } else if($_GET['acao'] == 'excluir') {
-            $this->excluir($_GET['id']);
-            header('Location: ../src/views/index.php?acao=semacao');
+            $this->excluir($_POST['codigo']);
+            header('Location: ../views/index.php?acao=semacao');
         }
     }
 

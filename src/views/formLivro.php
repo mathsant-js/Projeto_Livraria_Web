@@ -18,52 +18,52 @@
                 <h2 class="text-warning ms-md-3 mb-4 w-100">Dados do Livro</h2>
                 
                 <div class="col-md-2 form-floating col mb-3">
-                    <input type="number" class="form-control text-warning background-dark-light border-bottom border-top-0 border-start-0 border-end-0 border-3 rounded-bottom-0 border-warning me-2" id="codlivro" name="codlivro" placeholder="Código do Livro" required>
-                    <label for="codlivro" class="ms-3">Código do Livro</label>
+                    <input type="number" class="form-control text-white background-dark-light border-bottom border-top-0 border-start-0 border-end-0 border-3 rounded-bottom-0 border-warning me-2" id="codlivro" name="codlivro" placeholder="Código do Livro" required>
+                    <label for="codlivro" class="text-warning ms-3">Código do Livro</label>
                 </div>
                 <div class="col-md-10 form-floating col mb-3">
-                    <input type="text" class="form-control text-warning background-dark-light border-bottom border-top-0 border-start-0 border-end-0 border-3 rounded-bottom-0 border-warning me-2" id="nomelivro" name="nomelivro" placeholder="Nome do Livro" required>
-                    <label for="nomelivro" class="ms-3">Nome do Livro</label>
+                    <input type="text" class="form-control text-white background-dark-light border-bottom border-top-0 border-start-0 border-end-0 border-3 rounded-bottom-0 border-warning me-2" id="nomelivro" name="nomelivro" placeholder="Nome do Livro" required>
+                    <label for="nomelivro" class="text-warning ms-3">Nome do Livro</label>
                 </div>
                 <div class="col-md-4 form-floating col mb-3">
-                    <input type="text" class="form-control text-warning background-dark-light border-bottom border-top-0 border-start-0 border-end-0 border-3 rounded-bottom-0 border-warning me-2" id="isbn" name="isbn" placeholder="ISBN" required>
-                    <label for="isbn" class="ms-3">ISBN</label>
+                    <input type="text" class="form-control text-white background-dark-light border-bottom border-top-0 border-start-0 border-end-0 border-3 rounded-bottom-0 border-warning me-2" id="isbn" name="isbn" placeholder="ISBN" required>
+                    <label for="isbn" class="text-warning ms-3">ISBN</label>
                 </div>
                 <div class=" col-md-4 form-floating col mb-3">
-                    <input type="date" class="form-control text-warning background-dark-light border-bottom border-top-0 border-start-0 border-end-0 border-3 rounded-bottom-0 border-warning me-2" id="datalanc" name="datalanc" placeholder="Data de Lançamento" required>
-                    <label for="datalanc" class="ms-3">Data de Lançamento</label>
+                    <input type="date" class="form-control text-white background-dark-light border-bottom border-top-0 border-start-0 border-end-0 border-3 rounded-bottom-0 border-warning me-2" id="datalanc" name="datalanc" placeholder="Data de Lançamento" required>
+                    <label for="datalanc" class="text-warning ms-3">Data de Lançamento</label>
                 </div>
                 <div class="col-md-4 form-floating col mb-3">
-                    <input type="text" class="form-control text-warning background-dark-light border-bottom border-top-0 border-start-0 border-end-0 border-3 rounded-bottom-0 border-warning me-2" id="preco" name="preco" placeholder="Preço" required>
-                    <label for="preco" class="ms-3">Preço</label>
+                    <input type="text" class="form-control text-white background-dark-light border-bottom border-top-0 border-start-0 border-end-0 border-3 rounded-bottom-0 border-warning me-2" id="preco" name="preco" placeholder="Preço" required>
+                    <label for="preco" class="text-warning ms-3">Preço</label>
                 </div>
                 <div class="col-md-2 form-floating col mb-3">
-                    <input type="number" class="form-control text-warning background-dark-light border-bottom border-top-0 border-start-0 border-end-0 border-3 rounded-bottom-0 border-warning me-2" id="codautor" name="codautor" placeholder="Código do Autor" required>
-                    <label for="codautor" class="ms-3">Código do Autor</label>
+                    <input type="number" class="form-control text-white background-dark-light border-bottom border-top-0 border-start-0 border-end-0 border-3 rounded-bottom-0 border-warning me-2" id="codautor" name="codautor" placeholder="Código do Autor" required>
+                    <label for="codautor" class="text-warning ms-3">Código do Autor</label>
                 </div>
                 <div class="col-md-10 form-floating col mb-3">
-                    <input type="text" class="form-control text-warning background-dark-light border-bottom border-top-0 border-start-0 border-end-0 border-3 rounded-bottom-0 border-warning me-2" id="nomeautor" name="nomeautor" placeholder="Nome do Autor" required>
-                    <label for="nomeautor" class="ms-3">Nome do Autor</label>
+                    <input type="text" class="form-control text-white background-dark-light border-bottom border-top-0 border-start-0 border-end-0 border-3 rounded-bottom-0 border-warning me-2" id="nomeautor" name="nomeautor" placeholder="Nome do Autor" required>
+                    <label for="nomeautor" class="text-warning ms-3">Nome do Autor</label>
                 </div>
                 <div class="col-md-2 form-floating col mb-3">
-                    <input type="number" class="form-control text-warning background-dark-light border-bottom border-top-0 border-start-0 border-end-0 border-3 rounded-bottom-0 border-warning me-2" id="codeditora" name="codeditora" placeholder="Código da Editora" required>
-                    <label for="codeditora" class="ms-3">Código da Editora</label>
+                    <input type="number" class="form-control text-white background-dark-light border-bottom border-top-0 border-start-0 border-end-0 border-3 rounded-bottom-0 border-warning me-2" id="codeditora" name="codeditora" placeholder="Código da Editora" required>
+                    <label for="codeditora" class="text-warning ms-3">Código da Editora</label>
                 </div>
                 <div class="col-md-10 form-floating col mb-3">
-                    <input type="text" class="form-control text-warning background-dark-light border-bottom border-top-0 border-start-0 border-end-0 border-3 rounded-bottom-0 border-warning me-2" id="nomeeditora" name="nomeeditora" placeholder="Nome da Editora" required>
-                    <label for="nomeeditora" class="ms-3">Nome da Editora</label>
+                    <input type="text" class="form-control text-white background-dark-light border-bottom border-top-0 border-start-0 border-end-0 border-3 rounded-bottom-0 border-warning me-2" id="nomeeditora" name="nomeeditora" placeholder="Nome da Editora" required>
+                    <label for="nomeeditora" class="text-warning ms-3">Nome da Editora</label>
                 </div>
                 <div class="col-md-2 form-floating col mb-3">
-                    <input type="number" class="form-control text-warning background-dark-light border-bottom border-top-0 border-start-0 border-end-0 border-3 rounded-bottom-0 border-warning me-2" id="codgenero" name="codgenero" placeholder="Código do Gênero" required>
-                    <label for="codgenero" class="ms-3">Código do Gênero</label>
+                    <input type="number" class="form-control text-white background-dark-light border-bottom border-top-0 border-start-0 border-end-0 border-3 rounded-bottom-0 border-warning me-2" id="codgenero" name="codgenero" placeholder="Código do Gênero" required>
+                    <label for="codgenero" class="text-warning ms-3">Código do Gênero</label>
                 </div>
                 <div class="col-md-10 form-floating col mb-3">
-                    <input type="text" class="form-control text-warning background-dark-light border-bottom border-top-0 border-start-0 border-end-0 border-3 rounded-bottom-0 border-warning me-2" id="nomegenero" name="nomegenero" placeholder="Nome do Gênero" required>
-                    <label for="nomegenero" class="ms-3">Nome do Gênero</label>
+                    <input type="text" class="form-control text-white background-dark-light border-bottom border-top-0 border-start-0 border-end-0 border-3 rounded-bottom-0 border-warning me-2" id="nomegenero" name="nomegenero" placeholder="Nome do Gênero" required>
+                    <label for="nomegenero" class="text-warning ms-3">Nome do Gênero</label>
                 </div>
                 <div class="col-md-12 form-floating col mb-4">
-                    <textarea class="form-control text-warning background-dark-light border-bottom border-top-0 border-start-0 border-end-0 border-3 rounded-bottom-0 border-warning me-2" id="descricao" name="descricao" placeholder="Descrição" rows="12" style="height: 18em; resize: none;" required></textarea>
-                    <label for="descricao" class="ms-3">Descrição</label>
+                    <textarea class="form-control text-white background-dark-light border-bottom border-top-0 border-start-0 border-end-0 border-3 rounded-bottom-0 border-warning me-2" id="descricao" name="descricao" placeholder="Descrição" rows="12" style="height: 18em; resize: none;" required></textarea>
+                    <label for="descricao" class="text-warning ms-3">Descrição</label>
                 </div>
                 <div class="w-100 text-center text-md-start">
                     <button type="submit" class="btn btn-warning btn-lg text-white text-center px-5">Cadastrar</button>

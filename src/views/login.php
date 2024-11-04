@@ -22,12 +22,12 @@
                 <p class="text-white text-center mt-2">Ainda não possui uma conta? <a href="" class="link-warning">Cadastre-se agora.</a></p>
 
                 <div class="form-floating mb-3">
-                    <input type="email" class="form-control text-warning background-dark-light border-bottom border-top-0 border-start-0 border-end-0 border-3 rounded-bottom-0 border-warning me-2" id="email" name="email" placeholder="Email">
-                    <label for="email">Digite seu email</label>
+                    <input type="email" class="form-control text-white background-dark-light border-bottom border-top-0 border-start-0 border-end-0 border-3 rounded-bottom-0 border-warning me-2" id="email" name="email" placeholder="Email">
+                    <label for="email" class="text-warning">Digite seu email</label>
                 </div>
                 <div class="form-floating mb-2">
-                    <input type="password" class="form-control text-warning background-dark-light border-bottom border-top-0 border-start-0 border-end-0 border-3 rounded-bottom-0 border-warning me-2" id="senha" name="senha" placeholder="Senha">
-                    <label for="senha">Digite sua senha</label>
+                    <input type="password" class="form-control text-white background-dark-light border-bottom border-top-0 border-start-0 border-end-0 border-3 rounded-bottom-0 border-warning me-2" id="senha" name="senha" placeholder="Senha">
+                    <label for="senha" class="text-warning">Digite sua senha</label>
                 </div>
                 <a href="" class="link-warning mb-3">Esqueci minha senha</a>
 

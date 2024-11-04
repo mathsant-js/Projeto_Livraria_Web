@@ -23,7 +23,7 @@
                 <h2 class="text-warning ms-md-3 mb-4 w-100">Dados da Editora</h2>
                 
                 <div class="col-md-2 form-floating col mb-3">
-                    <input type="number" class="form-control text-warning background-dark-light border-bottom border-top-0 border-start-0 border-end-0 border-3 rounded-bottom-0 border-warning me-2" id="codigo" name="codigo" placeholder="Código" required readonly>
+                    <input type="number" class="form-control text-warning background-dark-light border-bottom border-top-0 border-start-0 border-end-0 border-3 rounded-bottom-0 border-warning me-2" id="codigo" name="codigo" placeholder="Código" readonly>
                     <label for="codigo" class="ms-3">Código</label>
                 </div>
                 <div class="col-md-10 form-floating col mb-3">
