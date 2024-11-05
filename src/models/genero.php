@@ -74,7 +74,7 @@ class Genero {
     public function atualizar($codGenero) {
         $sql = "UPDATE genero SET nome_genero = ?, descricao_genero = ? WHERE cod_genero = ?";
         $stmt = $this->conexao->getConexao()->prepare($sql);
-        $stmt->bind_param('ssssi', $this->nomeGenero, $this->descricaoGenero, $codGenero);
+        $stmt->bind_param('ssi', $this->nomeGenero, $this->descricaoGenero, $codGenero);
         return $stmt->execute();
     }
 
