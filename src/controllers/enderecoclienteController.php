@@ -7,21 +7,10 @@ class EnderecoClienteController {
 
     public function __construct() {
         $this->enderecocliente = new EnderecoCliente();
-        
-        if($_GET['acao'] == 'inserir') {
-            $this->inserir();
-            header('Location: ../views/index.php?acao=semacao');
-        } else if($_GET['acao'] == 'atualizar') {
-            $this->atualizar($_POST['codigo']);
-            header('Location: ../views/index.php?acao=semacao');
-        } else if($_GET['acao'] == 'excluir') {
-            $this->excluir($_POST['codigo']);
-            header('Location: ../views/index.php?acao=semacao');
-        }
     }
 
-    public function inserir() {
-        $this->enderecocliente->setCodCliente($_POST['codigo']);
+    public function inserir($codCliente) {
+        $this->enderecocliente->setCodCliente($codCliente);
         $this->enderecocliente->setEnderecoCliente($_POST['endereco']);
 
         $this->enderecocliente->inserir();

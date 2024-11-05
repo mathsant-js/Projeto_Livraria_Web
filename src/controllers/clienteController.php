@@ -1,6 +1,9 @@
 <?php
 
 require_once $_SERVER['DOCUMENT_ROOT'] . '/Projeto_Livraria_Web/src/models/cliente.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/Projeto_Livraria_Web/src/controllers/emailclienteController.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/Projeto_Livraria_Web/src/controllers/telefoneclienteController.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/Projeto_Livraria_Web/src/controllers/enderecoclienteController.php';
 
 class ClienteController {
     private $cliente;
@@ -26,7 +29,16 @@ class ClienteController {
         $this->cliente->setDatanascCliente($_POST['datanasc']);
         $this->cliente->setSenhaCliente($_POST['senha']);
 
-        $this->cliente->inserir();
+        $codCliente = $this->cliente->inserir();
+
+        $emailclientecontroller = new EmailClienteController();
+        $emailclientecontroller->inserir($codCliente);
+
+        $telefoneclientecontroller = new TelefoneClienteController();
+        $telefoneclientecontroller->inserir($codCliente);
+
+        $enderecoclientecontroller = new EnderecoClienteController();
+        $enderecoclientecontroller->inserir($codCliente);
     }
 
     public function listar(){
@@ -38,6 +50,15 @@ class ClienteController {
     }
 
     public function atualizar($codCliente){
+        $emailclientecontroller = new EmailClienteController();
+        $emailclientecontroller->atualizar($codCliente);
+
+        $telefoneclientecontroller = new TelefoneClienteController();
+        $telefoneclientecontroller->atualizar($codCliente);
+
+        $enderecoclientecontroller = new EnderecoClienteController();
+        $enderecoclientecontroller->atualizar($codCliente);
+
         $this->cliente->setCodCliente($codCliente);
         $this->cliente->setNomeCliente($_POST['nome']);
         $this->cliente->setCpfCliente($_POST['cpf']);
@@ -48,6 +69,15 @@ class ClienteController {
     }
 
     public function excluir($codCliente) {
+        $emailclientecontroller = new EmailClienteController();
+        $emailclientecontroller->excluir($codCliente);
+
+        $telefoneclientecontroller = new TelefoneClienteController();
+        $telefoneclientecontroller->excluir($codCliente);
+
+        $enderecoclientecontroller = new EnderecoClienteController();
+        $enderecoclientecontroller->excluir($codCliente);
+
         $this->cliente->excluir($codCliente);
     }
 }
