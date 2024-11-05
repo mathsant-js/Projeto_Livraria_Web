@@ -1,8 +1,3 @@
-<?php
-    require_once $_SERVER['DOCUMENT_ROOT'] . '/Projeto_Livraria_Web/src/controllers/clienteController.php';
-    require_once $_SERVER['DOCUMENT_ROOT'] . '/Projeto_Livraria_Web/src/controllers/telefoneclienteController.php';
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
