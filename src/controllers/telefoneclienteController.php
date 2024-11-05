@@ -7,21 +7,10 @@ class TelefoneClienteController {
 
     public function __construct() {
         $this->telefonecliente = new TelefoneCliente();
-        
-        if($_GET['acao'] == 'inserir') {
-            $this->inserir();
-            header('Location: ../views/index.php?acao=semacao');
-        } else if($_GET['acao'] == 'atualizar') {
-            $this->atualizar($_POST['codigo']);
-            header('Location: ../views/index.php?acao=semacao');
-        } else if($_GET['acao'] == 'excluir') {
-            $this->excluir($_POST['codigo']);
-            header('Location: ../views/index.php?acao=semacao');
-        }
     }
 
-    public function inserir() {
-        $this->telefonecliente->setCodCliente($_POST['codigo']);
+    public function inserir($codCliente) {
+        $this->telefonecliente->setCodCliente($codCliente);
         $this->telefonecliente->setTelefoneCliente($_POST['telefone']);
 
         $this->telefonecliente->inserir();

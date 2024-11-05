@@ -7,21 +7,10 @@ class EmailClienteController {
 
     public function __construct() {
         $this->emailcliente = new EmailCliente();
-        
-        if($_GET['acao'] == 'inserir') {
-            $this->inserir();
-            header('Location: ../views/index.php?acao=semacao');
-        } else if($_GET['acao'] == 'atualizar') {
-            $this->atualizar($_POST['codigo']);
-            header('Location: ../views/index.php?acao=semacao');
-        } else if($_GET['acao'] == 'excluir') {
-            $this->excluir($_POST['codigo']);
-            header('Location: ../views/index.php?acao=semacao');
-        }
     }
 
-    public function inserir() {
-        $this->emailcliente->setCodCliente($_POST['codigo']);
+    public function inserir($codCliente) {
+        $this->emailcliente->setCodCliente($codCliente);
         $this->emailcliente->setEmailCliente($_POST['email']);
 
         $this->emailcliente->inserir();

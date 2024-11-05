@@ -62,7 +62,8 @@ class Cliente {
         $sql = "INSERT INTO cliente (`nome_cliente`, `cpf_cliente`, `data_nascimento_cliente`, `senha_cliente`) VALUES (?,?,?,?);";
         $stmt = $this->conexao->getConexao()->prepare($sql);
         $stmt->bind_param('ssss', $this->nomeCliente, $this->cpfCliente, $this->datanascCliente, $this->senhaCliente);
-        return $stmt->execute();
+        $stmt->execute();
+        return $stmt->insert_id;
     }
 
     // listar
