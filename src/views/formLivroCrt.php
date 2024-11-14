@@ -12,11 +12,13 @@
 <body class="background-dark-light">
     <?php require_once '../components/header.php'; ?>
     <div class="container w-100 mx-auto mt-4">
-        <h5><a href="javascript:history.back()" class="link-warning">< Voltar</a></h5>
+        <h5><a href="javascript:history.back()" class="link-warning">
+                < Voltar</a>
+        </h5>
         <div class="border-warning bg-dark text-white mx-auto p-4 rounded-4 order-1 order-lg-2 mt-4">
             <form class="row row-cols-1 row-cols-md-2 text-start mx-md-3">
                 <h2 class="text-warning ms-md-3 mb-4 w-100">Dados do Livro</h2>
-                
+
                 <div class="col-md-2 form-floating col mb-3">
                     <input type="number" class="form-control text-white background-dark-light border-bottom border-top-0 border-start-0 border-end-0 border-3 rounded-bottom-0 border-warning me-2" id="codlivro" name="codlivro" placeholder="Código do Livro" readonly>
                     <label for="codlivro" class="text-warning ms-3">Código</label>
@@ -41,25 +43,46 @@
                     <input type="number" class="form-control text-white background-dark-light border-bottom border-top-0 border-start-0 border-end-0 border-3 rounded-bottom-0 border-warning me-2" id="codautor" name="codautor" placeholder="Código do Autor" readonly>
                     <label for="codautor" class="text-warning ms-3">Código</label>
                 </div>
-                <div class="col-md-10 form-floating col mb-3">
-                    <input type="text" class="form-control text-white background-dark-light border-bottom border-top-0 border-start-0 border-end-0 border-3 rounded-bottom-0 border-warning me-2" id="nomeautor" name="nomeautor" placeholder="Nome do Autor" required>
-                    <label for="nomeautor" class="text-warning ms-3">Nome do Autor</label>
+                <div class="col-md-10 col mb-3">
+                    <div class="form-floating">
+                        <select class="form-select text-white background-dark-light border-bottom border-top-0 border-start-0 border-end-0 border-3 rounded-bottom-0 border-warning me-2" id="floatingSelectGrid">
+                            <option selected disabled>Selecione aqui...</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+                        <label for="floatingSelectGrid" class="text-warning">Selecione um Autor</label>
+                    </div>
                 </div>
                 <div class="col-md-2 form-floating col mb-3">
                     <input type="number" class="form-control text-white background-dark-light border-bottom border-top-0 border-start-0 border-end-0 border-3 rounded-bottom-0 border-warning me-2" id="codeditora" name="codeditora" placeholder="Código da Editora" readonly>
                     <label for="codeditora" class="text-warning ms-3">Código</label>
                 </div>
-                <div class="col-md-10 form-floating col mb-3">
-                    <input type="text" class="form-control text-white background-dark-light border-bottom border-top-0 border-start-0 border-end-0 border-3 rounded-bottom-0 border-warning me-2" id="nomeeditora" name="nomeeditora" placeholder="Nome da Editora" required>
-                    <label for="nomeeditora" class="text-warning ms-3">Nome da Editora</label>
+                <div class="col-md-10 col mb-3">
+                    <div class="form-floating">
+                        <select class="form-select text-white background-dark-light border-bottom border-top-0 border-start-0 border-end-0 border-3 rounded-bottom-0 border-warning me-2" id="floatingSelectGrid">
+                            <option selected disabled>Selecione aqui...</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+                        <label for="floatingSelectGrid" class="text-warning">Selecione uma Editora</label>
+                    </div>
                 </div>
                 <div class="col-md-2 form-floating col mb-3">
                     <input type="number" class="form-control text-white background-dark-light border-bottom border-top-0 border-start-0 border-end-0 border-3 rounded-bottom-0 border-warning me-2" id="codgenero" name="codgenero" placeholder="Código do Gênero" readonly>
                     <label for="codgenero" class="text-warning ms-3">Código</label>
                 </div>
-                <div class="col-md-10 form-floating col mb-3">
-                    <input type="text" class="form-control text-white background-dark-light border-bottom border-top-0 border-start-0 border-end-0 border-3 rounded-bottom-0 border-warning me-2" id="nomegenero" name="nomegenero" placeholder="Nome do Gênero" required>
-                    <label for="nomegenero" class="text-warning ms-3">Nome do Gênero</label>
+                <div class="col-md-10 col mb-3">
+                    <div class="form-floating">
+                        <select class="form-select text-white background-dark-light border-bottom border-top-0 border-start-0 border-end-0 border-3 rounded-bottom-0 border-warning me-2" id="floatingSelectGrid">
+                            <option selected disabled>Selecione aqui...</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+                        <label for="floatingSelectGrid" class="text-warning">Selecione um Gênero</label>
+                    </div>
                 </div>
                 <div class="col-md-12 form-floating col mb-4">
                     <textarea class="form-control text-white background-dark-light border-bottom border-top-0 border-start-0 border-end-0 border-3 rounded-bottom-0 border-warning me-2" id="descricao" name="descricao" placeholder="Descrição" rows="12" style="height: 18em; resize: none;" required></textarea>
@@ -76,4 +99,5 @@
         <?php require_once '../components/footer.php'; ?>
     </div>
 </body>
+
 </html>
