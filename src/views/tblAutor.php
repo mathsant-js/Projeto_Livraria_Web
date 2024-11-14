@@ -20,7 +20,7 @@
         <div class="border-warning bg-dark text-white mx-auto p-4 rounded-4 order-1 order-lg-2 mt-4 overflow-x-scroll">
             <h2 class="text-warning ms-md-3 mb-4">Lista de Autores</h2>
 
-            <table class="table">
+            <table class="table table-dark">
                 <thead>
                     <tr>
                         <th>Código</th>
