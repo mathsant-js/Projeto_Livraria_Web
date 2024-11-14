@@ -20,7 +20,7 @@
         <div class="border-warning bg-dark text-white p-4 mx-auto rounded-4 order-1 order-lg-2 mt-4 overflow-x-scroll">
             <h2 class="text-warning ms-md-3 mb-4">Lista de Clientes</h2>
 
-            <table class="table">
+            <table class="table table-dark">
                 <thead>
                     <tr>
                         <th>Código</th>
@@ -52,6 +52,7 @@
                     <?php } ?>
                 </tbody>
             </table>
+            <a href="<?php echo "formClienteCrt.php?acao=crt&codCliente" . $cliente['cod_cliente'];?>" class="btn btn-warning btn-lg text-white mt-sm-2">Cadastrar Cliente</a>
         </div>
     </div>
 

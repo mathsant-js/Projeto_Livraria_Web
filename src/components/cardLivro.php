@@ -3,7 +3,7 @@ function carregarCard($nomeEditora, $nomeLivro, $nomeAutor, $precoLivro)
 {
     echo '
     <!-- Começo do card -->
-    <div class="col-3">
+    <div class="col-sm-3 col-12">
         <div class="row book-carousel mx-auto mt-3 column-gap-0">
             <div class="col">
                 <a href="#">
