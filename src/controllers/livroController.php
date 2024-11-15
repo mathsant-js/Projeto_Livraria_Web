@@ -1,18 +1,12 @@
 <?php
     require_once $_SERVER['DOCUMENT_ROOT'] . '/Projeto_Livraria_Web/src/models/livro.php';
-    require_once $_SERVER['DOCUMENT_ROOT'] . '/Projeto_Livraria_Web/src/models/genero.php';
-    require_once $_SERVER['DOCUMENT_ROOT'] . '/Projeto_Livraria_Web/src/models/editora.php'; 
 
     class LivroController {
         private $livro;
-        private $genero;
-        private $editora;
     
         public function __construct()
         {
             $this->livro = new Livro();
-            $this->genero = new Genero();
-            $this->editora = new Editora();
     
             if($_GET['acao'] == 'inserir') {
                 $this->inserir();
@@ -44,6 +38,18 @@
             return $this->livro->buscarPorId($codLivro);
         }
     
+        public function buscarNomeAutor(){
+            return $this->livro->buscarNomeAutor();
+        }
+
+        public function buscarNomeGenero(){
+            return $this->livro->buscarNomeGenero();
+        }
+
+        public function buscarNomeEditora(){
+            return $this->livro->buscarNomeEditora();
+        }
+
         public function atualizar($codLivro) {
             $this->livro->setNomeLivro($_POST['nome']);
             $this->livro->setIsbnLivro($_POST['isbn']);

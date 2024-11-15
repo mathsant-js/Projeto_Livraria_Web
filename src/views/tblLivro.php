@@ -82,7 +82,7 @@
                     </div>
                 </tbody>
             </table>
-            <a href="<?php echo "formLivroCrt.php?acao=crt&codCliente" . $livro['cod_livro']; ?>" class="btn btn-warning btn-lg text-white mt-sm-2">Cadastrar Livro</a>
+            <a href="<?php echo "formLivroCrt.php?acao=crt&codLivro=" . $livro['cod_livro']; ?>" class="btn btn-warning btn-lg text-white mt-sm-2">Cadastrar Livro</a>
         </div>
     </div>
     <div class="w-100 mt-5 pt-5">

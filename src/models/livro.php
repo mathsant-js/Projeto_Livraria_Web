@@ -66,11 +66,10 @@ class Livro {
 
     // insert
     public function inserir() {
-        $sql = "INSERT INTO livro (`nome_livro`, `isbn_livro`, `data_lancamento_livro`, `preco_livro`, `descricao_livro`) VALUES (?,?,?,?,?);";
+        $sql = "INSERT INTO livro (`nome_livro`, `isbn_livro`, `data_lancamento`, `preco_livro`, `descricao_livro`) VALUES (?,?,?,?,?);";
         $stmt = $this->conexao->getConexao()->prepare($sql);
         $stmt->bind_param('sssss', $this->nomeLivro, $this->isbnLivro, $this->dataLancamento, $this->precoLivro, $this->descricaoLivro);
-        $stmt->execute();
-        return $stmt->insert_id;
+        return $stmt->execute();
     }
 
     // listar
@@ -96,6 +95,48 @@ class Livro {
         $stmt->execute();
         $result = $stmt->get_result();
         return $result->fetch_assoc();
+    }
+
+    public function buscarNomeAutor() {
+        $sql = "SELECT cod_autor, nome_autor FROM autor";
+        $stmt = $this->conexao->getConexao()->prepare($sql);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        $autores = [];
+
+        while ($autor = $result->fetch_assoc()) {
+            $autores[] = $autor;
+        }
+
+        return $autores;
+    }
+
+    public function buscarNomeEditora() {
+        $sql = "SELECT cod_editora, nome_editora FROM editora";
+        $stmt = $this->conexao->getConexao()->prepare($sql);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        $editoras = [];
+
+        while ($editora = $result->fetch_assoc()) {
+            $editoras[] = $editora;
+        }
+
+        return $editoras;
+    }
+
+    public function buscarNomeGenero() {
+        $sql = "SELECT cod_genero, nome_genero FROM genero";
+        $stmt = $this->conexao->getConexao()->prepare($sql);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        $generos = [];
+
+        while ($genero = $result->fetch_assoc()) {
+            $generos[] = $genero;
+        }
+
+        return $generos;
     }
 
     // update
