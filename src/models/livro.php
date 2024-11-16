@@ -143,8 +143,13 @@ class Livro {
     public function atualizar($codLivro) {
         $sql = "UPDATE livro SET nome_livro = ?, isbn_livro = ?, data_lancamento = ?, preco_livro = ?, descricao_livro = ? WHERE cod_livro = ?";
         $stmt = $this->conexao->getConexao()->prepare($sql);
-        $stmt->bind_param('sssssi', $this->nomeLivro, $this->isbnLivro, $this->dataLancamento, $this->precoLivro, $codLivro);
-        return $stmt->execute();
+        $stmt->bind_param('sssssi', $this->nomeLivro, $this->isbnLivro, $this->dataLancamento, $this->precoLivro, $this->descricaoLivro, $codLivro);
+        if ($stmt->execute()) {
+            return true;
+        } else {
+            error_log("Erro ao atualizar livro: " . $stmt->error);
+            return false;
+        }
     }
 
     // delete
