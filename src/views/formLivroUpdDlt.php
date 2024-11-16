@@ -40,7 +40,7 @@
                 <h2 class="text-warning ms-md-3 mb-4 w-100">Dados do Livro</h2>
 
                 <div class="col-md-2 form-floating col mb-3">
-                    <input type="number" class="form-control text-white background-dark-light border-bottom border-top-0 border-start-0 border-end-0 border-3 rounded-bottom-0 border-warning me-2" id="codlivro" name="codlivro" placeholder="Código do Livro" value="<?php echo $livro['cod_livro']; ?>" readonly>
+                    <input type="number" class="form-control text-white background-dark-light border-bottom border-top-0 border-start-0 border-end-0 border-3 rounded-bottom-0 border-warning me-2" id="codigo" name="codigo" placeholder="Código do Livro" value="<?php echo $livro['cod_livro']; ?>" readonly>
                     <label for="codlivro" class="text-warning ms-3">Código</label>
                 </div>
                 <div class="col-md-10 form-floating col mb-3">
