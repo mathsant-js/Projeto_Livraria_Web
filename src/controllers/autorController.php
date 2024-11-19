@@ -8,15 +8,17 @@ class AutorController {
     public function __construct() {
         $this->autor = new Autor();
         
-        if($_GET['acao'] == 'inserir') {
-            $this->inserir();
-            header('Location: ../views/index.php?acao=semacao');
-        } else if($_GET['acao'] == 'atualizar') {
-            $this->atualizar($_POST['codigo']);
-            header('Location: ../views/index.php?acao=semacao');
-        } else if($_GET['acao'] == 'excluir') {
-            $this->excluir($_POST['codigo']);
-            header('Location: ..views/index.php?acao=semacao');
+        if ($_GET['acao'] ?? null) {
+            if($_GET['acao'] == 'inserir') {
+                $this->inserir();
+                header('Location: ../views/index.php?acao=semacao');
+            } else if($_GET['acao'] == 'atualizar') {
+                $this->atualizar($_POST['codigo']);
+                header('Location: ../views/index.php?acao=semacao');
+            } else if($_GET['acao'] == 'excluir') {
+                $this->excluir($_POST['codigo']);
+                header('Location: ..views/index.php?acao=semacao');
+            }
         }
     }
 
@@ -32,6 +34,22 @@ class AutorController {
 
     public function listar(){
         return $this->autor->listar();
+    }
+
+    public function exibirDescricaoAjax() {
+        if (!isset($_POST['cod_autor']) || empty($_POST['cod_autor'])) {
+            echo json_encode(['error' => 'ID não fornecido']);
+            return;
+        }
+    
+        $id = $_POST['cod_autor'];
+        $descricao = $this->autor->buscarPorId($id);
+    
+        if ($descricao) {
+            echo json_encode($descricao); // Retorna os dados em formato JSON
+        } else {
+            echo json_encode(['error' => 'Autor não encontrado']);
+        }
     }
 
     public function buscarPorId($codAutor){
