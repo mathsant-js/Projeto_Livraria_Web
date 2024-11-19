@@ -11,15 +11,17 @@ class ClienteController {
     public function __construct() {
         $this->cliente = new Cliente();
         
-        if($_GET['acao'] == 'inserir') {
-            $this->inserir();
-            header('Location: ../views/tblCliente.php?acao=semacao');
-        } else if($_GET['acao'] == 'atualizar') {
-            $this->atualizar($_POST['codigo']);
-            header('Location: ../views/tblCliente.php?acao=semacao');
-        } else if($_GET['acao'] == 'excluir') {
-            $this->excluir($_POST['codigo']);
-            header('Location: ../views/tblCliente.php?acao=semacao');
+        if ($_GET['acao'] ?? null) {
+            if($_GET['acao'] == 'inserir') {
+                $this->inserir();
+                header('Location: ../views/tblCliente.php?acao=semacao');
+            } else if($_GET['acao'] == 'atualizar') {
+                $this->atualizar($_POST['codigo']);
+                header('Location: ../views/tblCliente.php?acao=semacao');
+            } else if($_GET['acao'] == 'excluir') {
+                $this->excluir($_POST['codigo']);
+                header('Location: ../views/tblCliente.php?acao=semacao');
+            }
         }
     }
 
@@ -43,6 +45,40 @@ class ClienteController {
 
     public function listar(){
         return $this->cliente->listar();
+    }
+
+    public function exibirDescricaoAjax() {
+        if (!isset($_POST['cod_cliente']) || empty($_POST['cod_cliente'])) {
+            echo json_encode(['error' => 'ID não fornecido']);
+            return;
+        }
+    
+        $id = $_POST['cod_cliente'];
+        $codigoCliente = $this->cliente->buscarPorId($id);
+
+        $telefoneclientecontroller = new TelefoneClienteController();
+        $telefone = $telefoneclientecontroller->buscarPorId($id);
+
+        $enderecoclientecontroller = new EnderecoClienteController();
+        $endereco = $enderecoclientecontroller->buscarPorId($id);
+
+        $emailclientecontroller = new EmailClienteController();
+        $email = $emailclientecontroller->buscarPorId($id);
+        
+        if ($codigoCliente) {
+            $response = [
+                'nome_cliente' => $codigoCliente['nome_cliente'] ?: ['error' => 'Nome nao encontrado'],
+                'cpf_cliente' => $codigoCliente['cpf_cliente'] ?: ['error' => 'CPF nao encontrado'],
+                'data_nascimento_cliente' => $codigoCliente['data_nascimento_cliente'] ?: ['error' => 'Data de nascimento nao encontrada'],
+                'email_cliente' => $email['email_cliente'] ?: ['error' => 'Email nao encontrado'],
+                'telefone_cliente' => $telefone['telefone_cliente'] ?: ['error' => 'Telefone não encontrado'],
+                'endereco_cliente' => $endereco['endereco_cliente'] ?: ['error' => 'Endereço não encontrado'],
+                'senha_cliente' => $codigoCliente['senha_cliente'] ?: ['error' => 'Senha nao encontrada']
+            ];
+            echo json_encode($response); // Retorna os dados em formato JSON
+        } else {
+            echo json_encode(['error' => 'Cliente nao encontrado']);
+        }
     }
 
     public function buscarPorId($codCliente){
