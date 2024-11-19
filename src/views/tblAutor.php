@@ -79,7 +79,7 @@
                     </div>
                 </tbody>
             </table>
-            <a href="<?php echo "formAutorCrt.php?acao=crt&codAutor=" . $autor['cod_autor'];?>" class="btn btn-warning btn-lg text-white mt-sm-2">Cadastrar Autor</a>
+            <a href="formAutorCrt.php?acao=crt" class="btn btn-warning btn-lg text-white mt-sm-2">Cadastrar Autor</a>
         </div>
     </div>
 

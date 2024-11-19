@@ -11,13 +11,13 @@ class EditoraController {
         
         if($_GET['acao'] == 'inserir') {
             $this->inserir();
-            header('Location: ../views/index.php?acao=semacao');
+            header('Location: ../views/tblEditora.php?acao=semacao');
         } else if($_GET['acao'] == 'atualizar') {
             $this->atualizar($_POST['codigo']);
-            header('Location: ../views/index.php?acao=semacao');
+            header('Location: ../views/tblEditora.php?acao=semacao');
         } else if($_GET['acao'] == 'excluir') {
             $this->excluir($_POST['codigo']);
-            header('Location: ../views/index.php?acao=semacao');
+            header('Location: ../views/tblEditora.php?acao=semacao');
         }
     }
 

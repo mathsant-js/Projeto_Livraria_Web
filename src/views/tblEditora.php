@@ -56,7 +56,7 @@
                     <?php } ?>
                 </tbody>
             </table>
-            <a href="<?php echo "formEditoraCrt.php?acao=crt&codEditora=" . $editora['cod_editora'];?>" class="btn btn-warning btn-lg text-white mt-sm-2">Cadastrar Editora</a>
+            <a href="formEditoraCrt.php?acao=crt" class="btn btn-warning btn-lg text-white mt-sm-2">Cadastrar Editora</a>
         </div>
     </div>
 

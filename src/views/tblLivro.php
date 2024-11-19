@@ -61,7 +61,7 @@
                     <?php } ?>
                 </tbody>
             </table>
-            <a href="<?php echo "formLivroCrt.php?acao=crt&codLivro=" . $livro['cod_livro']; ?>" class="btn btn-warning btn-lg text-white mt-sm-2">Cadastrar Livro</a>
+            <a href="formLivroCrt.php?acao=crt" class="btn btn-warning btn-lg text-white mt-sm-2">Cadastrar Livro</a>
         </div>
     </div>
     <div class="w-100 mt-5 pt-5">

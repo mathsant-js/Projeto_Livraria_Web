@@ -52,7 +52,7 @@
                     <?php } ?>
                 </tbody>
             </table>
-            <a href="<?php echo "formClienteCrt.php?acao=crt&codCliente" . $cliente['cod_cliente'];?>" class="btn btn-warning btn-lg text-white mt-sm-2">Cadastrar Cliente</a>
+            <a href="formClienteCrt.php?acao=crt" class="btn btn-warning btn-lg text-white mt-sm-2">Cadastrar Cliente</a>
         </div>
     </div>
 
