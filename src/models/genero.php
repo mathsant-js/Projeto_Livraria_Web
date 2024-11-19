@@ -60,6 +60,20 @@ class Genero {
         return $generos;
     }
 
+    public function buscarNomeGenero() {
+        $sql = "SELECT cod_genero, nome_genero FROM genero";
+        $stmt = $this->conexao->getConexao()->prepare($sql);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        $generos = [];
+
+        while ($genero = $result->fetch_assoc()) {
+            $generos[] = $genero;
+        }
+
+        return $generos;
+    }
+
     // buscar por id
     public function buscarPorId($codGenero) {
         $sql = "SELECT * FROM genero WHERE cod_genero = ?";

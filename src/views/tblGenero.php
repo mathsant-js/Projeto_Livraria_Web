@@ -11,6 +11,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/Projeto_Livraria_Web/src/controllers/
     <title>Open Book</title>
     <link rel="stylesheet" href="../assets/scss/main.css">
     <script src="../js/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="../js/modalRequisicaoAjax/modalTbl.js"></script>
 </head>
 
 <body class="background-dark-light">
@@ -42,7 +43,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/Projeto_Livraria_Web/src/controllers/
                             <td><?php echo $genero['cod_genero']; ?></td>
                             <td><?php echo $genero['nome_genero']; ?></td>
                             <td>
-                                <a href="#" class="btn btn-warning text-light" data-bs-toggle="modal" data-bs-target="#exampleModal">Exibir Descrição</a>
+                                <a onclick="exibirDescricao(<?php echo $genero['cod_genero']; ?>)" href="#" class="btn btn-warning text-light">Exibir Descrição</a>
                             </td>
                             <td>
                                 <a href="<?php echo "formGeneroUpdDlt.php?acao=upd&codGenero=" . $genero['cod_genero']; ?>" class="btn btn-warning text-white text-center me-2">Atualizar</a>
@@ -60,8 +61,8 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/Projeto_Livraria_Web/src/controllers/
                                     <button type="button" class="btn-close btn-close-white shadow-none" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
-                                    <h4>Gênero <?php echo $genero['nome_genero'] ?></h4>
-                                    <p class="mt-sm-3 text-uppercase"><?php echo $genero['descricao_genero'] ?></p>
+                                    <h4 id="titulo">Gênero </h4>
+                                    <p id="descricao" class="mt-sm-3"></p>
                                 </div>
                                 <div class="modal-footer justify-content-between">
                                     <button type="button" class="btn btn-warning btn-lg text-light" data-bs-dismiss="modal">Ok</button>
@@ -71,7 +72,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/Projeto_Livraria_Web/src/controllers/
                     </div>
                 </tbody>
             </table>
-            <a href="<?php echo "formGeneroCrt.php?acao=crt&codGenero=" . $genero['cod_genero'];?>" class="btn btn-warning btn-lg text-white">Cadastrar Gênero</a>
+            <a href="formGeneroCrt.php?acao=crt" class="btn btn-warning btn-lg text-white">Cadastrar Gênero</a>
         </div>
     </div>
 

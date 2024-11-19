@@ -40,6 +40,7 @@
 
                     foreach ($livros as $livro) {
                     ?>
+                    
                         <tr>
                             <td><?php echo $livro['cod_livro']; ?></td>
                             <td><?php echo $livro['nome_livro']; ?></td>
@@ -58,28 +59,6 @@
                         </a>
 
                     <?php } ?>
-                    <!-- Modal -->
-                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-centered">
-                            <div class="modal-content bg-dark">
-                                <div class="modal-header">
-                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Informações do Livro</h1>
-                                    <button type="button" class="btn-close btn-close-white shadow-none" data-bs-dismiss="modal" aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    <h4><?php echo $livro['nome_livro'] ?></h4>
-                                    <p class="mt-sm-3">Código: <?php echo $livro['cod_livro'] ?></p>
-                                    <p class="mt-sm-3">ISBN: <?php echo $livro['isbn_livro'] ?></p>
-                                    <p class="mt-sm-3">Data de Lançamento: <?php echo $livro['data_lancamento'] ?></p>
-                                    <p class="mt-sm-3">Preço: <?php echo $livro['preco_livro'] ?></p>
-                                    <p class="mt-sm-3">Descrição: <?php echo $livro['descricao_livro'] ?></p>
-                                </div>
-                                <div class="modal-footer justify-content-between">
-                                    <button type="button" class="btn btn-warning btn-lg text-light" data-bs-dismiss="modal">Ok</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </tbody>
             </table>
             <a href="<?php echo "formLivroCrt.php?acao=crt&codLivro=" . $livro['cod_livro']; ?>" class="btn btn-warning btn-lg text-white mt-sm-2">Cadastrar Livro</a>
