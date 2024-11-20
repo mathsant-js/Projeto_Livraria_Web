@@ -9,6 +9,8 @@ class Livro {
     private $dataLancamento;
     private $precoLivro;
     private $descricaoLivro;
+    private $codGenero;
+    private $codEditora;
     private $conexao;
 
     public function getCodLivro() {
@@ -59,6 +61,22 @@ class Livro {
         $this->descricaoLivro = $descricaoLivro;
     }
 
+    public function getCodGenero() {
+        return $this->codGenero;
+    }
+
+    public function setCodGenero($codGenero) {
+        $this->codGenero = $codGenero;
+    }
+
+    public function getCodEditora() {
+        return $this->codEditora;
+    }
+
+    public function setCodEditora($codEditora) {
+        $this->codEditora = $codEditora;
+    }
+
     // construtor
     public function __construct() {
         $this->conexao = new Conexao();
@@ -66,9 +84,9 @@ class Livro {
 
     // insert
     public function inserir() {
-        $sql = "INSERT INTO livro (`nome_livro`, `isbn_livro`, `data_lancamento`, `preco_livro`, `descricao_livro`) VALUES (?,?,?,?,?);";
+        $sql = "INSERT INTO livro (`nome_livro`, `isbn_livro`, `data_lancamento`, `preco_livro`, `descricao_livro`, `cod_genero`, `cod_editora`) VALUES (?,?,?,?,?,?,?);";
         $stmt = $this->conexao->getConexao()->prepare($sql);
-        $stmt->bind_param('sssss', $this->nomeLivro, $this->isbnLivro, $this->dataLancamento, $this->precoLivro, $this->descricaoLivro);
+        $stmt->bind_param('sssssss', $this->nomeLivro, $this->isbnLivro, $this->dataLancamento, $this->precoLivro, $this->descricaoLivro, $this->codGenero, $this->codEditora);
         return $stmt->execute();
     }
 
@@ -139,11 +157,27 @@ class Livro {
         return $generos;
     }
 
+    public function buscarAutoresPorLivro($codLivro) {
+        $sql = "SELECT cod_autor FROM autorlivro WHERE cod_livro = ?";
+        $stmt = $this->conexao->getConexao()->prepare($sql);
+        $stmt->bind_param('i', $codLivro);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        $autores = [];
+    
+        while ($row = $result->fetch_assoc()) {
+            $autores[] = $row['cod_autor']; // Apenas códigos de autores
+        }
+    
+        return $autores; // Encapsulado e seguro
+    }
+    
+
     // update
     public function atualizar($codLivro) {
-        $sql = "UPDATE livro SET nome_livro = ?, isbn_livro = ?, data_lancamento = ?, preco_livro = ?, descricao_livro = ? WHERE cod_livro = ?";
+        $sql = "UPDATE livro SET nome_livro = ?, isbn_livro = ?, data_lancamento = ?, preco_livro = ?, descricao_livro = ?, cod_genero = ?, cod_editora = ? WHERE cod_livro = ?";
         $stmt = $this->conexao->getConexao()->prepare($sql);
-        $stmt->bind_param('sssssi', $this->nomeLivro, $this->isbnLivro, $this->dataLancamento, $this->precoLivro, $this->descricaoLivro, $codLivro);
+        $stmt->bind_param('ssssssii', $this->nomeLivro, $this->isbnLivro, $this->dataLancamento, $this->precoLivro, $this->descricaoLivro, $this->codGenero, $this->codEditora, $codLivro);
         if ($stmt->execute()) {
             return true;
         } else {

@@ -59,60 +59,61 @@
                     <input type="text" class="form-control text-white background-dark-light border-bottom border-top-0 border-start-0 border-end-0 border-3 rounded-bottom-0 border-warning me-2" id="preco" name="preco" placeholder="Preço" value="<?php echo $livro['preco_livro']; ?>" required>
                     <label for="preco" class="text-warning ms-3">Preço</label>
                 </div>
-                <div class="col-md-2 form-floating col mb-3">
-                    <input type="number" class="form-control text-white background-dark-light border-bottom border-top-0 border-start-0 border-end-0 border-3 rounded-bottom-0 border-warning me-2" id="codautor" name="codautor" placeholder="Código do Autor" readonly>
-                    <label for="codautor" class="text-warning ms-3">Código</label>
-                </div>
-                <div class="col-md-10 col mb-3">
+                <div class="col-md-12 col mb-3">
                     <div class="form-floating">
-                        <select class="form-select text-white background-dark-light border-bottom border-top-0 border-start-0 border-end-0 border-3 rounded-bottom-0 border-warning me-2" id="floatingSelectGrid">
-                            <option selected disabled>Selecione aqui</option>
-                            <?php 
-                            $livroController = new LivroController();
-                            $autores = $livroController->buscarNomeAutor();
-                            foreach ($autores as $autor): ?>
-                                <option value="<?php $autor['cod_autor']; ?>"><?php echo $autor['nome_autor']; ?></option>
-                            <?php endforeach; ?>
+                        <select class="form-select text-white background-dark-light border-bottom border-top-0 border-start-0 border-end-0 border-3 rounded-bottom-0 border-warning me-2" id="floatingSelectAutor" name="autor[]" multiple>
+                        <?php
+                        $livroController = new LivroController();
+                        $autoresDisponiveis = $livroController->buscarNomeAutor(); // Todos os autores disponíveis
+                        $autoresSelecionados = $livroController->buscarAutoresPorLivro($livro['cod_livro']); // Autores selecionados no formulárioAutoresLivro($livro['cod_livro']); // Autores do livro // Associações existentes
+            
+                        foreach ($autoresDisponiveis as $autor): ?>
+                            <option value="<?= $autor['cod_autor'] ?>" 
+                                <?= in_array($autor['cod_autor'], $autoresSelecionados) ? 'selected' : '' ?>>
+                                <?= $autor['nome_autor'] ?>
+                            </option>
+                        <?php endforeach; ?>
                         </select>
-                        <label for="floatingSelectGrid" class="text-warning">Selecione um Autor</label>
+                        <label for="floatingSelectAutor" class="text-warning">Selecione um Autor</label>
                     </div>
                 </div>
                 <div class="col-md-2 form-floating col mb-3">
-                    <input type="number" class="form-control text-white background-dark-light border-bottom border-top-0 border-start-0 border-end-0 border-3 rounded-bottom-0 border-warning me-2" id="codeditora" name="codeditora" placeholder="Código da Editora" readonly>
+                    <input type="number" class="form-control text-white background-dark-light border-bottom border-top-0 border-start-0 border-end-0 border-3 rounded-bottom-0 border-warning me-2" id="codeditora" name="codeditora" placeholder="Código da Editora" value="<?php echo $livro['cod_editora']; ?>" readonly>
                     <label for="codeditora" class="text-warning ms-3">Código</label>
                 </div>
                 <div class="col-md-10 col mb-3">
                     <div class="form-floating">
-                        <select class="form-select text-white background-dark-light border-bottom border-top-0 border-start-0 border-end-0 border-3 rounded-bottom-0 border-warning me-2" id="floatingSelectGrid">
-                            <option selected disabled>Selecione aqui...</option>
-                            <?php
-                            $livroController = new LivroController();
-                            $editoras = $livroController->buscarNomeEditora();
-                            foreach ($editoras as $editora): ?>
-                                <option value="<?php echo $editora['cod_editora']; ?>"><?php echo $editora['nome_editora']; ?></option>
-                            <?php endforeach;
-                            ?>
+                        <select class="form-select text-white background-dark-light border-bottom border-top-0 border-start-0 border-end-0 border-3 rounded-bottom-0 border-warning me-2" id="floatingSelectEditora" name="editora">
+                        <?php
+                        $livroController = new LivroController();
+                        $editoras = $livroController->buscarNomeEditora();
+                        foreach ($editoras as $editora): ?>
+                            <option value="<?php echo $editora['cod_editora'] ?>" <?php echo $livro['cod_editora'] == $editora['cod_editora'] ? 'selected' : '' ?>>
+                                <?php echo $editora['nome_editora'] ?>
+                            </option>
+                        <?php endforeach; ?>
                         </select>
-                        <label for="floatingSelectGrid" class="text-warning">Selecione uma Editora</label>
+                        <label for="floatingSelectEditora" class="text-warning">Selecione uma Editora</label>
                     </div>
                 </div>
                 <div class="col-md-2 form-floating col mb-3">
-                    <input type="number" class="form-control text-white background-dark-light border-bottom border-top-0 border-start-0 border-end-0 border-3 rounded-bottom-0 border-warning me-2" id="codgenero" name="codgenero" placeholder="Código do Gênero" readonly>
+                    <input type="number" class="form-control text-white background-dark-light border-bottom border-top-0 border-start-0 border-end-0 border-3 rounded-bottom-0 border-warning me-2" id="codgenero" name="codgenero" placeholder="Código do Gênero" value="<?php echo $livro['cod_genero']; ?>" readonly>
                     <label for="codgenero" class="text-warning ms-3">Código</label>
                 </div>
                 <div class="col-md-10 col mb-3">
                     <div class="form-floating">
-                        <select class="form-select text-white background-dark-light border-bottom border-top-0 border-start-0 border-end-0 border-3 rounded-bottom-0 border-warning me-2" id="floatingSelectGrid">
-                            <option selected disabled>Selecione aqui...</option>
+                        <select class="form-select text-white background-dark-light border-bottom border-top-0 border-start-0 border-end-0 border-3 rounded-bottom-0 border-warning me-2" id="floatingSelectGenero" name="genero">
                             <?php
                             $livroController = new LivroController();
                             $generos = $livroController->buscarNomeGenero();
                             foreach ($generos as $genero): ?>
-                                <option value="<?php echo $genero['cod_genero']; ?>"><?php echo $genero['nome_genero']; ?></option>
-                            <?php endforeach;
+                                <option value="<?php echo $genero['cod_genero'] ?>" <?php echo $livro['cod_genero'] == $genero['cod_genero'] ? 'selected' : '' ?>>
+                                    <?php echo $genero['nome_genero'] ?>
+                                </option>
+                            <?php endforeach; ?>
                             ?>
                         </select>
-                        <label for="floatingSelectGrid" class="text-warning">Selecione um Gênero</label>
+                        <label for="floatingSelectGenero" class="text-warning">Selecione um Gênero</label>
                     </div>
                 </div>
                 <div class="col-md-12 form-floating col mb-4">
