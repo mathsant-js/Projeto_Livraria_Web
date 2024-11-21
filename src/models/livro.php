@@ -244,6 +244,49 @@ class Livro
         return $result->fetch_all(MYSQLI_ASSOC);
     }
 
+    public function buscarLivroParaCompra($codLivro)
+{
+    // Query SQL para buscar os detalhes do livro
+    $sql = "
+        SELECT 
+            l.cod_livro AS livro_id,
+            l.nome_livro,
+            l.preco_livro,
+            l.descricao_livro,
+            g.nome_genero AS genero,
+            e.nome_editora AS editora,
+            (SELECT a.nome_autor 
+             FROM autorlivro la
+             JOIN autor a ON la.cod_autor = a.cod_autor
+             WHERE la.cod_livro = l.cod_livro
+             LIMIT 1) AS autor
+        FROM livro l
+        LEFT JOIN editora e ON l.cod_editora = e.cod_editora
+        LEFT JOIN genero g ON l.cod_genero = g.cod_genero
+        WHERE l.cod_livro = ?
+    ";
+
+    // Prepara a consulta
+    $stmt = $this->conexao->getConexao()->prepare($sql);
+
+    if (!$stmt) {
+        throw new Exception("Erro ao preparar a consulta: " . $this->conexao->getConexao()->error);
+    }
+
+    // Faz o bind do parâmetro (tipo inteiro)
+    $stmt->bind_param("i", $codLivro);
+
+    // Executa a consulta
+    $stmt->execute();
+
+    // Obtém o resultado
+    $result = $stmt->get_result();
+
+    // Retorna os dados como um array associativo, ou null se não encontrado
+    return $result->fetch_assoc();
+}
+    
+
     // update
     public function atualizar($codLivro)
     {

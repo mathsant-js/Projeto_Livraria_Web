@@ -1,7 +1,7 @@
 <?php
 class CardLivro
 {
-    function carregarCard($nomeEditora, $nomeLivro, $nomeAutor, $precoLivro)
+    function carregarCard($nomeEditora, $nomeLivro, $nomeAutor, $precoLivro, $livroId)
     {
         echo '
     <!-- Começo do card -->
@@ -25,7 +25,7 @@ class CardLivro
                                 <h5 class="card-text">' . $precoLivro . '</h5>
                                 <div class="row mt-3">
                                     <div class="col">
-                                        <a href="#" class="btn btn-warning rounded-3 text-white mb-3 w-100">Comprar</a>
+                                        <a href="paginaCompra.php?codLivro=' . $livroId . '&acao=semacao" class="btn btn-warning rounded-3 text-white mb-3 w-100">Comprar</a>
                                     </div>
                                     <div class="col col-auto">
                                         <a href="">

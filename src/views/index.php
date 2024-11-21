@@ -14,7 +14,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . "/Projeto_Livraria_Web/src/controllers/
 
 <body class="background-dark-light overflow-x-hidden">
     <?php require_once '../components/header.php'; ?>
-    <div class="container">
+    <div class="container overflow-x-hidden">
         <div id="carouselExampleCaptions" class="carousel slide container mt-5">
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -70,7 +70,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . "/Projeto_Livraria_Web/src/controllers/
             require $_SERVER['DOCUMENT_ROOT'] . "/Projeto_Livraria_Web/src/components/cardLivro.php";
             $cardLivro = new CardLivro();
             foreach ($livros as $livro) {
-                $card = $cardLivro->carregarCard($livro['editora'], $livro['nome_livro'], $livro['autor'], $livro['preco_livro']);
+                $card = $cardLivro->carregarCard($livro['editora'], $livro['nome_livro'], $livro['autor'], $livro['preco_livro'], $livro['livro_id']);
             }
             ?>
             <!-- Fim do Card -->
@@ -90,7 +90,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . "/Projeto_Livraria_Web/src/controllers/
         <div class="row row-cols-md-4 row-cols-1 justify-content-center text-center text-light mt-sm-4">
             <?php
             foreach ($livros as $livro) {
-                $card = $cardLivro->carregarCard($livro['editora'], $livro['nome_livro'], $livro['autor'], $livro['preco_livro']);
+                $card = $cardLivro->carregarCard($livro['editora'], $livro['nome_livro'], $livro['autor'], $livro['preco_livro'], $livro['livro_id']);
             }
             ?>
         </div>
