@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg border-bottom border-warning border-4 navbar-dark bg-dark w-100">
   <div class="container-fluid mx-5">
     <!-- Logo -->
-    <a class="navbar-brand fs-4 text-warning" href="../views/index.php">
+    <a class="navbar-brand fs-4 text-warning" href="../views/index.php?acao=semacao">
       <img src="../assets/icons/logo.svg" alt="Logo" width="50" height="40" class="d-inline-block align-text-top">
       Open Book
     </a>
@@ -13,7 +13,7 @@
     <div class="offcanvas offcanvas-start navbar-dark bg-dark" tabindex="-1" id="offcanvasWithBothOptions" data-bs-scroll="true" aria-labelledby="offcanvasWithBothOptionsLabel">
       <div class="offcanvas-header">
         <!-- Logo -->
-        <a class="navbar-brand fs-4 text-warning" href="../views/index.php">
+        <a class="navbar-brand fs-4 text-warning" href="../views/index.php?acao=semacao">
           <img src="../assets/icons/logo.svg" alt="Logo" width="50" height="40" class="d-inline-block align-text-top">
           Open Book
         </a>
@@ -22,10 +22,10 @@
       <div class="offcanvas-body my-2">
         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 me-5">
           <li class="nav-item mx-2">
-            <a class="nav-link" aria-current="page" href="../views/index.php">Home</a>
+            <a class="nav-link" aria-current="page" href="../views/index.php?acao=semacao">Home</a>
           </li>
           <li class="nav-item mx-2">
-            <a class="nav-link" href="#">Livros</a>
+            <a class="nav-link" href="../views/livrosCompra.php?acao=semacao">Livros</a>
           </li>
           <li class="nav-item mx-2">
             <a class="nav-link" href="../views/autorpag.php">Autores</a>

@@ -62,6 +62,10 @@
             return $this->livro->buscarNomeEditora();
         }
 
+        public function buscarLivro() {
+            return $this->livro->buscarLivro();
+        }
+
         public function atualizar($codLivro) {
             $this->livro->setNomeLivro($_POST['nome']);
             $this->livro->setIsbnLivro($_POST['isbn']);

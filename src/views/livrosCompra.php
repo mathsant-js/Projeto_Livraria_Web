@@ -1,4 +1,3 @@
-<?php require_once '../components/header.php' ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,12 +10,13 @@
 </head>
 
 <body class="background-dark-light overflow-x-hidden">
+    <?php require_once '../components/header.php' ?>
     <div class="container mt-sm-5 text-light">
         <div class="row">
             <div class="col text-start">
-                <a href="#" class="link-warning link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">
-                    < Voltar
-                </a>
+                <h5><a href="javascript:history.back()" class="link-warning">
+                        < Voltar</a>
+                </h5>
             </div>
         </div>
         <div class="row mt-sm-3 justify-content-between">

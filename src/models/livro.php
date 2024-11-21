@@ -1,8 +1,9 @@
-<?php 
+<?php
 
 require_once $_SERVER['DOCUMENT_ROOT'] . '/Projeto_Livraria_Web/src/connection/conexao.php';
 
-class Livro {
+class Livro
+{
     private $codLivro;
     private $nomeLivro;
     private $isbnLivro;
@@ -13,77 +14,95 @@ class Livro {
     private $codEditora;
     private $conexao;
 
-    public function getCodLivro() {
+    public function getCodLivro()
+    {
         return $this->codLivro;
     }
 
-    public function setCodLivro($codLivro) {
+    public function setCodLivro($codLivro)
+    {
         $this->codLivro = $codLivro;
     }
 
-    public function getNomeLivro() {
+    public function getNomeLivro()
+    {
         return $this->nomeLivro;
     }
 
-    public function setNomeLivro($nomeLivro) {
+    public function setNomeLivro($nomeLivro)
+    {
         $this->nomeLivro = $nomeLivro;
     }
 
-    public function getIsbnLivro() {
+    public function getIsbnLivro()
+    {
         return $this->isbnLivro;
     }
 
-    public function setIsbnLivro($isbnLivro) {
+    public function setIsbnLivro($isbnLivro)
+    {
         $this->isbnLivro = $isbnLivro;
     }
 
-    public function getDataLancamento() {
+    public function getDataLancamento()
+    {
         return $this->dataLancamento;
     }
 
-    public function setDataLancamento($dataLancamento) {
+    public function setDataLancamento($dataLancamento)
+    {
         $this->dataLancamento = $dataLancamento;
     }
 
-    public function getPrecoLivro() {
+    public function getPrecoLivro()
+    {
         return $this->precoLivro;
     }
 
-    public function setPrecoLivro($precoLivro) {
+    public function setPrecoLivro($precoLivro)
+    {
         $this->precoLivro = $precoLivro;
     }
 
-    public function getDescricaoLivro() {
+    public function getDescricaoLivro()
+    {
         return $this->descricaoLivro;
     }
 
-    public function setDescricaoLivro($descricaoLivro) {
+    public function setDescricaoLivro($descricaoLivro)
+    {
         $this->descricaoLivro = $descricaoLivro;
     }
 
-    public function getCodGenero() {
+    public function getCodGenero()
+    {
         return $this->codGenero;
     }
 
-    public function setCodGenero($codGenero) {
+    public function setCodGenero($codGenero)
+    {
         $this->codGenero = $codGenero;
     }
 
-    public function getCodEditora() {
+    public function getCodEditora()
+    {
         return $this->codEditora;
     }
 
-    public function setCodEditora($codEditora) {
+    public function setCodEditora($codEditora)
+    {
         $this->codEditora = $codEditora;
     }
 
     // construtor
-    public function __construct() {
+    public function __construct()
+    {
         $this->conexao = new Conexao();
     }
 
     // insert
-    public function inserir() {
+    public function inserir()
+    {
         $sql = "INSERT INTO livro (`nome_livro`, `isbn_livro`, `data_lancamento`, `preco_livro`, `descricao_livro`, `cod_genero`, `cod_editora`) VALUES (?,?,?,?,?,?,?);";
         $stmt = $this->conexao->getConexao()->prepare($sql);
         $stmt->bind_param('sssssss', $this->nomeLivro, $this->isbnLivro, $this->dataLancamento, $this->precoLivro, $this->descricaoLivro, $this->codGenero, $this->codEditora);
@@ -91,7 +110,8 @@ class Livro {
     }
 
     // listar
-    public function listar() {
+    public function listar()
+    {
         $sql = "SELECT * FROM livro";
         $stmt = $this->conexao->getConexao()->prepare($sql);
         $stmt->execute();
@@ -106,7 +126,8 @@ class Livro {
     }
 
     // buscar por id
-    public function buscarPorId($codLivro) {
+    public function buscarPorId($codLivro)
+    {
         $sql = "SELECT * FROM livro WHERE cod_livro = ?";
         $stmt = $this->conexao->getConexao()->prepare($sql);
         $stmt->bind_param('i', $codLivro);
@@ -115,7 +136,8 @@ class Livro {
         return $result->fetch_assoc();
     }
 
-    public function buscarNomeAutor() {
+    public function buscarNomeAutor()
+    {
         $sql = "SELECT cod_autor, nome_autor FROM autor";
         $stmt = $this->conexao->getConexao()->prepare($sql);
         $stmt->execute();
@@ -129,7 +151,8 @@ class Livro {
         return $autores;
     }
 
-    public function buscarNomeEditora() {
+    public function buscarNomeEditora()
+    {
         $sql = "SELECT cod_editora, nome_editora FROM editora";
         $stmt = $this->conexao->getConexao()->prepare($sql);
         $stmt->execute();
@@ -143,7 +166,8 @@ class Livro {
         return $editoras;
     }
 
-    public function buscarNomeGenero() {
+    public function buscarNomeGenero()
+    {
         $sql = "SELECT cod_genero, nome_genero FROM genero";
         $stmt = $this->conexao->getConexao()->prepare($sql);
         $stmt->execute();
@@ -157,24 +181,72 @@ class Livro {
         return $generos;
     }
 
-    public function buscarAutoresPorLivro($codLivro) {
+    public function buscarAutoresPorLivro($codLivro)
+    {
         $sql = "SELECT cod_autor FROM autorlivro WHERE cod_livro = ?";
         $stmt = $this->conexao->getConexao()->prepare($sql);
         $stmt->bind_param('i', $codLivro);
         $stmt->execute();
         $result = $stmt->get_result();
         $autores = [];
-    
+
         while ($row = $result->fetch_assoc()) {
             $autores[] = $row['cod_autor']; // Apenas códigos de autores
         }
-    
+
         return $autores; // Encapsulado e seguro
     }
-    
+
+    public function buscarLivro($filtroEditora = null, $filtroAutor = null)
+    {
+        $sql = "SELECT 
+                l.cod_livro AS livro_id,
+                l.nome_livro,
+                l.preco_livro,
+                e.nome_editora AS editora,
+                (SELECT a.nome_autor 
+                 FROM autorlivro la
+                 JOIN autor a ON la.cod_autor = a.cod_autor
+                 WHERE la.cod_livro = l.cod_livro
+                 LIMIT 1) AS autor
+            FROM livro l
+            LEFT JOIN editora e ON l.cod_editora = e.cod_editora
+            WHERE 1=1";
+        $params = [];
+        $types = ""; // String para tipos do bind_param (e.g., 's', 'i')
+        
+        if ($filtroEditora) {
+            $sql = "";
+            $sql .= " AND e.nome LIKE ?";
+            $params[] = "%$filtroEditora%";
+            $types .= "s"; // Tipo string
+        }
+
+        if ($filtroAutor) {
+            $sql .= " AND EXISTS (
+                SELECT 1 
+                FROM autor_livro la
+                JOIN autor a ON la.cod_autor = a.cod_autor
+                WHERE la.cod_livro = l.id AND a.nome LIKE ?
+            )";
+            $params[] = "%$filtroAutor%";
+            $types .= "s"; // Tipo string
+        }
+
+        $stmt = $this->conexao->getConexao()->prepare($sql);
+        if ($params) {
+            // Passa os parâmetros dinamicamente
+            $stmt->bind_param($types, ...$params);
+        }
+
+        $stmt->execute();
+        $result = $stmt->get_result();
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
 
     // update
-    public function atualizar($codLivro) {
+    public function atualizar($codLivro)
+    {
         $sql = "UPDATE livro SET nome_livro = ?, isbn_livro = ?, data_lancamento = ?, preco_livro = ?, descricao_livro = ?, cod_genero = ?, cod_editora = ? WHERE cod_livro = ?";
         $stmt = $this->conexao->getConexao()->prepare($sql);
         $stmt->bind_param('ssssssii', $this->nomeLivro, $this->isbnLivro, $this->dataLancamento, $this->precoLivro, $this->descricaoLivro, $this->codGenero, $this->codEditora, $codLivro);
@@ -187,7 +259,8 @@ class Livro {
     }
 
     // delete
-    public function excluir($codLivro) {
+    public function excluir($codLivro)
+    {
         $sql = "DELETE FROM livro WHERE cod_livro = ?";
         $stmt = $this->conexao->getConexao()->prepare($sql);
         $stmt->bind_param('i', $codLivro);

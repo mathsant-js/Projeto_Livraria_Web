@@ -1,13 +1,15 @@
 <?php
-function carregarCard($nomeEditora, $nomeLivro, $nomeAutor, $precoLivro)
+class CardLivro
 {
-    echo '
+    function carregarCard($nomeEditora, $nomeLivro, $nomeAutor, $precoLivro)
+    {
+        echo '
     <!-- Começo do card -->
-    <div class="col-sm-3 col-12">
+    <div class="col-sm-3 col-12 justify-content-center">
         <div class="row book-carousel mx-auto mt-3 column-gap-0">
             <div class="col">
                 <a href="#">
-                    <div class="card book-card bg-dark rounded-5 overflow-hidden">
+                    <div class="card book-card bg-dark rounded-3 overflow-hidden">
                         <div class="row border-bottom border-3 border-warning bg-white">
                             <img src="../assets/imgs/static/livroplaceholder.png" alt="book image" class="mx-auto book-card-image">
                             <p class="mb-0">
@@ -40,4 +42,5 @@ function carregarCard($nomeEditora, $nomeLivro, $nomeAutor, $precoLivro)
     </div>
     <!-- Fim do Card -->
     ';
+    }
 }

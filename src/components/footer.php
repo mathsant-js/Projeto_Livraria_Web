@@ -4,7 +4,7 @@
             <div class="col align-self-center">
                 <div class="row align-items-center">
                     <div class="col-2">
-                        <a class="navbar-brand fs-4 text-warning" href="../views/index.php">
+                        <a class="navbar-brand fs-4 text-warning" href="../views/index.php?acao=semacao">
                             <img src="../assets/icons/logo.svg" alt="Logo" height="80" class="d-inline-block align-text-top">
                             Open Book
                         </a>
