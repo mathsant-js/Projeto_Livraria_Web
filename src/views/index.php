@@ -63,7 +63,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . "/Projeto_Livraria_Web/src/controllers/
                 </a>
             </div>
         </div>
-        <div class="row row-cols-md-4 row-cols-1 justify-content-center text-center text-light mt-sm-4">
+        <div class="row row-cols-md-4 row-cols-1 justify-content-start text-center text-light mt-sm-4">
             <?php
             $livroController = new LivroController();
             $livros = $livroController->buscarLivro();
@@ -87,7 +87,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . "/Projeto_Livraria_Web/src/controllers/
                 </a>
             </div>
         </div>
-        <div class="row row-cols-md-4 row-cols-1 justify-content-center text-center text-light mt-sm-4">
+        <div class="row row-cols-md-4 row-cols-1 justify-content-start text-center text-light mt-sm-4">
             <?php
             foreach ($livros as $livro) {
                 $card = $cardLivro->carregarCard($livro['editora'], $livro['nome_livro'], $livro['autor'], $livro['preco_livro'], $livro['livro_id']);

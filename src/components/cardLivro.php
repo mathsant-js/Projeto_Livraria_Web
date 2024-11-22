@@ -5,7 +5,7 @@ class CardLivro
     {
         echo '
     <!-- Começo do card -->
-    <div class="col-sm-3 col-12 justify-content-center">
+    <div class="col-sm-3 col-12 justify-content-center mb-sm-3 mb-2">
         <div class="row book-carousel mx-auto mt-3 column-gap-0">
             <div class="col">
                 <a href="#">
