@@ -5,22 +5,22 @@ class CardLivro
     {
         echo '
     <!-- Começo do card -->
-    <div class="col-sm-3 col-12 justify-content-center mb-sm-3 mb-2">
+    <div class="col-sm-3 col-12 mb-sm-3 mb-2">
         <div class="row book-carousel mx-auto mt-3 column-gap-0">
             <div class="col">
                 <a href="#">
-                    <div class="card book-card bg-dark rounded-3 overflow-hidden">
+                    <div class="card book-card bg-dark rounded-4 overflow-hidden">
                         <div class="row border-bottom border-3 border-warning bg-white">
                             <img src="../assets/imgs/static/livroplaceholder.png" alt="book image" class="mx-auto book-card-image">
                             <p class="mb-0">
-                                <a href="editorapag.php" class="link-warning ps-3">' . $nomeEditora . '</a>
+                                <a href="editorapag.php?acao=semacao&codEditora=CODIGOEDITORAAQUI" class="link-warning ps-3">' . $nomeEditora . '</a>
                             </p>
                         </div>
                         <div class="row mx-1">
                             <div class="card-body text-white text-center">
                                 <h5 class="card-title book-card-title mt-2 text-warning">' . $nomeLivro . '</h5>
-                                <p class="small">
-                                    <a href="autorpag.php" class="link-warning">' . $nomeAutor . '</a>
+                                <p>
+                                    <a href="autorpag.php?acao=semacao&codAutor=CODIGOAUTORAQUI" class="link-warning">' . $nomeAutor . '</a>
                                 </p>
                                 <h5 class="card-text">' . $precoLivro . '</h5>
                                 <div class="row mt-3">

@@ -1,4 +1,15 @@
-<footer class="bg-dark p-5 mt-5 w-100">
+<script>
+    function footerBottom() {
+        const body = document.body;
+        const footer = document.getElementById("footer");
+
+        if ($(window).height > body.offsetHeight) {
+            footer.classList.add("fixed-bottom");
+        }
+    }
+</script>
+
+<footer class="bg-dark p-5 mt-5 w-100" onload="footerBottom()">
     <div class="container text-light">
         <div class="row">
             <div class="col align-self-center">

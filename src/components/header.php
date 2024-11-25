@@ -35,7 +35,7 @@
           <img class="ms-lg-5 me-2" src="../assets/icons/search.svg" alt="Ícone de carrinho de compras" width="45" height="45">
           <input class="form-control background-dark-light text-warning border-dark me-2" type="search" placeholder="Pesquisar" aria-label="Search">
         </form>
-        <a href="../views/carrinhoCompras.php">
+        <a href="../views/carrinhoCompras.php?acao=semacao">
           <img class="ms-lg-5" src="../assets/icons/cartBuy.svg" alt="Ícone de carrinho de compras" width="45" height="45">
         </a>
         <a href="../views/configuracoes.php">

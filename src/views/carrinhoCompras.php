@@ -1,3 +1,8 @@
+<?php
+    require_once $_SERVER['DOCUMENT_ROOT'] . '/Projeto_Livraria_Web/src/controllers/listaController.php';
+    require_once $_SERVER['DOCUMENT_ROOT'] . '/Projeto_Livraria_Web/src/controllers/livroController.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,66 +16,53 @@
 
 <body class="background-dark-light">
 <?php require_once '../components/header.php' ?>
-  <div class="container text-start text-light mt-5">
-    <h2 class="lexend-title-semibold text-warning">Carrinho de Compras</h2>
-    <div class="row shadow p-3 my-5 my-sm-4 bg-dark rounded">
-      <div class="col-md-4">
-        <div class="row">
+  <div class="container text-start text-light mt-5 mb-5 pb-5">
+    <h5><a href="javascript:history.back()" class="link-warning">< Voltar</a></h5>
+    <h2 class="text-warning ms-md-3 mb-4">Carrinho de Compras</h2>
+
+<!-- aqui -->
+    <?php 
+        $listaController = new ListaController();
+        $livroController = new LivroController();
+        $lista = $listaController->buscarPorIdDoCliente(1);
+        $livroslista = $listaController->listarLivros($lista['cod_lista']);
+        
+        if (count($livroslista) === 0) {
+          ?> <h4 class="text-white ms-md-3 mb-4">Não há livros salvos no carrinho.</h4> <?php
+        } else {
+          foreach($livroslista as $livrolista) {
+          $livro = $livroController->buscarLivroParaCompra($livrolista['cod_livro']);
+    ?>
+    <div class="row shadow p-3 my-5 my-sm-4 bg-dark rounded mb-3 row-cols-md-1 row-cols-1">
           <div class="col">
-            <img src="https://placehold.co/100x150" alt="">
+            <div class="row">
+              <div class="col-5 col-md-2">
+                <img src="https://placehold.co/100x150" alt="">
+              </div>
+              <div class="col-7 col-md-10">
+                <ul class="navbar-nav justify-content-start">
+                  <li class="nav-item">
+                    <p class="fs-2 lexend-title-semibold text-warning text-break"><?php echo $livro['nome_livro']; ?></p>
+                  </li>
+                  <li class="nav-item">
+                    <p class="text-break">Autor: <?php echo $livro['autor']; ?></p>
+                  </li>
+                  <li class="nav-item">
+                    <p class="text-break">Editora: <?php echo $livro['editora']; ?></p>
+                  </li>
+                  <li class="nav-item">
+                    <p class="fs-5 lexend-title-semibold text-warning text-break">R$ <?php echo $livro['preco_livro']; ?></p>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
-          <div class="col-7">
-            <ul class="navbar-nav justify-content-start">
-              <li class="nav-item">
-                <p class="fs-5 lexend-title-semibold text-warning">Nome do Livro</p>
-              </li>
-              <li class="nav-item">
-                <p>Autor: Autor</p>
-              </li>
-              <li class="nav-item">
-                <p>Editora: Editora</p>
-              </li>
-              <li class="nav-item">
-                <p class="fs-5 lexend-title-semibold text-warning">R$ XX,XX</p>
-              </li>
-            </ul>
+          <div class="col-12 align-self-auto align-self-md-end text-start text-md-end">
+            <a href="paginaCompra.php?acao=semacao&codLivro=<?php echo $livro['livro_id']; ?>" class="btn btn-warning btn-lg text-light me-2 mb-3 mb-md-0">Ver Produto</a>
+            <a href="../controllers/listaController.php?acao=excluirlivro&codLista=1&codLivro=<?php echo $livro['livro_id']; ?>" class="btn btn-danger btn-lg me-2 mb-3 mb-md-0">Remover Produto</a>
           </div>
-        </div>
-      </div>
-      <div class="col-6 col-md-8 align-self-end text-end">
-        <a href="" class="btn btn-warning btn-lg text-light me-2">Ver Produto</a>
-        <a href="" class="btn btn-danger btn-lg">Remover Produto</a>
-      </div>
     </div>
-    <div class="row shadow p-3 my-5 my-sm-5 bg-dark rounded">
-      <div class="col-md-4">
-        <div class="row">
-          <div class="col">
-            <img src="https://placehold.co/100x150" alt="">
-          </div>
-          <div class="col-7">
-            <ul class="navbar-nav justify-content-start">
-              <li class="nav-item">
-                <p class="fs-5 lexend-title-semibold text-warning">Nome do Livro</p>
-              </li>
-              <li class="nav-item">
-                <p>Autor: Autor</p>
-              </li>
-              <li class="nav-item">
-                <p>Editora: Editora</p>
-              </li>
-              <li class="nav-item">
-                <p class="fs-5 lexend-title-semibold text-warning">R$ XX,XX</p>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="col-6 col-md-8 align-self-end text-end">
-        <a href="" class="btn btn-warning btn-lg text-light me-2">Ver Produto</a>
-        <a href="" class="btn btn-danger btn-lg">Remover Produto</a>
-      </div>
-    </div>
+    <?php } } ?>
   </div>
 </body>
 <?php require_once '../components/footer.php' ?>

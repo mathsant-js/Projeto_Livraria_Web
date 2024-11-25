@@ -71,7 +71,7 @@
                     <div class="row mx-1">
                         <div class="card-body text-white text-center">
                             <h5 class="card-title book-card-title mt-2 text-warning">Título do livro</h5>
-                            <p class="small">
+                            <p>
                                 <a href="autorpag.php" class="link-warning">Nome do autor</a>
                             </p>
                             <h5 class="card-text">R$ XX,XX</h5>
