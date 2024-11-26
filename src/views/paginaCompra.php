@@ -27,7 +27,7 @@
                     ?>
                     <div class="row">
                         <div class="col">
-                            <img src="" alt="Imagem do Livro">''
+                            <img src="../assets/imgs/static/livroplaceholder.png" alt="Imagem do Livro" class="bg-white book-buy-image mx-auto">
                         </div>
                         <div class="col">
                             <ul class="navbar-nav">
@@ -38,7 +38,7 @@
                                 <li class="text-warning fs-4">R$ <?php echo $livro['preco_livro'] ?></li>
                             </ul>
                             <p class="text-break mt-sm-3">Descrição: <?php echo $livro['descricao_livro'] ?></p>
-                            <button class="btn btn-warning btn-lg text-light me-sm-5">Comprar</button>
+                            <button class="btn btn-warning btn-lg text-light me-sm-5 mb-3 mb-md-0">Comprar</button>
                             <button class="btn btn-warning btn-lg text-light">Adicionar ao Carrinho</button>
                         </div>
                     </div>

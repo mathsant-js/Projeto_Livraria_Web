@@ -255,6 +255,23 @@
   }
 }
 
+.book-buy-image {
+  height: 28vh;
+  width: auto;
+}
+@media (min-width: 700px) {
+  .book-buy-image {
+    height: 40vh;
+    width: 65vh;
+  }
+}
+@media (500px < width < 700px) {
+  .book-buy-image {
+    height: 70vh;
+    width: 110vh;
+  }
+}
+
 *,
 *::before,
 *::after {
