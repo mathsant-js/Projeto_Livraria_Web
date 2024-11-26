@@ -203,15 +203,22 @@ class Livro
                 l.cod_livro AS livro_id,
                 l.nome_livro,
                 l.preco_livro,
+                l.cod_editora AS codigo_editora,
                 e.nome_editora AS editora,
-                (SELECT a.nome_autor 
+                (SELECT 
+                 la.cod_autor -- Código do autor
+                 FROM autorlivro la
+                 WHERE la.cod_livro = l.cod_livro
+                 LIMIT 1) AS codigo_autor, 
+                (SELECT 
+                 a.nome_autor -- Nome do autor
                  FROM autorlivro la
                  JOIN autor a ON la.cod_autor = a.cod_autor
                  WHERE la.cod_livro = l.cod_livro
                  LIMIT 1) AS autor
-            FROM livro l
-            LEFT JOIN editora e ON l.cod_editora = e.cod_editora
-            WHERE 1=1";
+                FROM livro l
+                LEFT JOIN editora e ON l.cod_editora = e.cod_editora
+                WHERE 1=1;";
         $params = [];
         $types = ""; // String para tipos do bind_param (e.g., 's', 'i')
 

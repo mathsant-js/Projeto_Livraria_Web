@@ -70,7 +70,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . "/Projeto_Livraria_Web/src/controllers/
             require $_SERVER['DOCUMENT_ROOT'] . "/Projeto_Livraria_Web/src/components/cardLivro.php";
             $cardLivro = new CardLivro();
             foreach ($livros as $livro) {
-                $card = $cardLivro->carregarCard($livro['editora'], $livro['nome_livro'], $livro['autor'], $livro['preco_livro'], $livro['livro_id']);
+                $card = $cardLivro->carregarCard($livro['editora'], $livro['nome_livro'], $livro['autor'], $livro['preco_livro'], $livro['livro_id'], $livro['codigo_editora'], $livro['codigo_autor']);
             }
             ?>
             <!-- Fim do Card -->
@@ -90,7 +90,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . "/Projeto_Livraria_Web/src/controllers/
         <div class="row row-cols-md-4 row-cols-1 justify-content-start text-center text-light mt-sm-4">
             <?php
             foreach ($livros as $livro) {
-                $card = $cardLivro->carregarCard($livro['editora'], $livro['nome_livro'], $livro['autor'], $livro['preco_livro'], $livro['livro_id']);
+                $card = $cardLivro->carregarCard($livro['editora'], $livro['nome_livro'], $livro['autor'], $livro['preco_livro'], $livro['livro_id'], $livro['codigo_editora'], $livro['codigo_autor']);
             }
             ?>
         </div>

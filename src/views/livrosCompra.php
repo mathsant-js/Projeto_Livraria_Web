@@ -37,7 +37,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . "/Projeto_Livraria_Web/src/controllers/
             require $_SERVER['DOCUMENT_ROOT'] . "/Projeto_Livraria_Web/src/components/cardLivro.php";
             $cardLivro = new CardLivro();
             foreach ($livros as $livro) {
-                $card = $cardLivro->carregarCard($livro['editora'], $livro['nome_livro'], $livro['autor'], $livro['preco_livro'], $livro['livro_id']);
+                $card = $cardLivro->carregarCard($livro['editora'], $livro['nome_livro'], $livro['autor'], $livro['preco_livro'], $livro['livro_id'], $livro['codigo_editora'], $livro['codigo_autor']);
             }
             ?>
         </div>

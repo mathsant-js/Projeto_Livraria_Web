@@ -1,7 +1,7 @@
 <?php
 class CardLivro
 {
-    function carregarCard($nomeEditora, $nomeLivro, $nomeAutor, $precoLivro, $livroId)
+    function carregarCard($nomeEditora, $nomeLivro, $nomeAutor, $precoLivro, $livroId, $editoraId, $autorId)
     {
         echo '
     <!-- Começo do card -->
@@ -13,14 +13,14 @@ class CardLivro
                         <div class="row border-bottom border-3 border-warning bg-white">
                             <img src="../assets/imgs/static/livroplaceholder.png" alt="book image" class="mx-auto book-card-image">
                             <p class="mb-0">
-                                <a href="editorapag.php?acao=semacao&codEditora=CODIGOEDITORAAQUI" class="link-warning ps-3">' . $nomeEditora . '</a>
+                                <a href="editorapag.php?acao=semacao&codEditora=' . $editoraId . '" class="link-warning ps-3">' . $nomeEditora . '</a>
                             </p>
                         </div>
                         <div class="row mx-1">
                             <div class="card-body text-white text-center">
                                 <h5 class="card-title book-card-title mt-2 text-warning">' . $nomeLivro . '</h5>
                                 <p>
-                                    <a href="autorpag.php?acao=semacao&codAutor=CODIGOAUTORAQUI" class="link-warning">' . $nomeAutor . '</a>
+                                    <a href="autorpag.php?acao=semacao&codAutor=' . $autorId  . '" class="link-warning">' . $nomeAutor . '</a>
                                 </p>
                                 <h5 class="card-text">' . $precoLivro . '</h5>
                                 <div class="row mt-3">
