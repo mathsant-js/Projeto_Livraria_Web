@@ -28,7 +28,7 @@
             <a class="nav-link" href="../views/livrosCompra.php?acao=semacao">Livros</a>
           </li>
           <li class="nav-item mx-2">
-            <a class="nav-link" href="../views/autorpag.php">Autores</a>
+            <a class="nav-link" href="../views/verAutores.php?acao=semacao">Autores</a>
           </li>
         </ul>
         <form class="d-flex" role="search">
