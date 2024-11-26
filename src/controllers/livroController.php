@@ -1,5 +1,6 @@
 <?php
     require_once $_SERVER['DOCUMENT_ROOT'] . '/Projeto_Livraria_Web/src/models/livro.php';
+    require_once $_SERVER['DOCUMENT_ROOT'] . '/Projeto_Livraria_Web/src/controllers/autorController.php';
 
     class LivroController {
         private $livro;
@@ -10,15 +11,17 @@
             $this->livro = new Livro();
             $this->conexao = new Conexao();
     
-            if($_GET['acao'] == 'inserir') {
-                $this->inserir();
-                header('Location: ../views/tblLivro.php?acao=semacao');
-            } else if($_GET['acao'] == 'atualizar') {
-                $this->atualizar($_POST['codigo']);
-                header('Location: ../views/tblLivro.php?acao=semacao');
-            } else if($_GET['acao'] == 'excluir') {
-                $this->excluir($_POST['codigo']);
-                header('Location: ../views/tblLivro.php?acao=semacao');
+            if ($_GET['acao'] ?? null) {
+                if($_GET['acao'] == 'inserir') {
+                    $this->inserir();
+                    header('Location: ../views/tblLivro.php?acao=semacao');
+                } else if($_GET['acao'] == 'atualizar') {
+                    $this->atualizar($_POST['codigo']);
+                    header('Location: ../views/tblLivro.php?acao=semacao');
+                } else if($_GET['acao'] == 'excluir') {
+                    $this->excluir($_POST['codigo']);
+                    header('Location: ../views/tblLivro.php?acao=semacao');
+                }
             }
         }
     
@@ -50,6 +53,23 @@
             return $this->livro->buscarPorId($codLivro);
         }
     
+        public function buscarDetalhesLivroAjax() {
+            if (!isset($_POST['cod_livro'])) {
+                echo json_encode(['error' => 'ID do livro não fornecido']);
+                return;
+            }
+        
+            $codLivro = intval($_POST['cod_livro']);
+            $detalhesLivro = $this->livro->buscarDetalhesPorId($codLivro);
+        
+            if ($detalhesLivro) {
+                echo json_encode($detalhesLivro); // Retorna os detalhes do livro em formato JSON
+            } else {
+                echo json_encode(['error' => 'Livro não encontrado']);
+            }
+        }
+        
+
         public function buscarNomeAutor(){
             return $this->livro->buscarNomeAutor();
         }

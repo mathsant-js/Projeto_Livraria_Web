@@ -214,7 +214,7 @@ class Livro
             WHERE 1=1";
         $params = [];
         $types = ""; // String para tipos do bind_param (e.g., 's', 'i')
-        
+
         if ($filtroEditora) {
             $sql = "";
             $sql .= " AND e.nome LIKE ?";
@@ -245,9 +245,9 @@ class Livro
     }
 
     public function buscarLivroParaCompra($codLivro)
-{
-    // Query SQL para buscar os detalhes do livro
-    $sql = "
+    {
+        // Query SQL para buscar os detalhes do livro
+        $sql = "
         SELECT 
             l.cod_livro AS livro_id,
             l.nome_livro,
@@ -266,26 +266,55 @@ class Livro
         WHERE l.cod_livro = ?
     ";
 
-    // Prepara a consulta
-    $stmt = $this->conexao->getConexao()->prepare($sql);
+        // Prepara a consulta
+        $stmt = $this->conexao->getConexao()->prepare($sql);
 
-    if (!$stmt) {
-        throw new Exception("Erro ao preparar a consulta: " . $this->conexao->getConexao()->error);
+        if (!$stmt) {
+            throw new Exception("Erro ao preparar a consulta: " . $this->conexao->getConexao()->error);
+        }
+
+        // Faz o bind do parâmetro (tipo inteiro)
+        $stmt->bind_param("i", $codLivro);
+
+        // Executa a consulta
+        $stmt->execute();
+
+        // Obtém o resultado
+        $result = $stmt->get_result();
+
+        // Retorna os dados como um array associativo, ou null se não encontrado
+        return $result->fetch_assoc();
     }
 
-    // Faz o bind do parâmetro (tipo inteiro)
-    $stmt->bind_param("i", $codLivro);
+    public function buscarDetalhesPorId($codLivro)
+    {
+        $sql = "
+            SELECT 
+                l.*, 
+                g.nome_genero, 
+                e.nome_editora, 
+                GROUP_CONCAT(a.nome_autor SEPARATOR ', ') AS autores
+            FROM livro l
+            LEFT JOIN genero g ON l.cod_genero = g.cod_genero
+            LEFT JOIN editora e ON l.cod_editora = e.cod_editora
+            LEFT JOIN autorlivro la ON l.cod_livro = la.cod_livro
+            LEFT JOIN autor a ON la.cod_autor = a.cod_autor
+            WHERE l.cod_livro = ?
+            GROUP BY l.cod_livro
+        ";
 
-    // Executa a consulta
-    $stmt->execute();
+        $stmt = $this->conexao->getConexao()->prepare($sql);
+        $stmt->bind_param("i", $codLivro);
+        $stmt->execute();
 
-    // Obtém o resultado
-    $result = $stmt->get_result();
+        $resultado = $stmt->get_result();
+        $dados = $resultado->fetch_assoc();
 
-    // Retorna os dados como um array associativo, ou null se não encontrado
-    return $result->fetch_assoc();
-}
-    
+        $stmt->close();
+
+        return $dados;
+    }
+
 
     // update
     public function atualizar($codLivro)

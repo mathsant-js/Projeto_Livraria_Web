@@ -11,6 +11,7 @@
     <title>Open Book</title>
     <link rel="stylesheet" href="../assets/scss/main.css">
     <script src="../js/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="../js/modalRequisicaoAjax/modalTblLivro.js"></script>
 </head>
 
 <body class="background-dark-light">
@@ -47,7 +48,7 @@
                             <td><?php echo $livro['isbn_livro']; ?></td>
                             <td><?php echo $livro['data_lancamento']; ?></td>
                             <td>
-                                <a href="#" class="btn btn-warning text-white" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                <a onclick="exibirDescricao(<?php echo $livro['cod_livro'] ?>)" href="#" class="btn btn-warning text-white" data-bs-toggle="modal" data-bs-target="#exampleModal">
                                     Exibir Mais
                                 </a>
                             </td>
@@ -59,6 +60,31 @@
                         </a>
 
                     <?php } ?>
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content bg-dark">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Descrição do Livro</h1>
+                                    <button type="button" class="btn-close btn-close-white shadow-none" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <h4 id="nome"></h4>
+                                    <ul class="navbar-nav justify-content-start mt-sm-3">
+                                        <li id="isbn"></li>
+                                        <li id="preco"></li>
+                                        <li id="datalancamento"></li>
+                                        <li id="autor"></li>
+                                        <li id="genero"></li>
+                                        <li id="editora"></li>
+                                    </ul>
+                                </div>
+                                <div class="modal-footer justify-content-between">
+                                    <button type="button" class="btn btn-warning btn-lg text-light" data-bs-dismiss="modal">Ok</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </tbody>
             </table>
             <a href="formLivroCrt.php?acao=crt" class="btn btn-warning btn-lg text-white mt-sm-2">Cadastrar Livro</a>
