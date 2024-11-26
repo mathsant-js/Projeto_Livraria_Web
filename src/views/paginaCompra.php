@@ -38,7 +38,7 @@
                                 <li class="text-warning fs-4">R$ <?php echo $livro['preco_livro'] ?></li>
                             </ul>
                             <p class="text-break mt-sm-3">Descrição: <?php echo $livro['descricao_livro'] ?></p>
-                            <button class="btn btn-warning btn-lg text-light me-sm-5 mb-3 mb-md-0">Comprar</button>
+                            <a href=<?php echo "formaPagamento.php?acao=semacao&codLivro=" . $_GET['codLivro']; ?> class="btn btn-warning btn-lg text-light me-sm-5 mb-3 mb-md-0">Comprar</a>
                             <button class="btn btn-warning btn-lg text-light">Adicionar ao Carrinho</button>
                         </div>
                     </div>
