@@ -22,7 +22,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/Projeto_Livraria_Web/src/controllers/
                 < Voltar</a>
         </h5>
         <div class="border-warning bg-dark text-white mx-auto p-4 rounded-4 order-1 order-lg-2 mt-4">
-            <form id="livroForm" method="POST" action="../controllers/livroController.php?acao=inserir" class="row row-cols-1 row-cols-md-2 text-start mx-md-3">
+            <form id="livroForm" method="POST" action="../controllers/livroController.php?acao=inserirLivro" class="row row-cols-1 row-cols-md-2 text-start mx-md-3">
                 <h2 class="text-warning ms-md-3 mb-4 w-100">Dados do Livro</h2>
 
                 <div class="col-md-2 form-floating col mb-3">
@@ -31,7 +31,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/Projeto_Livraria_Web/src/controllers/
                 </div>
                 <div class="col-md-10 form-floating col mb-3">
                     <input type="text" class="form-control text-white background-dark-light border-bottom border-top-0 border-start-0 border-end-0 border-3 rounded-bottom-0 border-warning me-2" id="nome" name="nome" maxlength="60" placeholder="Nome do Livro" required>
-                    <label for="nomelivro" class="text-warning ms-3">Nome do Livro</label>
+                    <label for="nome" class="text-warning ms-3">Nome do Livro</label>
                     <span id="erroNome" class="erro"></span>
                 </div>
                 <div class="col-md-4 form-floating col mb-3">
@@ -41,11 +41,11 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/Projeto_Livraria_Web/src/controllers/
                 </div>
                 <div class=" col-md-4 form-floating col mb-3">
                     <input type="date" class="form-control text-white background-dark-light border-bottom border-top-0 border-start-0 border-end-0 border-3 rounded-bottom-0 border-warning me-2" id="data" name="data" placeholder="Data de Lançamento" required>
-                    <label for="datalanc" class="text-warning ms-3">Data de Lançamento</label>
+                    <label for="data" class="text-warning ms-3">Data de Lançamento</label>
                     <span id="erroDataLancamento" class="erro"></span>
                 </div>
                 <div class="col-md-4 form-floating col mb-3">
-                    <input type="text" class="form-control text-white background-dark-light border-bottom border-top-0 border-start-0 border-end-0 border-3 rounded-bottom-0 border-warning me-2" id="preco" name="preco" maxlength="6" placeholder="Preço" required>
+                    <input type="text" class="form-control text-white background-dark-light border-bottom border-top-0 border-start-0 border-end-0 border-3 rounded-bottom-0 border-warning me-2" id="preco" name="preco" maxlength="10" placeholder="Preço" required>
                     <label for="preco" class="text-warning ms-3">Preço</label>
                     <span id="erroPreco" class="erro"></span>
                 </div>

@@ -3,13 +3,13 @@
 
     switch ($_GET['acao']) {
         case "upd":
-            $act = "atualizar";
+            $act = "atualizarLivro";
             break;
         case "dlt":
-            $act = "excluir";
+            $act = "excluirLivro";
             break;
         default:
-            $act = "atualizar";
+            $act = "atualizarLivro";
             break;
     }
 ?>

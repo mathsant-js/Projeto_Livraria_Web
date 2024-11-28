@@ -12,13 +12,13 @@
             $this->conexao = new Conexao();
     
             if ($_GET['acao'] ?? null) {
-                if($_GET['acao'] == 'inserir') {
+                if($_GET['acao'] == 'inserirLivro') {
                     $this->inserir();
                     header('Location: ../views/tblLivro.php?acao=semacao');
-                } else if($_GET['acao'] == 'atualizar') {
+                } else if($_GET['acao'] == 'atualizarLivro') {
                     $this->atualizar($_POST['codigo']);
                     header('Location: ../views/tblLivro.php?acao=semacao');
-                } else if($_GET['acao'] == 'excluir') {
+                } else if($_GET['acao'] == 'excluirLivro') {
                     $this->excluir($_POST['codigo']);
                     header('Location: ../views/tblLivro.php?acao=semacao');
                 }
