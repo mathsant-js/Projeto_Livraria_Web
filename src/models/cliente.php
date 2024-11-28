@@ -81,6 +81,34 @@ class Cliente {
         return $clientes;
     }
 
+    // login
+    public function login($email) {
+        session_start();
+
+        $sql = "SELECT * FROM emailcliente WHERE email_cliente = ?";
+        $stmt = $this->conexao->getConexao()->prepare($sql);
+        $stmt->bind_param('s', $email);
+        $stmt->execute();
+        $email = $stmt->get_result()->fetch_assoc();
+
+        $sql2 = "SELECT * FROM cliente WHERE senha_cliente = ?";
+        $stmt2 = $this->conexao->getConexao()->prepare($sql2);
+        $stmt2->bind_param('s', $_POST['senha']);
+        $stmt2->execute();
+        $senha = $stmt2->get_result()->fetch_assoc();
+    
+        if (@$email['cod_cliente'] == null || @$senha['cod_cliente'] == null) {
+            echo "<script type='text/javascript'>history.back();</script>";
+            echo "<script type='text/javascript'>alert('Não foi possível realizar o login. Verifique as informações preenchidas e tente novamente.');</script>";
+        } else {
+            if ($senha['cod_cliente'] == $email['cod_cliente']) {
+                $_SESSION["usuario"] = $senha['cod_cliente'];
+                echo "<script type='text/javascript'>alert('Login Realizado com sucesso!');</script>";
+                header('Location: ../views/index.php?acao=semacao');
+            }
+        }
+    }
+
     // buscar por id
     public function buscarPorId($codCliente) {
         $sql = "SELECT * FROM cliente WHERE cod_cliente = ?";

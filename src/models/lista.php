@@ -181,7 +181,7 @@ class Lista
     public function inserirLivro($codLista, $codLivro)
     {
         $data = date("Y-m-d");
-        $sql = "INSERT INTO livrossalvos (cod_livro, cod_lista, data_salvamento_lista) VALUES (?, ?, ?);";
+        $sql = "INSERT INTO livrossalvos (cod_livro, cod_lista, data_salvamento_livro) VALUES (?, ?, ?);";
         $stmt = $this->conexao->getConexao()->prepare($sql);
         $stmt->bind_param('iis', $codLivro, $codLista, $data);
         return $stmt->execute();

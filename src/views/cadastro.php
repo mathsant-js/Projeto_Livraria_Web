@@ -15,6 +15,7 @@
         if (form.senha.value == form.confsenha.value) {
             return true;
         } else {
+            alert("Não foi possível realizar o cadastro. Verifique as informações inseridas e tente novamente.");
             return false;
         }
     }
@@ -27,10 +28,11 @@
             <img src="../assets/icons/logo.svg" class="signup-logo">
         </div>
         <div class="col border-warning bg-dark text-white my-3 mx-auto p-4 rounded-4 order-1 order-lg-2">
-            <form method="POST" action="../controllers/clienteController.php?acao=inserir" class="text-start" onsubmit="return verificarCampos(this);">
+            <h5 class="text-start"><a href="javascript:history.back()" class="link-warning">< Voltar</a></h5>
+            <form method="POST" action="../controllers/clienteController.php?acao=cadastrar" class="text-start" onsubmit="return verificarCampos(this);">
                 <h2 class="text-warning text-center">Seja bem-vindo à Open Book!</h2>
                 <p class="text-white text-center">Preencha os dados solicitados para criar sua conta.</p>
-                <p class="text-white text-center mt-2">Já possui uma conta? <a href="" class="link-warning">Entre agora.</a></p>
+                <p class="text-white text-center mt-2">Já possui uma conta? <a href="login.php" class="link-warning">Entre agora.</a></p>
 
                 <div class="form-floating mb-3">
                     <input type="text" class="form-control text-white background-dark-light border-bottom border-top-0 border-start-0 border-end-0 border-3 rounded-bottom-0 border-warning me-2" id="nome" name="nome" placeholder="Nome" required>

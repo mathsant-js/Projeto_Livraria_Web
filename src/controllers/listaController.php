@@ -19,6 +19,10 @@
             } else if($_GET['acao'] == 'excluir') {
                 $this->excluir($_POST['codigo']);
                 
+            } else if($_GET['acao'] == 'adicionarcarrinho') {
+                $codLista = $this->buscarPorIdDoCliente($_GET['codCliente']);
+                $this->inserirLivro($codLista, $_GET['codLivro']);
+                echo "<script> history.back(); location.reload(); </script>";
             } else if($_GET['acao'] == 'excluirlivro') {
                 $this->excluirLivro();
                 echo "<script> history.back(); location.reload(); </script>";

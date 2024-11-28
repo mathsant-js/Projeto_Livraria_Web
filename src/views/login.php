@@ -16,10 +16,11 @@
             <img src="../assets/icons/logo.svg" class="signup-logo">
         </div>
         <div class="col border-warning bg-dark text-white my-3 mx-auto p-4 rounded-4 order-1 order-lg-2 mb-1">
-            <form class="text-start">
+            <h5 class="text-start"><a href="javascript:history.back()" class="link-warning">< Voltar</a></h5>
+            <form method="POST" action="../controllers/clienteController.php?acao=login" class="text-start">
                 <h2 class="text-warning text-center">Bem-vindo de volta!</h2>
                 <p class="text-white text-center">Informe seu email de usuário e senha para entrar em sua conta.</p>
-                <p class="text-white text-center mt-2">Ainda não possui uma conta? <a href="" class="link-warning">Cadastre-se agora.</a></p>
+                <p class="text-white text-center mt-2">Ainda não possui uma conta? <a href="cadastro.php" class="link-warning">Cadastre-se agora.</a></p>
 
                 <div class="form-floating mb-3">
                     <input type="email" class="form-control text-white background-dark-light border-bottom border-top-0 border-start-0 border-end-0 border-3 rounded-bottom-0 border-warning me-2" id="email" name="email" placeholder="Email">
@@ -29,7 +30,7 @@
                     <input type="password" class="form-control text-white background-dark-light border-bottom border-top-0 border-start-0 border-end-0 border-3 rounded-bottom-0 border-warning me-2" id="senha" name="senha" placeholder="Senha">
                     <label for="senha" class="text-warning">Digite sua senha</label>
                 </div>
-                <a href="" class="link-warning mb-3">Esqueci minha senha</a>
+                <a href="http://gmail.com" class="link-warning mb-3">Esqueci minha senha</a>
 
                 <div class="w-100 text-center">
                     <button type="submit" class="btn btn-warning btn-lg text-white text-center m-3 px-5">Entrar</button>

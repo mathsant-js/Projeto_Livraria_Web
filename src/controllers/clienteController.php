@@ -15,9 +15,20 @@ class ClienteController {
             if($_GET['acao'] == 'inserir') {
                 $this->inserir();
                 header('Location: ../views/tblCliente.php?acao=semacao');
+            } else if($_GET['acao'] == 'cadastrar') {
+                $this->inserir();
+                header('Location: ../views/login.php');
+            } else if($_GET['acao'] == 'login') {
+                $this->login();
+            } else if($_GET['acao'] == 'sair') {
+                $this->sair();
+                header('Location: ../views/index.php?acao=semacao');
             } else if($_GET['acao'] == 'atualizar') {
                 $this->atualizar($_POST['codigo']);
                 header('Location: ../views/tblCliente.php?acao=semacao');
+            } else if($_GET['acao'] == 'atualizarproprio') {
+                $this->atualizar($_GET['codigo']);
+                header('Location: ../views/configuracoes.php');
             } else if($_GET['acao'] == 'excluir') {
                 $this->excluir($_POST['codigo']);
                 header('Location: ../views/tblCliente.php?acao=semacao');
@@ -45,6 +56,17 @@ class ClienteController {
 
     public function listar(){
         return $this->cliente->listar();
+    }
+
+    public function login() {
+        $this->cliente->setSenhaCliente($_POST['senha']);
+
+        $this->cliente->login($_POST['email']);
+    }
+
+    public function sair() {
+        session_start();
+        session_destroy();
     }
 
     public function exibirDescricaoAjax() {
