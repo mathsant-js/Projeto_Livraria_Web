@@ -130,13 +130,15 @@ function validarIsbn() {
 
   if (isbn.length != 12) {
     if (isbn.length != 16) {
-      if (isbn.length != 17) {
-        erro.textContent = "O ISBN deve ser XX-X-XXXXXX-X ou XXX-XX-XXXXX-XX-X";
-        console.log(isbn.length);
-        return false;
-      } else if (isbn.length != 13) {
-        erro.textContent = "O ISBN deve ser XX-X-XXXXXX-X ou XXX-XX-XXXXX-XX-X";
-        return false;
+      if (isbn.length != 13) {
+        if (isbn.length != 17) {
+          console.log(isbn.length);
+          erro.textContent = "O ISBN deve ser XX-X-XXXXXX-X ou XXX-XX-XXXXX-XX-X";
+          return false;
+        } else {
+          erro.textContent = "";
+          return true;
+        }
       } else {
         erro.textContent = "";
         console.log(isbn.length);
