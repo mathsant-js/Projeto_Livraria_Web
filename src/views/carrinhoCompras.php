@@ -1,6 +1,16 @@
 <?php
     require_once $_SERVER['DOCUMENT_ROOT'] . '/Projeto_Livraria_Web/src/controllers/listaController.php';
     require_once $_SERVER['DOCUMENT_ROOT'] . '/Projeto_Livraria_Web/src/controllers/livroController.php';
+
+    function imagefind($imgId) {
+      $caminho = "../assets/imgs/static/bookcovers/";
+      if (file_exists( $caminho . $imgId . ".png")) {
+          return $caminho . $imgId . ".png";
+      }
+      else {
+          return $caminho . "livroplaceholder.png";
+      }
+  }
 ?>
 
 <!DOCTYPE html>
@@ -33,13 +43,15 @@
           foreach($livroslista as $livrolista) {
           $livro = $livroController->buscarLivroParaCompra($livrolista['cod_livro']);
     ?>
-    <div class="row shadow p-3 my-5 my-sm-4 bg-dark rounded mb-3 row-cols-md-1 row-cols-1">
+    <div class="row shadow p-3 my-5 my-sm-4 bg-dark rounded-2 mb-3 row-cols-md-1 row-cols-1">
           <div class="col">
             <div class="row">
-              <div class="col-5 col-md-2">
-                <img src="https://placehold.co/100x150" alt="">
+              <div class="col-12 col-lg-4 col-md-6">
+                <div class="cart-image bg-white rounded-4 text-center">
+                  <img src="<?php echo imagefind($livro['livro_id']); ?>" alt="bookimage" height="225px" class="mx-auto text-warning rounded-4">
+                </div>
               </div>
-              <div class="col-7 col-md-10">
+              <div class="col-7 col-md-4">
                 <ul class="navbar-nav justify-content-start">
                   <li class="nav-item">
                     <p class="fs-2 lexend-title-semibold text-warning text-break"><?php echo $livro['nome_livro']; ?></p>

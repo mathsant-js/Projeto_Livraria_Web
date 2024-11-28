@@ -272,6 +272,25 @@
   }
 }
 
+.cart-image {
+  height: 225px;
+}
+@media (min-width: 1400px) {
+  .cart-image {
+    width: 20vw;
+  }
+}
+@media (900px < width < 1400px) {
+  .cart-image {
+    width: 300px;
+  }
+}
+@media (500px < width < 900px) {
+  .cart-image {
+    width: 300px;
+  }
+}
+
 *,
 *::before,
 *::after {
