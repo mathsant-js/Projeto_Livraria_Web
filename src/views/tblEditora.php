@@ -47,7 +47,7 @@
                             <td><?php echo $editora['endereco_editora'];?></td>
                             <td><?php echo $telefoneeditora['telefone_editora'];?></td>
                             <td>
-                                <a href="<?php echo "formEditoraUpdDlt.php?acao=upd&codEditora=" . $editora['cod_editora'];?>" class="btn btn-warning text-white text-center me-2">Atualizar</a>
+                                <a href="<?php echo "formEditoraUpdDlt.php?acao=upd&codEditora=" . $editora['cod_editora'];?>" class="btn btn-warning text-white text-center me-2 mb-2">Atualizar</a>
                                 <a href="<?php echo "formEditoraUpdDlt.php?acao=dlt&codEditora=" . $editora['cod_editora'];?>" type="submit" class="btn btn-danger text-white text-center px-4">Excluir</a>
                             </td>
                         </tr>

@@ -38,7 +38,8 @@
         @$livroslista = $listaController->listarLivros($lista['cod_lista']);
         
         if (count($livroslista) === 0) {
-          ?> <h4 class="text-white ms-md-3 mb-4">Não há livros salvos no carrinho.</h4> <?php
+          ?>  <h4 class="text-white ms-md-3 mb-4">Não há livros salvos no carrinho.</h4>
+              <div class="background-dark-light" style="height: 27.5vh;"></div> <?php
         } else {
           foreach($livroslista as $livrolista) {
           $livro = $livroController->buscarLivroParaCompra($livrolista['cod_livro']);

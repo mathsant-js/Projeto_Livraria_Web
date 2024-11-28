@@ -27,7 +27,9 @@
         $livroController = new LivroController();
         $livros = $livroController->buscarPorEditora($_GET['codEditora']);
     ?>
-    <div class="background-image-author border-bottom border-5 border-warning"></div>
+    <div class="background-image-author border-bottom border-5 border-warning">
+        <h5 class="pt-4 ps-5 text-start"><a href="javascript:history.back()" class="link-warning">< Voltar</a></h5>
+    </div>
     <div class="mx-auto author-div overflow-hidden">
         <div class="card bg-transparent border-0">
             <div class="row column-gap-5">

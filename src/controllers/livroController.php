@@ -14,13 +14,13 @@
             if ($_GET['acao'] ?? null) {
                 if($_GET['acao'] == 'inserirLivro') {
                     $this->inserir();
-                    header('Location: ../views/tblLivro.php?acao=semacao');
+                    echo "<script>javascript:history.go(-2)</script>";
                 } else if($_GET['acao'] == 'atualizarLivro') {
                     $this->atualizar($_POST['codigo']);
-                    header('Location: ../views/tblLivro.php?acao=semacao');
+                    echo "<script>javascript:history.go(-2)</script>";
                 } else if($_GET['acao'] == 'excluirLivro') {
                     $this->excluir($_POST['codigo']);
-                    header('Location: ../views/tblLivro.php?acao=semacao');
+                    echo "<script>javascript:history.go(-2)</script>";
                 }
             }
         }

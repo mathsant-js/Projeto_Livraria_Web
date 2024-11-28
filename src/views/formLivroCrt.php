@@ -105,7 +105,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/Projeto_Livraria_Web/src/controllers/
                     </div>
                 </div>
                 <div class="col-md-12 form-floating col mb-4">
-                    <textarea class="form-control text-white background-dark-light border-bottom border-top-0 border-start-0 border-end-0 border-3 rounded-bottom-0 border-warning me-2" id="descricao" name="descricao" placeholder="Descrição" maxlength="255" rows="12" style="height: 18em; resize: none;" required></textarea>
+                    <textarea class="form-control text-white background-dark-light border-bottom border-top-0 border-start-0 border-end-0 border-3 rounded-bottom-0 border-warning me-2" id="descricao" name="descricao" placeholder="Descrição" maxlength="2000" rows="12" style="height: 18em; resize: none;" required></textarea>
                     <label for="descricao" class="text-warning ms-3">Descrição</label>
                     <span id="erroDescricao" class="erro"></span>
                 </div>

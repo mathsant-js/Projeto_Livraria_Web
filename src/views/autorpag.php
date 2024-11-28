@@ -21,7 +21,9 @@
         $livroController = new LivroController();
         $livros = $livroController->buscarPorAutor($_GET['codAutor']);
     ?>
-    <div class="background-image-author border-bottom border-5 border-warning"></div>
+    <div class="background-image-author border-bottom border-5 border-warning">
+        <h5 class="pt-4 ps-5 text-start"><a href="javascript:history.back()" class="link-warning">< Voltar</a></h5>
+    </div>
     <div class="text-center">
         <div class="mx-auto author-div">
             <img src="../assets/imgs/static/autorplaceholder.png" class="author-image">
