@@ -30,7 +30,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . "/Projeto_Livraria_Web/src/controllers/
                 <a href="#" class="btn btn-warning btn-lg text-light">Filtrar</a>
             </div>
         </div>
-        <div class="row row-cols-md-4 row-cols-1 justify-content-start text-light mt-sm-4">
+        <div class="row row-cols-md-4 row-cols-1 justify-content-start text-center text-light mt-sm-4">
             <?php
             $livroController = new LivroController();
             $livros = $livroController->buscarLivro();

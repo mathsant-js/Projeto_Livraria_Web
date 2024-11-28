@@ -20,18 +20,22 @@
                 $this->excluir($_POST['codigo']);
                 
             } else if($_GET['acao'] == 'adicionarcarrinho') {
-                $existe = $this->existe($_GET['codCliente']);
+                if (!empty($_GET['codCliente'])) {
+                    $existe = $this->existe($_GET['codCliente']);
+                    
+                    if (!$existe) {
+                        $this->lista->setDataCriacaoLista(date("Y-m-d"));
+                        $this->lista->setCodCliente($_GET['codCliente']);
                 
-                if (!$existe) {
-                    $this->lista->setDataCriacaoLista(date("Y-m-d"));
-                    $this->lista->setCodCliente($_GET['codCliente']);
-            
-                    $this->lista->inserir();
-                }
+                        $this->lista->inserir();
+                    }
 
-                $codLista = $this->buscarPorIdDoCliente($_GET['codCliente']);
-                $this->inserirLivro($codLista, $_GET['codLivro']);
-                echo "<script> history.back(); location.reload(); </script>";
+                    $codLista = $this->buscarPorIdDoCliente($_GET['codCliente']);
+                    $this->inserirLivro($codLista, $_GET['codLivro']);
+                    echo "<script> history.back(); location.reload(); </script>";
+                } else {
+                    echo "<script> history.back(); location.reload(); </script>";
+                }
             } else if($_GET['acao'] == 'excluirlivro') {
                 $this->excluirLivro();
                 echo "<script> history.back(); location.reload(); </script>";

@@ -50,7 +50,7 @@ class Lista
     {
         $sql = "INSERT INTO lista (`data_criacao_lista`, `cod_cliente`) VALUES (?,?);";
         $stmt = $this->conexao->getConexao()->prepare($sql);
-        $stmt->bind_param('ss', $this->datacriacaoLista, $this->codCliente);
+        $stmt->bind_param('si', $this->datacriacaoLista, $this->codCliente);
         return $stmt->execute();
     }
 
