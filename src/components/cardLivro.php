@@ -1,6 +1,17 @@
 <?php
+
 class CardLivro
 {
+    function imagefind($imgId) {
+        $caminho = "../assets/imgs/static/bookcovers/";
+        if (file_exists( $caminho . $imgId . ".png")) {
+            return $caminho . $imgId . ".png";
+        }
+        else {
+            return $caminho . "livroplaceholder.png";
+        }
+    }
+
     function carregarCard($nomeEditora, $nomeLivro, $nomeAutor, $precoLivro, $livroId, $editoraId, $autorId)
     {
         echo '
@@ -11,7 +22,7 @@ class CardLivro
                 <a href="#">
                     <div class="card book-card bg-dark rounded-4 overflow-hidden">
                         <div class="row border-bottom border-3 border-warning bg-white">
-                            <img src="../assets/imgs/static/livroplaceholder.png" alt="book image" class="mx-auto book-card-image">
+                            <img src="' . $this->imageFind($livroId) . '" alt="book image" class="mx-auto book-card-image">
                             <p class="mb-0">
                                 <a href="editorapag.php?acao=semacao&codEditora=' . $editoraId . '" class="link-warning ps-3">' . $nomeEditora . '</a>
                             </p>
