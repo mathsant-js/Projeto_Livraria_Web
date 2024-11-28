@@ -39,7 +39,7 @@
                             </ul>
                             <p class="text-break mt-sm-3">Descrição: <?php echo $livro['descricao_livro'] ?></p>
                             <a href=<?php echo "formaPagamento.php?acao=semacao&codLivro=" . $_GET['codLivro']; ?> class="btn btn-warning btn-lg text-light me-sm-5 mb-3 mb-md-0">Comprar</a>
-                            <button class="btn btn-warning btn-lg text-light">Adicionar ao Carrinho</button>
+                            <a href=<?php echo "../controllers/listaController.php?acao=adicionarcarrinho&codLivro=" . $livro['livro_id'] . "&codCliente=" . @$_SESSION['usuario'] . "";?> class="btn btn-warning btn-lg text-light">Adicionar ao Carrinho</a>
                         </div>
                     </div>
                 </div>
