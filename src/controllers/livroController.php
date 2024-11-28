@@ -52,6 +52,14 @@
         public function buscarPorId($codLivro){
             return $this->livro->buscarPorId($codLivro);
         }
+
+        public function buscarPorAutor($codAutor){
+            return $this->livro->buscarPorAutor($codAutor);
+        }
+
+        public function buscarPorEditora($codEditora){
+            return $this->livro->buscarPorEditora($codEditora);
+        }
     
         public function buscarDetalhesLivroAjax() {
             if (!isset($_POST['cod_livro'])) {

@@ -136,6 +136,85 @@ class Livro
         return $result->fetch_assoc();
     }
 
+    public function buscarPorAutor($codAutor) {
+        $sql = "SELECT * FROM autorlivro WHERE cod_autor = ?";
+        $stmt = $this->conexao->getConexao()->prepare($sql);
+        $stmt->bind_param('i', $codAutor);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        $codigos = [];
+        $livros = [];
+
+        while ($autor = $result->fetch_assoc()) {
+            $codigos[] = $autor['cod_livro'];
+        }
+
+        foreach($codigos as $codigo) {
+            $sqlL = "SELECT 
+                    l.cod_livro AS livro_id,
+                    l.nome_livro,
+                    l.preco_livro,
+                    l.cod_editora AS codigo_editora,
+                    e.nome_editora AS editora,
+                    (SELECT 
+                    la.cod_autor -- Código do autor
+                    FROM autorlivro la
+                    WHERE la.cod_livro = l.cod_livro
+                    LIMIT 1) AS codigo_autor, 
+                    (SELECT 
+                    a.nome_autor -- Nome do autor
+                    FROM autorlivro la
+                    JOIN autor a ON la.cod_autor = a.cod_autor
+                    WHERE la.cod_livro = l.cod_livro
+                    LIMIT 1) AS autor
+                    FROM livro l
+                    LEFT JOIN editora e ON l.cod_editora = e.cod_editora
+                    WHERE cod_livro = ?;";
+            $stmtL = $this->conexao->getConexao()->prepare($sqlL);
+            $stmtL->bind_param('i', $codigo);
+            $stmtL->execute();
+            $result = $stmtL->get_result();
+            $livros[] = $result->fetch_assoc();
+        }
+
+        return $livros;
+    }
+
+    public function buscarPorEditora($codEditora) {
+        $sql = "SELECT 
+                l.cod_livro AS livro_id,
+                l.nome_livro,
+                l.preco_livro,
+                l.cod_editora AS codigo_editora,
+                e.nome_editora AS editora,
+                (SELECT 
+                la.cod_autor -- Código do autor
+                FROM autorlivro la
+                WHERE la.cod_livro = l.cod_livro
+                LIMIT 1) AS codigo_autor, 
+                (SELECT 
+                a.nome_autor -- Nome do autor
+                FROM autorlivro la
+                JOIN autor a ON la.cod_autor = a.cod_autor
+                WHERE la.cod_livro = l.cod_livro
+                LIMIT 1) AS autor
+                FROM livro l
+                LEFT JOIN editora e ON l.cod_editora = e.cod_editora
+                WHERE l.cod_editora = ?;";
+        $stmt = $this->conexao->getConexao()->prepare($sql);
+        $stmt->bind_param('i', $codEditora);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        $livros = [];
+
+        while ($livro = $result->fetch_assoc()) {
+            $livros[] = $livro;
+        }
+
+        return $livros;
+    }
+
     public function buscarNomeAutor()
     {
         $sql = "SELECT cod_autor, nome_autor FROM autor";

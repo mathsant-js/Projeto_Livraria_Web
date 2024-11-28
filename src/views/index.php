@@ -54,12 +54,12 @@
             </button>
         </div>
         <div class="row justify-content-between text-light mt-sm-5">
-            <div class="col-sm-4">
+            <div class="col">
                 <h4 class="lexend-title-semibold ms-sm-2">Lançamentos</h4>
             </div>
-            <div class="col-sm-4">
+            <div class="col">
                 <a href="../views/livrosCompra.php?acao=semacao" class="link-warning">
-                    <h4 class="lexend-title-regular text-warning text-end me-sm-2">Ver Todos</h4>
+                    <h4 class="lexend-title-regular text-warning text-end me-sm-2">Ver Todos ➜</h4>
                 </a>
             </div>
         </div>
@@ -78,12 +78,12 @@
         <div class="row mt-sm-5">
         </div>
         <div class="row justify-content-between text-light mt-sm-5">
-            <div class="col-sm-4">
+            <div class="col">
                 <h4 class="lexend-title-semibold ms-sm-2">Mais Vendidos</h4>
             </div>
-            <div class="col-sm-4">
+            <div class="col">
                 <a href="../views/livrosCompra.php?acao=semacao" class="link-warning">
-                    <h4 class="lexend-title-regular text-warning text-end me-sm-2">Ver Todos</h4>
+                    <h4 class="lexend-title-regular text-warning text-end me-sm-2">Ver Todos ➜</h4>
                 </a>
             </div>
         </div>
