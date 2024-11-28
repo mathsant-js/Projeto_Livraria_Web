@@ -28,7 +28,7 @@ class CardLivro
                                         <a href="paginaCompra.php?codLivro=' . $livroId . '&acao=semacao" class="btn btn-warning rounded-3 text-white mb-3 w-100">Comprar</a>
                                     </div>
                                     <div class="col col-auto">
-                                        <a href="../controllers/listaController.php?acao=adicionarcarrinho&codLivro=' . $livroId . '&codCliente=' . $_SESSION['usuario'] . '" onclick="alert(\'Adicionado ao carrinho!\');">
+                                        <a href="../controllers/listaController.php?acao=adicionarcarrinho&codLivro=' . $livroId . '&codCliente=' . @$_SESSION['usuario'] . '" onclick="alert(\'Adicionado ao carrinho!\');">
                                             <img src="../assets/icons/cartAdd.svg" alt="add to cart" height="40px" width="40px">
                                         </a>
                                     </div>

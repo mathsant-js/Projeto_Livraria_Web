@@ -20,6 +20,15 @@
                 $this->excluir($_POST['codigo']);
                 
             } else if($_GET['acao'] == 'adicionarcarrinho') {
+                $existe = $this->existe($_GET['codCliente']);
+                
+                if (!$existe) {
+                    $this->lista->setDataCriacaoLista(date("Y-m-d"));
+                    $this->lista->setCodCliente($_GET['codCliente']);
+            
+                    $this->lista->inserir();
+                }
+
                 $codLista = $this->buscarPorIdDoCliente($_GET['codCliente']);
                 $this->inserirLivro($codLista, $_GET['codLivro']);
                 echo "<script> history.back(); location.reload(); </script>";
@@ -69,6 +78,11 @@
 
         public function excluirLivro() {
             $this->lista->excluirLivro($_GET['codLista'], $_GET['codLivro']);
+        }
+
+        public function existe() {
+            $result = $this->lista->existe($_GET['codCliente']);
+            return $result;
         }
     }
     

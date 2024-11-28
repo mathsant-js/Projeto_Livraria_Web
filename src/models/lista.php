@@ -48,7 +48,7 @@ class Lista
     // insert
     public function inserir()
     {
-        $sql = "INSERT INTO lista (`data_criacao`, `cod_cliente`) VALUES (?,?);";
+        $sql = "INSERT INTO lista (`data_criacao_lista`, `cod_cliente`) VALUES (?,?);";
         $stmt = $this->conexao->getConexao()->prepare($sql);
         $stmt->bind_param('ss', $this->datacriacaoLista, $this->codCliente);
         return $stmt->execute();
@@ -77,7 +77,7 @@ class Lista
         $sql = "
             SELECT 
                 l.cod_lista
-                l.data_criacao,
+                l.data_criacao_lista,
                 l.cod_cliente,
                 (SELECT lv.cod_livro
                 FROM livrossalvos ls
@@ -158,7 +158,7 @@ class Lista
     // update - provavelmente não será usado
     public function atualizar($codLista)
     {
-        $sql = "UPDATE lista SET data_criacao = ?, cod_cliente = ? WHERE cod_lista = ?";
+        $sql = "UPDATE lista SET data_criacao_lista = ?, cod_cliente = ? WHERE cod_lista = ?";
         $stmt = $this->conexao->getConexao()->prepare($sql);
         $stmt->bind_param('ssi', $this->datacriacaoLista, $this->codCliente, $codLista);
         if ($stmt->execute()) {
@@ -176,6 +176,22 @@ class Lista
         $stmt = $this->conexao->getConexao()->prepare($sql);
         $stmt->bind_param('i', $codLista);
         return $stmt->execute();
+    }
+
+    public function existe($codCliente){
+        session_start();
+
+        $sql = "SELECT * FROM lista WHERE cod_cliente = ?";
+        $stmt = $this->conexao->getConexao()->prepare($sql);
+        $stmt->bind_param('i', $codCliente);
+        $stmt->execute();
+        $lista = $stmt->get_result()->fetch_assoc();
+
+        if (@$lista['cod_cliente'] == null) {
+            return false;
+        } else {
+            return true;
+        }
     }
 
     public function inserirLivro($codLista, $codLivro)

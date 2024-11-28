@@ -24,7 +24,7 @@
     <?php 
         $listaController = new ListaController();
         $livroController = new LivroController();
-        $lista = $listaController->buscarPorIdDoCliente(1);
+        $lista = $listaController->buscarPorIdDoCliente(@$_SESSION["usuario"]);
         $livroslista = $listaController->listarLivros($lista['cod_lista']);
         
         if (count($livroslista) === 0) {
