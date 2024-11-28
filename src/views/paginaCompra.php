@@ -1,5 +1,15 @@
 <?php
     require_once $_SERVER['DOCUMENT_ROOT'] . "/Projeto_Livraria_Web/src/controllers/livroController.php";
+
+    function imagefind($imgId) {
+        $caminho = "../assets/imgs/static/bookcovers/";
+        if (file_exists( $caminho . $imgId . ".png")) {
+            return $caminho . $imgId . ".png";
+        }
+        else {
+            return $caminho . "livroplaceholder.png";
+        }
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -26,8 +36,8 @@
                         $livro = $livroController->buscarLivroParaCompra($_GET['codLivro']);
                     ?>
                     <div class="row">
-                        <div class="col">
-                            <img src="../assets/imgs/static/livroplaceholder.png" alt="Imagem do Livro" class="bg-white book-buy-image mx-auto">
+                        <div class="col book-buy-image-bg bg-white rounded-4 text-center m-2">
+                            <img src="<?php echo imagefind($livro['livro_id']); ?>" alt="Imagem do Livro" class="mx-auto book-buy-image">
                         </div>
                         <div class="col">
                             <ul class="navbar-nav">
