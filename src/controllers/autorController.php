@@ -17,7 +17,7 @@ class AutorController {
                 header('Location: ../views/tblAutor.php?acao=semacao');
             } else if($_GET['acao'] == 'excluir') {
                 $this->excluir($_POST['codigo']);
-                header('Location: ..views/tblAutor.php?acao=semacao');
+                header('Location: ../views/tblAutor.php?acao=semacao');
             }
         }
     }
