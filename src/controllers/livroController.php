@@ -34,14 +34,11 @@
             $this->livro->setCodGenero($_POST['genero']);
             $this->livro->setCodEditora($_POST['editora']);
     
-            $this->livro->inserir();
-    
-            $codLivro = $this->livro->buscarPorID($_POST['codigo']);
+            $codLivro = $this->livro->inserir();
 
-            if (isset($_POST['autor'])) {
-                foreach ($_POST['autor'] as $codAutor) {
-                    $this->inserirAutorLivro($codLivro, $codAutor);
-                }
+            if (isset($_POST['autor']) && !empty($_POST['autor'])) {
+                $codAutor = intval($_POST['autor']); // Converte para inteiro
+                $this->inserirAutorLivro($codLivro, $codAutor);
             }
         }
     

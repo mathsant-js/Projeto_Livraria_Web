@@ -106,7 +106,12 @@ class Livro
         $sql = "INSERT INTO livro (`nome_livro`, `isbn_livro`, `data_lancamento`, `preco_livro`, `descricao_livro`, `cod_genero`, `cod_editora`) VALUES (?,?,?,?,?,?,?);";
         $stmt = $this->conexao->getConexao()->prepare($sql);
         $stmt->bind_param('sssssss', $this->nomeLivro, $this->isbnLivro, $this->dataLancamento, $this->precoLivro, $this->descricaoLivro, $this->codGenero, $this->codEditora);
-        return $stmt->execute();
+        $stmt->execute();
+        if ($stmt->affected_rows > 0) {
+            return $this->conexao->getConexao()->insert_id; // Retorna o ID gerado
+        } else {
+            throw new Exception("Erro ao inserir livro: " . $stmt->error);
+        }
     }
 
     // listar

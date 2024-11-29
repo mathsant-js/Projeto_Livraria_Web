@@ -55,8 +55,8 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/Projeto_Livraria_Web/src/controllers/
                 </div>
                 <div class="col-md-10 col mb-3">
                     <div class="form-floating">
-                        <select class="form-select text-white background-dark-light border-bottom border-top-0 border-start-0 border-end-0 border-3 rounded-bottom-0 border-warning me-2" name="autor" id="floatingSelectAutor" multiple>
-                            <option disabled class="text-warning">Selecione um ou mais Autores...</option>
+                        <select class="form-select text-white background-dark-light border-bottom border-top-0 border-start-0 border-end-0 border-3 rounded-bottom-0 border-warning me-2" name="autor" id="floatingSelectAutor">
+                            <option disabled selected class="text-warning">Selecione um Autor</option>
                             <?php
                             $livroController = new LivroController();
                             $autores = $livroController->buscarNomeAutor();
@@ -64,6 +64,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/Projeto_Livraria_Web/src/controllers/
                                 <option value="<?php echo $autor['cod_autor']; ?>" id="autor"><?php echo $autor['nome_autor']; ?></option>
                             <?php endforeach; ?>
                         </select>
+                        <label for="floatingSelectEditora" class="text-warning">Selecione um Autor</label>
                     </div>
                 </div>
                 <div class="col-md-2 form-floating col mb-3">
@@ -73,7 +74,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/Projeto_Livraria_Web/src/controllers/
                 <div class="col-md-10 col mb-3">
                     <div class="form-floating">
                         <select class="form-select text-white background-dark-light border-bottom border-top-0 border-start-0 border-end-0 border-3 rounded-bottom-0 border-warning me-2" name="editora" id="floatingSelectEditora">
-                            <option selected disabled>Selecione aqui...</option>
+                            <option selected disabled>Selecione uma Editora</option>
                             <?php
                             $livroController = new LivroController();
                             $editoras = $livroController->buscarNomeEditora();
@@ -92,7 +93,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/Projeto_Livraria_Web/src/controllers/
                 <div class="col-md-10 col mb-3">
                     <div class="form-floating">
                         <select class="form-select text-white background-dark-light border-bottom border-top-0 border-start-0 border-end-0 border-3 rounded-bottom-0 border-warning me-2" name="genero" id="floatingSelectGenero">
-                            <option selected disabled>Selecione aqui...</option>
+                            <option selected disabled>Selecione um Gênero</option>
                             <?php
                             $livroController = new LivroController();
                             $generos = $livroController->buscarNomeGenero();

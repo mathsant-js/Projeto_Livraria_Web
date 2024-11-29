@@ -55,7 +55,7 @@
                     <label for="isbn" class="text-warning ms-3">ISBN</label>
                     <span id="erroIsbn" class="erro"></span>
                 </div>
-                <div class=" col-md-4 form-floating col mb-3">
+                <div class="col-md-4 form-floating col mb-3">
                     <input type="date" class="form-control text-white background-dark-light border-bottom border-top-0 border-start-0 border-end-0 border-3 rounded-bottom-0 border-warning me-2" id="data" name="data" placeholder="Data de Lançamento" value="<?php echo $livro['data_lancamento']; ?>" required>
                     <label for="data" class="text-warning ms-3">Data de Lançamento</label>
                     <span id="erroDataNascimento" class="erro"></span>
@@ -67,11 +67,11 @@
                 </div>
                 <div class="col-md-12 col mb-3">
                     <div class="form-floating">
-                        <select class="form-select text-white background-dark-light border-bottom border-top-0 border-start-0 border-end-0 border-3 rounded-bottom-0 border-warning me-2" id="floatingSelectAutor" name="autor[]" multiple>
+                        <select class="form-select text-white background-dark-light border-bottom border-top-0 border-start-0 border-end-0 border-3 rounded-bottom-0 border-warning me-2" id="floatingSelectAutor" name="autor[]">
                         <?php
                         $livroController = new LivroController();
                         $autoresDisponiveis = $livroController->buscarNomeAutor(); // Todos os autores disponíveis
-                        $autoresSelecionados = $livroController->buscarAutoresPorLivro($livro['cod_livro']); // Autores selecionados no formulárioAutoresLivro($livro['cod_livro']); // Autores do livro // Associações existentes
+                        $autoresSelecionados = $livroController->buscarAutoresPorLivro($livro['cod_livro']);
             
                         foreach ($autoresDisponiveis as $autor): ?>
                             <option value="<?= $autor['cod_autor'] ?>" 
@@ -83,11 +83,7 @@
                         <label for="floatingSelectAutor" class="text-warning">Selecione um Autor</label>
                     </div>
                 </div>
-                <div class="col-md-2 form-floating col mb-3">
-                    <input type="number" class="form-control text-white background-dark-light border-bottom border-top-0 border-start-0 border-end-0 border-3 rounded-bottom-0 border-warning me-2" id="codeditora" name="codeditora" placeholder="Código da Editora" value="<?php echo $livro['cod_editora']; ?>" readonly>
-                    <label for="codeditora" class="text-warning ms-3">Código</label>
-                </div>
-                <div class="col-md-10 col mb-3">
+                <div class="col-md-12 col mb-3">
                     <div class="form-floating">
                         <select class="form-select text-white background-dark-light border-bottom border-top-0 border-start-0 border-end-0 border-3 rounded-bottom-0 border-warning me-2" id="floatingSelectEditora" name="editora">
                         <?php
@@ -102,11 +98,7 @@
                         <label for="floatingSelectEditora" class="text-warning">Selecione uma Editora</label>
                     </div>
                 </div>
-                <div class="col-md-2 form-floating col mb-3">
-                    <input type="number" class="form-control text-white background-dark-light border-bottom border-top-0 border-start-0 border-end-0 border-3 rounded-bottom-0 border-warning me-2" id="codgenero" name="codgenero" placeholder="Código do Gênero" value="<?php echo $livro['cod_genero']; ?>" readonly>
-                    <label for="codgenero" class="text-warning ms-3">Código</label>
-                </div>
-                <div class="col-md-10 col mb-3">
+                <div class="col-md-12 col mb-3">
                     <div class="form-floating">
                         <select class="form-select text-white background-dark-light border-bottom border-top-0 border-start-0 border-end-0 border-3 rounded-bottom-0 border-warning me-2" id="floatingSelectGenero" name="genero">
                             <?php
