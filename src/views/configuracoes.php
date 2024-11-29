@@ -40,17 +40,6 @@
                 </div>
             </div>
         </div>
-        <div class="row mt-3">
-            <div class="row shadow p-3 mb-sm-5 bg-dark rounded text-light">
-                <div class="col-sm-6 text-start me-5">
-                    <h5 class="lexend-title-semibold ms-sm-2 mt-sm-2">Alterar Visibilidade</h5>
-                    <p class="mt-sm-4 ms-sm-2">Algumas configurações de como você vê o site.</p>
-                </div>
-                <div class="col-sm-4 align-self-center text-end d-grid gap-2 ms-sm-5">
-                    <a href="#" class="btn btn-warning text-light">Alterar Visibilidade</a>
-                </div>
-            </div>
-        </div>
 
         <div class="row mt-3">
             <div class="row shadow p-3 mb-sm-5 bg-dark rounded text-light">
