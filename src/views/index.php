@@ -30,17 +30,17 @@
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="../assets/imgs/static/imgCarouselWithFade.svg" class="d-block w-100" alt="...">
+                    <img src="../assets/imgs/static/2.png" class="d-block w-100" alt="...">
                     <div class="carousel-caption d-none d-md-block">
-                        <h5 class="text-warning">Second slide label</h5>
-                        <p>Some representative placeholder content for the second slide.</p>
+                        <h5 class="text-warning fs-4">Promoção de Natal!</h5>
+                        <p>Venha aproveitar a nossa promoção de natal! Presenteie quem você ama com os nossos livros!</p>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="../assets/imgs/static/imgCarouselWithFade.svg" class="d-block w-100" alt="...">
+                    <img src="../assets/imgs/static/3.png" class="d-block w-100" alt="...">
                     <div class="carousel-caption d-none d-md-block">
-                        <h5 class="text-warning">Third slide label</h5>
-                        <p>Some representative placeholder content for the third slide.</p>
+                        <h5 class="text-warning fs-4">Entrega de Livros</h5>
+                        <p>Nossas entregas são rápidas e com preços justos! Venha desfrutar da nossa vasta coleção de livros!</p>
                     </div>
                 </div>
             </div>
