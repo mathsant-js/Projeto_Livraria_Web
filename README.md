@@ -44,7 +44,9 @@
 
 ## Etapas
 
-1. Baixar o repositório
+1. Baixar o repositório, na pasta htdocs, que está no xampp. 
+<br>
+Caminho (Caminho comum): [C:\xampp\htdocs](...)
 2. Ligar o Apache e o MySQL do Xampp. Veja na imagem abaixo: 
 <br>
 <br>
