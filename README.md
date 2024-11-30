@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="src/assets/imgs/static/logo.svg" alt="Logo Open Book" width="300">
+  <img src="src/assets/imgs/static/logo.svg" alt="Logo Open Book" width="400">
 </div>
 
 <br>
@@ -23,7 +23,7 @@
 ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
 </div>
 
-## Projeto para Feira Tecnológica 2024
+# Projeto para Feira Tecnológica 2024
 
 ## Descrição
 
