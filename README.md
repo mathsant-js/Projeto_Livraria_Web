@@ -44,16 +44,13 @@
 
 ## Etapas
 
-1. Baixar o repositório, na pasta htdocs, que está no xampp. 
-<br>
-Caminho (Caminho comum): C:\xampp\htdocs
+1. Baixar o repositório, na pasta htdocs, que está no xampp. Caminho (Caminho comum): C:\xampp\htdocs
 2. Ligar o Apache e o MySQL do Xampp. Veja na imagem abaixo: 
 <br>
-<br>
 <img src="docs/imgs/xamppControlPanelpng.png">
-4. Digitar o seguinte link no seu navegador: <i>localhost/Projeto_Livraria_Web/src/views/index.php?acao=semacao</i>
+3. Digitar o seguinte link no seu navegador: <i>localhost/Projeto_Livraria_Web/src/views/index.php?acao=semacao</i>
 <br>
-5. Pronto, agora você pode ver como funciona a Open Book Web!
+4. Pronto, agora você pode ver como funciona a Open Book Web!
 
 ### <p style="font-weight: bold">Desenvolvedores:</p>
 
