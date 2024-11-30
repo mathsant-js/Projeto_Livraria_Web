@@ -46,7 +46,7 @@
 
 1. Baixar o repositório, na pasta htdocs, que está no xampp. 
 <br>
-Caminho (Caminho comum): [C:\xampp\htdocs](...)
+Caminho (Caminho comum): C:\xampp\htdocs
 2. Ligar o Apache e o MySQL do Xampp. Veja na imagem abaixo: 
 <br>
 <br>
@@ -57,6 +57,6 @@ Caminho (Caminho comum): [C:\xampp\htdocs](...)
 ### <p style="font-weight: bold">Desenvolvedores:</p>
 
 <ul>
-  <li>Matheus Jorge Santana: <a href="https://github.com/mathsant-js">mathsant-js</a></li>
+  <li>Matheus Jorge Santana: <a href="https://github.com/mathsant-js" target="_blank">mathsant-js</a></li>
   <li>Lucas Tino Rosa: <a href="https://github.com/Lucas-Tino">Lucas-Tino</a></li>
 </ul>
