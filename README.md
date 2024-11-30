@@ -51,8 +51,9 @@ Caminho (Caminho comum): C:\xampp\htdocs
 <br>
 <br>
 <img src="docs/imgs/xamppControlPanelpng.png">
-3. Digitar o seguinte link no seu navegador: <a href="localhost/Projeto_Livraria_Web/src/views/index.php?acao=semacao">localhost/Projeto_Livraria_Web/src/views/index.php?acao=semacao</a>
-4. Pronto, agora você pode ver como funciona a Open Book Web!
+4. Digitar o seguinte link no seu navegador: <i>localhost/Projeto_Livraria_Web/src/views/index.php?acao=semacao</i>
+<br>
+5. Pronto, agora você pode ver como funciona a Open Book Web!
 
 ### <p style="font-weight: bold">Desenvolvedores:</p>
 
