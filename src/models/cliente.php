@@ -82,20 +82,23 @@ class Cliente {
     }
 
     // login
-    public function login($email) {
+    public function login($email, $senha) {
         session_start();
 
-        $sql = "SELECT * FROM emailcliente WHERE email_cliente = ?";
-        $stmt = $this->conexao->getConexao()->prepare($sql);
-        $stmt->bind_param('s', $email);
-        $stmt->execute();
-        $email = $stmt->get_result()->fetch_assoc();
+        $sql = "SELECT c.cod_cliente AS cliente_id,
+                c.senha_cliente, 
+                (SELECT e.email_cliente FROM emailcliente e
+                WHERE e.email_cliente = ?
+                LIMIT 1) AS email
+                FROM cliente c
+                WHERE senha_cliente = ?";
 
-        $sql2 = "SELECT * FROM cliente WHERE senha_cliente = ?";
-        $stmt2 = $this->conexao->getConexao()->prepare($sql2);
-        $stmt2->bind_param('s', $_POST['senha']);
-        $stmt2->execute();
-        $senha = $stmt2->get_result()->fetch_assoc();
+        $stmt = $this->conexao->getConexao()->prepare($sql);
+        $stmt->bind_param('ss', $email, $senha);
+        $stmt->execute();
+        
+        // AJUSTAR DEPOIS
+        /*$email = $stmt->get_result()->fetch_assoc();
     
         if (@$email['cod_cliente'] == null || @$senha['cod_cliente'] == null) {
             echo "<script type='text/javascript'>history.back();</script>";
@@ -106,7 +109,7 @@ class Cliente {
                 echo "<script type='text/javascript'>alert('Login Realizado com sucesso!');</script>";
                 header('Location: ../views/index.php?acao=semacao');
             }
-        }
+        }*/
     }
 
     // buscar por id
