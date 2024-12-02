@@ -424,9 +424,14 @@ class Livro
     // delete
     public function excluir($codLivro)
     {
-        $sql = "DELETE FROM livro WHERE cod_livro = ?";
+        $sql = "DELETE FROM autorlivro WHERE cod_livro = ?";
+        $sql2 = "DELETE FROM livro WHERE cod_livro = ?";
         $stmt = $this->conexao->getConexao()->prepare($sql);
         $stmt->bind_param('i', $codLivro);
-        return $stmt->execute();
+        $stmt->execute();
+
+        $stmt2 = $this->conexao->getConexao()->prepare($sql2);
+        $stmt2->bind_param('i', $codLivro);
+        return $stmt2->execute();
     }
 }
