@@ -86,30 +86,27 @@ class Cliente {
         session_start();
 
         $sql = "SELECT c.cod_cliente AS cliente_id,
-                c.senha_cliente, 
-                (SELECT e.email_cliente FROM emailcliente e
-                WHERE e.cod_cliente = c.cod_cliente
-                LIMIT 1) AS email
+                c.senha_cliente,
+                e.email_cliente
                 FROM cliente c
-                WHERE c.senha_cliente = ? && e.email_cliente = ?";
+                LEFT JOIN emailcliente as e
+    			ON c.cod_cliente = e.cod_cliente
+                WHERE c.senha_cliente = ? && e.email_cliente = ?;";
 
         $stmt = $this->conexao->getConexao()->prepare($sql);
-        $stmt->bind_param('ss', $email, $senha);
+        $stmt->bind_param('ss', $senha, $email);
         $stmt->execute();
+        $result = $stmt->get_result();
+        $cliente = $result->fetch_assoc();
         
-        // AJUSTAR DEPOIS
-        /*$email = $stmt->get_result()->fetch_assoc();
-    
-        if (@$email['cod_cliente'] == null || @$senha['cod_cliente'] == null) {
+        if (is_null($cliente)) {
             echo "<script type='text/javascript'>history.back();</script>";
             echo "<script type='text/javascript'>alert('Não foi possível realizar o login. Verifique as informações preenchidas e tente novamente.');</script>";
         } else {
-            if ($senha['cod_cliente'] == $email['cod_cliente']) {
-                $_SESSION["usuario"] = $senha['cod_cliente'];
-                echo "<script type='text/javascript'>alert('Login Realizado com sucesso!');</script>";
-                header('Location: ../views/index.php?acao=semacao');
-            }
-        }*/
+            $_SESSION["usuario"] = $cliente['cliente_id'];
+            echo "<script type='text/javascript'>alert('Login Realizado com sucesso!');</script>";
+            header('Location: ../views/index.php?acao=semacao');
+        }
     }
 
     // buscar por id

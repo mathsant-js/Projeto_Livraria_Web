@@ -59,9 +59,7 @@ class ClienteController {
     }
 
     public function login() {
-        $this->cliente->setSenhaCliente($_POST['senha']);
-
-        $this->cliente->login($_POST['email']);
+        $this->cliente->login($_POST['email'], $_POST['senha']);
     }
 
     public function sair() {
