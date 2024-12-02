@@ -45,7 +45,7 @@
           </li>
         </ul>
         <form class="d-flex mb-3 mb-md-0" role="search">
-          <img class="ms-lg-5 me-2" src="../assets/icons/search.svg" alt="Ícone de carrinho de compras" width="45" height="45">
+          <img class="ms-lg-5 me-2" src="../assets/icons/search.svg" alt="Ícone de busca" width="45" height="45">
           <input class="form-control background-dark-light text-warning border-dark me-2" type="search" placeholder="Pesquisar" aria-label="Search">
         </form>
         <a href="../views/carrinhoCompras.php?acao=semacao" class="me-md-0 me-3">

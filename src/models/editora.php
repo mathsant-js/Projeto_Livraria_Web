@@ -83,10 +83,14 @@ class Editora {
 
     // delete
     public function excluir($codEditora) {
-        $sql = "DELETE FROM editora WHERE cod_editora = ?";
-        $stmt = $this->conexao->getConexao()->prepare($sql);
-        $stmt->bind_param('i', $codEditora);
-        return $stmt->execute();
+        try {
+            $sql = "DELETE FROM editora WHERE cod_editora = ?";
+            $stmt = $this->conexao->getConexao()->prepare($sql);
+            $stmt->bind_param('i', $codEditora);
+            return $stmt->execute();
+        } catch (Exception $e) {
+            echo "<script type='text/javascript'>alert('Não foi possível excluir a editora. Provavelmente ela está associada a algum livro.');</script>";
+        }
     }
 }
 

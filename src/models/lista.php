@@ -141,7 +141,7 @@ class Lista
 
     // listar livros de um cliente
     public function listarLivros($codLista) {
-        $sql = "SELECT * FROM livrossalvos WHERE cod_lista = ? ORDER BY data_salvamento_livro DESC";
+        $sql = "SELECT * FROM livrossalvos WHERE cod_lista = ? ORDER BY data_salvamento_livro ASC";
         $stmt = $this->conexao->getConexao()->prepare($sql);
         $stmt->bind_param('i', $codLista);
         $stmt->execute();
@@ -187,7 +187,7 @@ class Lista
         $stmt->execute();
         $lista = $stmt->get_result()->fetch_assoc();
 
-        if (@$lista['cod_cliente'] == null) {
+        if (is_null($lista)) {
             return false;
         } else {
             return true;

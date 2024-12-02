@@ -94,9 +94,13 @@ class Genero {
 
     // delete
     public function excluir($codGenero) {
-        $sql = "DELETE FROM genero WHERE cod_genero = ?";
-        $stmt = $this->conexao->getConexao()->prepare($sql);
-        $stmt->bind_param('i', $codGenero);
-        return $stmt->execute();
+        try {
+            $sql = "DELETE FROM genero WHERE cod_genero = ?";
+            $stmt = $this->conexao->getConexao()->prepare($sql);
+            $stmt->bind_param('i', $codGenero);
+            return $stmt->execute();
+        } catch (Exception $e) {
+            echo "<script type='text/javascript'>alert('Não foi possível excluir o gênero. Provavelmente ele está associado a algum livro.');</script>";
+        }
     }
 }

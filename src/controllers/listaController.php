@@ -23,15 +23,15 @@
                 if (!empty($_GET['codCliente'])) {
                     $existe = $this->existe($_GET['codCliente']);
                     
-                    if (!$existe) {
+                    if ($existe == false) {
                         $this->lista->setDataCriacaoLista(date("Y-m-d"));
                         $this->lista->setCodCliente($_GET['codCliente']);
                 
                         $this->lista->inserir();
                     }
 
-                    $codLista = $this->buscarPorIdDoCliente($_GET['codCliente']);
-                    $this->inserirLivro($codLista, $_GET['codLivro']);
+                    $lista = $this->buscarPorIdDoCliente($_GET['codCliente']);
+                    $this->inserirLivro($lista['cod_lista'], $_GET['codLivro']);
                     echo "<script> history.back(); location.reload(); </script>";
                 } else {
                     echo "<script> history.back(); location.reload(); </script>";

@@ -109,10 +109,14 @@ class Autor {
 
     // delete
     public function excluir($codAutor) {
-        $sql = "DELETE FROM autor WHERE cod_autor = ?";
-        $stmt = $this->conexao->getConexao()->prepare($sql);
-        $stmt->bind_param('i', $codAutor);
-        return $stmt->execute();
+        try {
+            $sql = "DELETE FROM autor WHERE cod_autor = ?";
+            $stmt = $this->conexao->getConexao()->prepare($sql);
+            $stmt->bind_param('i', $codAutor);
+            return $stmt->execute();
+        } catch (Exception $e) {
+            echo "<script type='text/javascript'>alert('Não foi possível excluir o autor. Provavelmente ele está associado a algum livro.');</script>";
+        }
     }
 }
 

@@ -31,7 +31,7 @@
     <h2 class="text-warning ms-md-3 mb-4">Carrinho de Compras</h2>
 
 <!-- aqui -->
-    <?php 
+    <?php
         $listaController = new ListaController();
         $livroController = new LivroController();
         $lista = $listaController->buscarPorIdDoCliente(@$_SESSION["usuario"]);
@@ -42,7 +42,7 @@
               <div class="background-dark-light" style="height: 27.5vh;"></div> <?php
         } else {
           foreach($livroslista as $livrolista) {
-          $livro = $livroController->buscarLivroParaCompra($livrolista['cod_livro']);
+            $livro = $livroController->buscarLivroParaCompra($livrolista['cod_livro']);
     ?>
     <div class="row shadow p-3 my-5 my-sm-4 bg-dark rounded-2 mb-3 row-cols-md-1 row-cols-1">
           <div class="col">
@@ -72,7 +72,7 @@
           </div>
           <div class="col-12 align-self-auto align-self-md-end text-start text-md-end">
             <a href="paginaCompra.php?acao=semacao&codLivro=<?php echo $livro['livro_id']; ?>" class="btn btn-warning btn-lg text-light me-2 mb-3 mb-md-0">Ver Produto</a>
-            <a href="../controllers/listaController.php?acao=excluirlivro&codLista=1&codLivro=<?php echo $livro['livro_id']; ?>" class="btn btn-danger btn-lg me-2 mb-3 mb-md-0">Remover Produto</a>
+            <a href="../controllers/listaController.php?acao=excluirlivro&codLista=<?php echo $lista['cod_lista']; ?>&codLivro=<?php echo $livro['livro_id']; ?>" class="btn btn-danger btn-lg me-2 mb-3 mb-md-0">Remover Produto</a>
           </div>
     </div>
     <?php } } ?>
