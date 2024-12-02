@@ -88,10 +88,10 @@ class Cliente {
         $sql = "SELECT c.cod_cliente AS cliente_id,
                 c.senha_cliente, 
                 (SELECT e.email_cliente FROM emailcliente e
-                WHERE e.email_cliente = ?
+                WHERE e.cod_cliente = c.cod_cliente
                 LIMIT 1) AS email
                 FROM cliente c
-                WHERE senha_cliente = ?";
+                WHERE c.senha_cliente = ? && e.email_cliente = ?";
 
         $stmt = $this->conexao->getConexao()->prepare($sql);
         $stmt->bind_param('ss', $email, $senha);
