@@ -4,12 +4,15 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/Projeto_Livraria_Web/src/models/clien
 require_once $_SERVER['DOCUMENT_ROOT'] . '/Projeto_Livraria_Web/src/controllers/emailclienteController.php';
 require_once $_SERVER['DOCUMENT_ROOT'] . '/Projeto_Livraria_Web/src/controllers/telefoneclienteController.php';
 require_once $_SERVER['DOCUMENT_ROOT'] . '/Projeto_Livraria_Web/src/controllers/enderecoclienteController.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/Projeto_Livraria_Web/src/controllers/listaController.php';
 
 class ClienteController {
     private $cliente;
+    private $conexao;
 
     public function __construct() {
         $this->cliente = new Cliente();
+        $this->conexao = new Conexao();
         
         if ($_GET['acao'] ?? null) {
             if($_GET['acao'] == 'inserir') {
@@ -133,6 +136,14 @@ class ClienteController {
 
         $enderecoclientecontroller = new EnderecoClienteController();
         $enderecoclientecontroller->excluir($codCliente);
+
+        $listacontroller = new ListaController();
+        $lista = $listacontroller->buscarPorIdDoCliente($codCliente);
+        $sql = "DELETE FROM livrossalvos WHERE cod_lista = ?;";
+        $stmt = $this->conexao->getConexao()->prepare($sql);
+        $stmt->bind_param('i', $lista['cod_lista']);
+        $stmt->execute();
+        $listacontroller->excluir($lista['cod_lista']);
 
         $this->cliente->excluir($codCliente);
     }
