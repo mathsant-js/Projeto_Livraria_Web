@@ -25,11 +25,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/Projeto_Livraria_Web/src/controllers/
             <form id="livroForm" method="POST" action="../controllers/livroController.php?acao=inserirLivro" class="row row-cols-1 row-cols-md-2 text-start mx-md-3">
                 <h2 class="text-warning ms-md-3 mb-4 w-100">Dados do Livro</h2>
 
-                <div class="col-md-2 form-floating col mb-3">
-                    <input type="number" class="form-control text-white background-dark-light border-bottom border-top-0 border-start-0 border-end-0 border-3 rounded-bottom-0 border-warning me-2" id="codlivro" name="codlivro" placeholder="Código do Livro" readonly>
-                    <label for="codlivro" class="text-warning ms-3">Código</label>
-                </div>
-                <div class="col-md-10 form-floating col mb-3">
+                <div class="col-md-12 form-floating col mb-3">
                     <input type="text" class="form-control text-white background-dark-light border-bottom border-top-0 border-start-0 border-end-0 border-3 rounded-bottom-0 border-warning me-2" id="nome" name="nome" maxlength="60" placeholder="Nome do Livro" required>
                     <label for="nome" class="text-warning ms-3">Nome do Livro</label>
                     <span id="erroNome" class="erro"></span>
@@ -49,11 +45,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/Projeto_Livraria_Web/src/controllers/
                     <label for="preco" class="text-warning ms-3">Preço</label>
                     <span id="erroPreco" class="erro"></span>
                 </div>
-                <div class="col-md-2 form-floating col mb-3">
-                    <input type="number" class="form-control text-white background-dark-light border-bottom border-top-0 border-start-0 border-end-0 border-3 rounded-bottom-0 border-warning me-2" id="codautor" name="codautor" placeholder="Código do Autor" readonly>
-                    <label for="codautor" class="text-warning ms-3">Código</label>
-                </div>
-                <div class="col-md-10 col mb-3">
+                <div class="col-md-12 col mb-3">
                     <div class="form-floating">
                         <select class="form-select text-white background-dark-light border-bottom border-top-0 border-start-0 border-end-0 border-3 rounded-bottom-0 border-warning me-2" name="autor" id="floatingSelectAutor">
                             <option disabled selected class="text-warning">Selecione um Autor</option>
@@ -67,11 +59,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/Projeto_Livraria_Web/src/controllers/
                         <label for="floatingSelectEditora" class="text-warning">Selecione um Autor</label>
                     </div>
                 </div>
-                <div class="col-md-2 form-floating col mb-3">
-                    <input type="number" class="form-control text-white background-dark-light border-bottom border-top-0 border-start-0 border-end-0 border-3 rounded-bottom-0 border-warning me-2" id="codeditora" name="codeditora" placeholder="Código da Editora" readonly>
-                    <label for="codeditora" class="text-warning ms-3">Código</label>
-                </div>
-                <div class="col-md-10 col mb-3">
+                <div class="col-md-12 col mb-3">
                     <div class="form-floating">
                         <select class="form-select text-white background-dark-light border-bottom border-top-0 border-start-0 border-end-0 border-3 rounded-bottom-0 border-warning me-2" name="editora" id="floatingSelectEditora">
                             <option selected disabled>Selecione uma Editora</option>
@@ -86,11 +74,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/Projeto_Livraria_Web/src/controllers/
                         <label for="floatingSelectEditora" class="text-warning">Selecione uma Editora</label>
                     </div>
                 </div>
-                <div class="col-md-2 form-floating col mb-3">
-                    <input type="number" class="form-control text-white background-dark-light border-bottom border-top-0 border-start-0 border-end-0 border-3 rounded-bottom-0 border-warning me-2" id="codgenero" name="codgenero" placeholder="Código do Gênero" readonly>
-                    <label for="codgenero" class="text-warning ms-3">Código</label>
-                </div>
-                <div class="col-md-10 col mb-3">
+                <div class="col-md-12 col mb-3">
                     <div class="form-floating">
                         <select class="form-select text-white background-dark-light border-bottom border-top-0 border-start-0 border-end-0 border-3 rounded-bottom-0 border-warning me-2" name="genero" id="floatingSelectGenero">
                             <option selected disabled>Selecione um Gênero</option>
