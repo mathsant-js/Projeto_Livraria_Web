@@ -6,7 +6,7 @@
   if (empty($_SESSION["usuario"])) {
     $redirect = "../views/login.php";
   } else {
-    $redirect = "../views/configuracoes.php";
+    $redirect = "../views/configuracoes.php?acao=semacao";
   }
   
 ?>

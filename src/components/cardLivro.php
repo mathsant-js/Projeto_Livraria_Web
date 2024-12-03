@@ -27,7 +27,7 @@ class CardLivro
     <div class="col-sm-3 col-12 mb-sm-3 mb-2">
         <div class="row book-carousel mx-auto mt-3 column-gap-0">
             <div class="col">
-                <a href="#">
+                <a href="paginaCompra.php?codLivro=' . $livroId . '&acao=semacao">
                     <div class="card book-card bg-dark rounded-4 overflow-hidden">
                         <div class="row border-bottom border-3 border-warning bg-white">
                             <img src="' . $this->imageFind($livroId) . '" alt="book image" class="mx-auto book-card-image">

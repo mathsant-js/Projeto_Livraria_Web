@@ -1,5 +1,15 @@
 <?php
-require_once $_SERVER['DOCUMENT_ROOT'] . "/Projeto_Livraria_Web/src/controllers/livroController.php";
+    require_once $_SERVER['DOCUMENT_ROOT'] . "/Projeto_Livraria_Web/src/controllers/livroController.php";
+
+    function imagefind($imgId) {
+        $caminho = "../assets/imgs/static/bookcovers/";
+        if (file_exists( $caminho . $imgId . ".png")) {
+            return $caminho . $imgId . ".png";
+        }
+        else {
+            return $caminho . "livroplaceholder.png";
+        }
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -23,26 +33,26 @@ require_once $_SERVER['DOCUMENT_ROOT'] . "/Projeto_Livraria_Web/src/controllers/
         </h5>
         <h2 class="text-warning mt-sm-5">Informações do Livro</h2>
         <div class="shadow p-3 mb-5 mt-sm-5 bg-dark rounded text-light">
-            <?php
-            $livroController = new LivroController();
-            $livro = $livroController->buscarLivroParaCompra($_GET['codLivro']);
-            ?>
-            <div class="row">
-                <div class="col">
-                    <img src="" alt="Imagem do Livro">''
+                    <?php
+                        $livroController = new LivroController();
+                        $livro = $livroController->buscarLivroParaCompra($_GET['codLivro']);
+                    ?>
+                    <div class="row">
+                        <div class="col book-buy-image-bg bg-white rounded-4 text-center m-2">
+                            <img src="<?php echo imagefind($livro['livro_id']); ?>" alt="Imagem do Livro" class="mx-auto book-buy-image">
+                        </div>
+                        <div class="col">
+                            <ul class="navbar-nav">
+                                <li class="text-warning fs-4 mb-sm-2"><?php echo $livro['nome_livro'] ?></li>
+                                <li class="my-sm-2 fs-5">Autor: <?php echo $livro['autor'] ?></li>
+                                <li class="my-sm-2 fs-5">Editora: <?php echo $livro['editora'] ?></li>
+                                <li class="my-sm-2 fs-5">Gênero: <?php echo $livro['genero'] ?></li>
+                                <li class="text-warning fs-4">R$ <?php echo $livro['preco_livro'] ?></li>
+                            </ul>
+                            <p class="text-break mt-sm-3">Descrição: <?php echo $livro['descricao_livro'] ?></p>
+                        </div>
+                    </div>
                 </div>
-                <div class="col">
-                    <ul class="navbar-nav">
-                        <li class="text-warning fs-4 mb-sm-2"><?php echo $livro['nome_livro'] ?></li>
-                        <li class="my-sm-2 fs-5">Autor: <?php echo $livro['autor'] ?></li>
-                        <li class="my-sm-2 fs-5">Editora: <?php echo $livro['editora'] ?></li>
-                        <li class="my-sm-2 fs-5">Gênero: <?php echo $livro['genero'] ?></li>
-                        <li class="text-warning fs-4">R$ <?php echo $livro['preco_livro'] ?></li>
-                    </ul>
-                    <p class="text-break mt-sm-3">Descrição: <?php echo $livro['descricao_livro'] ?></p>
-                </div>
-            </div>
-        </div>
         <div class="border-warning bg-dark text-white mx-auto p-4 rounded-4 order-1 order-lg-2 mt-4">
             <form id="cartaoForm" method="POST" action="" class="row row-cols-1 row-cols-md-2 text-start mx-md-3">
                 <h2 class="text-warning ms-md-3 mb-4 w-100">Dados do Cartão</h2>
